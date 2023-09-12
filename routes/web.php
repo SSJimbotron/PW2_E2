@@ -1,6 +1,14 @@
 <?php
 
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\ForfaitController;
+use App\Http\Controllers\ProgrammationController;
+use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\EnregistrementController;
+use App\Http\Controllers\AdministrationController;
+use App\Http\Controllers\UsagerController;
 use App\Models\Activite;
 use Illuminate\Support\Facades\Route;
 
@@ -115,12 +123,30 @@ Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
     // create
 Route::get("/admin/actualites/create", [ActualiteController::class, 'create'])
     ->name('admin.actualites.create');
-Route::post("/admin/actualitesstore", [ActualiteController::class, 'store'])
+Route::post("/admin/actualites/store", [ActualiteController::class, 'store'])
     ->name('admin.actualites.store');
 
     //  destroy
 Route::post("/admin/actualites/destroy/{id}", [ActualiteController::class, 'destroy'])
     ->name('admin.actualites.destroy');
+
+// ***USAGERS***
+
+    //  edit
+Route::get("/admin/usagers/edit/{id}", [UsagerController::class, 'edit'])
+    ->name('admin.usagers.edit');
+Route::post("/admin/usagers/update", [UsagerController::class, 'update'])
+    ->name('admin.usagers.update');
+
+    // create
+Route::get("/admin/usagers/create", [UsagerController::class, 'create'])
+    ->name('admin.usagers.create');
+Route::post("/admin/usagers/store", [UsagerController::class, 'store'])
+    ->name('admin.usagers.store');
+
+    //  destroy
+Route::post("/admin/usagers/destroy/{id}", [UsagerController::class, 'destroy'])
+    ->name('admin.usagers.destroy');
 
 
 
