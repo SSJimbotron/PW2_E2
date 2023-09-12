@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\AccueilController;
+use App\Http\Controllers\SiteController;
+use App\Models\Activite;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,118 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// ACCUEIL
-Route::get('/', [AccueilController::class, 'index'])
+// **ACCUEIL***
+Route::get('/', [SiteController::class, 'index'])
     ->name('accueil');
+
+// =========================================================
+
+// ***ACTUALITÉS***
+    //  index
+Route::get('/actualites', [ActualiteController::class, 'index'])
+    ->name('actualite.index');
+    // show
+Route::get('/actualites/{id}', [ActualiteController::class, 'show'])
+    ->name('actualite.show');
+
+// =========================================================
+
+// ***ACTIVITÉS***
+    //  index
+Route::get('/activites', [ActiviteController::class, 'index'])
+    ->name('activites.index');
+    // show
+Route::get('/activites/{id}', [ActiviteController::class, 'show'])
+    ->name('activites.show');
+
+// =========================================================
+
+// ***A PROPOS***
+    //  index
+    Route::get('/apropos', [SiteController::class, 'apropos'])
+    ->name('apropos');
+
+// =========================================================
+
+// ***FORFAITS***
+    //  index
+    Route::get('/forfaits', [ForfaitController::class, 'index'])
+    ->name('forfaits.index');
+
+// =========================================================
+
+// ***PROGRAMMATION***
+    //  index
+    Route::get('/programmation', [ProgrammationController::class, 'index'])
+    ->name('programmation.index');
+
+
+// ================= CONNEXION ET ENREGISTREMENT =====================
+
+
+Route::get("/connexion", [ConnexionController::class, 'create'])
+    ->name('connexion.create')
+    ->middleware('guest');
+
+Route::post("/connexion", [ConnexionController::class, 'authentifier'])
+    ->name('connexion.authentifier');
+
+Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
+    ->name('deconnexion');
+
+Route::get("/enregistrement",[EnregistrementController::class, 'create'])
+    ->name('enregistrement.create');
+
+Route::post("/enregistrement", [EnregistrementController::class, 'store'])
+    ->name('enregistrement.store');
+
+
+// ======================= ADMINISTRATION ===========================
+
+
+Route::post("/admin", [AdministrationController::class, 'index'])
+    ->name('admin');
+
+
+// ***ACTIVITES***
+    //  edit
+Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
+    ->name('admin.activites.edit');
+Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
+    ->name('admin.activites.update');
+
+    // create
+Route::get("/admin/activites/create", [ActiviteController::class, 'create'])
+    ->name('admin.activites.create');
+Route::post("/admin/activites/store", [ActiviteController::class, 'store'])
+    ->name('admin.activites.store');
+
+    //  destroy
+Route::post("/admin/activites/destroy/{id}", [ActiviteController::class, 'destroy'])
+    ->name('admin.activites.destroy');
+
+// ***ACTUALITES***
+    //  edit
+Route::get("/admin/actualites/edit/{id}", [ActualiteController::class, 'edit'])
+    ->name('admin.actualites.edit');
+Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
+    ->name('admin.actualites.update');
+
+    // create
+Route::get("/admin/actualites/create", [ActualiteController::class, 'create'])
+    ->name('admin.actualites.create');
+Route::post("/admin/actualitesstore", [ActualiteController::class, 'store'])
+    ->name('admin.actualites.store');
+
+    //  destroy
+Route::post("/admin/actualites/destroy/{id}", [ActualiteController::class, 'destroy'])
+    ->name('admin.actualites.destroy');
+
+
+
+
+
+
+
 
 
