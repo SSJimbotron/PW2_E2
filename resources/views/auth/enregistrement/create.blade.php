@@ -1,24 +1,25 @@
 <x-layout titre="Enregistrement">
     <div class="conteneur-enregistrement">
-        <h1>COMPTE UTILISATEUR</h1>
-        <div>
+        <h1 class="font-lovelo font-bold neon-mauve">COMPTE UTILISATEUR</h1>
 
-            <h2 class="inscrire" >
-                S'inscrire
-            </h2>
-
-        </div>
 
         <div class="formulaire-enregistrement">
+            <div>
+
+                <h2 class="font-lovelo neon-text">
+                    S'inscrire
+                </h2>
+
+            </div>
+
             {{-- FORMULAIRE D'ENREGISTREMENT --}}
-            <form action="{{ route('enregistrement.store') }}" method="POST"
-                enctype="multipart/form-data">
+            <form action="{{ route('enregistrement.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
 
                 {{-- NOM --}}
-                <div>
-                    <label for="nom" class="">
+                <div class="section">
+                    <label for="nom" class="font-technorace">
                         Nom
                     </label>
                     <div class="">
@@ -31,8 +32,8 @@
                 </div>
 
                 {{-- PRÉNOM --}}
-                <div>
-                    <label for="prenom" class="">Prénom</label>
+                <div class="section">
+                    <label for="prenom" class="font-technorace">Prénom</label>
                     <div class="">
                         <input id="prenom" name="prenom" type="text" autocomplete="given-name" autofocus
                             value="{{ old('prenom') }}" class="">
@@ -45,8 +46,8 @@
 
 
                 {{-- EMAIL --}}
-                <div>
-                    <label for="email" class="">Courriel</label>
+                <div class="section">
+                    <label for="email" class="font-technorace">Courriel</label>
                     <div class="">
                         <input id="email" name="email" type="email" value="{{ old('email') }}"
                             autocomplete="email" class="">
@@ -57,15 +58,14 @@
                 </div>
 
                 {{-- PASSWORD --}}
-                <div>
+                <div class="section">
                     <div class="flex items-center justify-between">
-                        <label for="password" class="">
+                        <label for="password" class="font-technorace">
                             Mot de passe
                         </label>
                     </div>
-                    <div class="mt-2">
-                        <input id="password" name="password" type="password" autocomplete="current-password"
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <div>
+                        <input id="password" name="password" type="password" autocomplete="current-password">
 
                         {{-- <x-forms.erreur champ="password" /> --}}
                     </div>
@@ -73,13 +73,13 @@
                 </div>
 
                 {{-- CONFIRM PASSWORD --}}
-                <div>
+                <div class="section">
                     <div class="">
-                        <label for="confirm-password" class="">
+                        <label for="confirm-password" class="font-technorace">
                             Confirmation du mot de passe
                         </label>
                     </div>
-                    <div class="mt-2">
+                    <div>
                         <input id="confirm-password" name="confirmation_password" type="password" class="">
 
                         {{-- <x-forms.erreur champ="confirmation_password" /> --}}
@@ -87,18 +87,19 @@
 
                 </div>
 
-                <div>
+                <div class="submit">
 
-                    <button type="submit" class="">
+                    <p class="">
+                        <a href="{{ route('connexion.create') }}" class="font-quicksand">
+                            Se connecter
+                        </a>
+                    </p>
+                    <button type="submit" class="font-quicksand">
                         Créez votre compte!
                     </button>
-                </div>
 
-                <p class="">
-                    <a href="{{ route('connexion.create') }}" class="">
-                        Se connecter
-                    </a>
-                </p>
+
+                </div>
             </form>
         </div>
     </div>
@@ -106,4 +107,3 @@
 
 
 </x-layout>
-

@@ -1,45 +1,44 @@
 <x-layout titre="Connexion">
     <div class="formulaire-connexion">
-        <h1>COMPTE UTILISATEUR</h1>
+        <h1 class="font-lovelo">COMPTE UTILISATEUR</h1>
         <form action="{{ route('connexion.authentifier') }}" method="POST">
-          @csrf
+            @csrf
 
-          <div>
-            <label for="email">Courriel</label>
+            <h2 class="font-lovelo">Connexion</h2>
 
-             {{-- <x-forms.erreur champ="email" /> --}}
-            <div>
-              <input id="email" name="email" type="email" autocomplete="email" value="{{ old('email') }}">
+            <div class="section">
+                <label for="email" class="font-technorace">Courriel</label>
+
+                {{-- <x-forms.erreur champ="email" /> --}}
+                <div>
+                    <input id="email" name="email" type="email" autocomplete="email" placeholder="Courriel"
+                        value="{{ old('email') }}">
+                </div>
             </div>
-          </div>
 
-          <div>
-              <label for="password" class="">
-                Mot de passe
-              </label>
+            <div class="section">
+                <label for="password" class="font-technorace">
+                    Mot de passe
+                </label>
             </div>
 
             {{-- <x-forms.erreur champ="password" /> --}}
-            <div>
-              <input id="password" name="password" type="password" autocomplete="current-password">
-            </div>
-          </div>
 
-          <div>
-            <button type="submit">
-              Connectez-vous!
-            </button>
-          </div>
+            <input id="password" name="password" type="password" autocomplete="current-password"
+                placeholder="Mot de passe">
+
+            <div class="section">
+                <button type="submit" >
+                    Connexion
+                </button>
+            </div>
+            <p class= "font-technorace">
+                <a href="{{ route('enregistrement.create') }}">
+                    S'inscrire
+                </a>
+            </p>
         </form>
 
-        <p>
-          <a href="{{ route('enregistrement.create') }}">
-            S'inscrire
-          </a>
-        </p>
-      </div>
-
-
+    </div>
 
 </x-layout>
-

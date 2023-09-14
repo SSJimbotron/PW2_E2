@@ -15,7 +15,7 @@ class EnregistrementController extends Controller
      *
      * @return View
      */
-    public function index() {
+    public function create() {
         return view('auth.enregistrement.create');
     }
 
