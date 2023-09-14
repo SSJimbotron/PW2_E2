@@ -55,12 +55,24 @@
                     <img src="image/logo.png" alt="Logo TechnoWave" class="w-auto h-64 m-auto">
                 </a>
             </div>
-            <div class="flex justify-end items-start w-1/3">
+            <div class="flex flex-col justify-start items-end w-1/3">
                 <button class="mr-8 p-2 border-mauve border-2 rounded drop-shadow-3xl">
                     <a href="{{ route('connexion.create') }}">
                         <p class="text-gray-400 font-quicksand text-2xl">Mon compte</p>
                     </a>
                 </button>
+                @if (Auth::check())
+                    <form action="{{ route('deconnexion') }}" method="POST">
+                        @csrf
+                        <button class="mr-8 mt-8 p-2 border-mauve border-2 rounded drop-shadow-3xl">
+                            <a href="{{ route('deconnexion') }}">
+                                <p class="text-gray-400 font-quicksand text-2xl">Déconnexion</p>
+                            </a>
+                        </button>
+                    </form>
+                @else
+                @endif
+                <button></button>
             </div>
         </div>
         <div class="w-full flex justify-evenly mt-24 text-white font-technorace text-4xl">

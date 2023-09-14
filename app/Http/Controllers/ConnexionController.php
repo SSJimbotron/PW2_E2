@@ -38,7 +38,7 @@ class ConnexionController extends Controller
             $request->session()->regenerate();
 
             return redirect()
-                    ->intended(route('notes.index'))
+                    ->intended(route('acceuil'))
                     ->with('succes', 'Vous êtes connectés!');
         }
 
