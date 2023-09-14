@@ -51,7 +51,7 @@ Route::get('/activites/{id}', [ActiviteController::class, 'show'])
 // ***A PROPOS***
     //  index
     Route::get('/apropos', [SiteController::class, 'apropos'])
-    ->name('apropos');
+    ->name('apropos.index');
 
 // =========================================================
 

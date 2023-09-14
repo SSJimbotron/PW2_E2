@@ -12,6 +12,10 @@ module.exports = {
             'jaune' : '#F7CD45',
             'mauve' : '#EA33F7',
         },
+        fontFamily: {
+            lovelo: "loveloline_light",
+            technorace: "techno_raceitalic",
+          },
     },
 
   },
