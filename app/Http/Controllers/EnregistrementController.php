@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class EnregistrementController extends Controller
 {
+
     /**
      * Affiche le formulaire d'enregistrement
      *
@@ -62,4 +63,5 @@ class EnregistrementController extends Controller
                 ->with('succes', 'Votre compte a été créé');
 
     }
+
 }

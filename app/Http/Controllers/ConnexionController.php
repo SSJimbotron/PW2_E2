@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ConnexionController extends Controller
 {
+
     /**
      * Affiche le formulaire de connexion
      *
@@ -67,4 +68,5 @@ class ConnexionController extends Controller
                 ->with('succes', "Vous êtes déconnectés!");
 
     }
+
 }
