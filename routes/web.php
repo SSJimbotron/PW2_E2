@@ -9,7 +9,6 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EnregistrementController;
 use App\Http\Controllers\AdministrationController;
 use App\Http\Controllers\UsagerController;
-use App\Models\Activite;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,7 +51,7 @@ Route::get('/activites/{id}', [ActiviteController::class, 'show'])
 // ***A PROPOS***
     //  index
     Route::get('/apropos', [SiteController::class, 'apropos'])
-    ->name('apropos');
+    ->name('apropos.index');
 
 // =========================================================
 

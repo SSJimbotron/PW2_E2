@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
+<x-layout titre="Connexion">
     <div class="formulaire-connexion">
         <h1>COMPTE UTILISATEUR</h1>
         <form action="{{ route('connexion.authentifier') }}" method="POST">
@@ -47,5 +38,8 @@
           </a>
         </p>
       </div>
-</body>
-</html>
+
+
+
+</x-layout>
+
