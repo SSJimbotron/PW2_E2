@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Activite;
 use Illuminate\Database\Seeder;
 
 class ActiviteSeeder extends Seeder
@@ -13,6 +14,12 @@ class ActiviteSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // Actualité spécifiques
+        Activite::factory()
+            ->create([
+                "nom" => "Eric",
+                "description" => "Gagné",
+                "image" => "erga@gmail.com",
+            ]);
     }
 }

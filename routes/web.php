@@ -91,9 +91,8 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
 // ======================= ADMINISTRATION ===========================
 
 
-Route::post("/admin", [AdministrationController::class, 'index'])
+Route::get("/admin", [AdministrationController::class, 'index'])
     ->name('admin');
-
 
 // ***ACTIVITES***
     //  edit
