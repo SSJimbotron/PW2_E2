@@ -52,7 +52,7 @@
             </div>
             <div class="w-1/3">
                 <a href="{{ route('accueil') }}">
-                    <img src="image/logo.png" alt="Logo TechnoWave" class="w-auto h-64 m-auto">
+                    <img src="{{url('/image/logo.png')}}" alt="Logo TechnoWave" class="w-auto h-64 m-auto">
                 </a>
             </div>
             <div class="flex flex-col justify-start items-end w-1/3">
@@ -94,7 +94,7 @@
         {{-- LOGO --}}
         <div class="mb-12">
             <a href="{{ route('accueil') }}">
-                <img src="image/logo.png" alt="Logo TechnoWave" class="w-auto h-64 m-auto">
+                <img src="{{url('image/logo.png')}}" alt="Logo TechnoWave" class="w-auto h-64 m-auto">
             </a>
         </div>
 
@@ -105,7 +105,7 @@
 
             {{-- INPUT INFOLETTRE --}}
             <div class=" border-white border-2 rounded drop-shadow-blanc flex items-center justify-end">
-                <img src="image/enter.png" alt="">
+                <img src="{{url('image/enter.png')}}" alt="">
             </div>
         </div>
 
@@ -113,15 +113,15 @@
         <div class="w-1/3 flex justify-around mt-10 mb-10">
             {{-- Instagram --}}
             <a href="https://www.instagram.com/">
-                <img src="image/reseaux/Instagram.png" alt="Instagram" class="w-14 h-auto">
+                <img src="{{url('image/reseaux/Instagram.png')}}" alt="Instagram" class="w-14 h-auto">
             </a>
             {{-- Facebook --}}
             <a href="https://www.facebook.com/">
-                <img src="image/reseaux/Facebook.png" alt="Facebook" class="w-14 h-auto">
+                <img src="{{url('image/reseaux/Facebook.png')}}" alt="Facebook" class="w-14 h-auto">
             </a>
             {{-- Spotify --}}
             <a href="https://www.spotify.com/">
-                <img src="image/reseaux/Spotify.png" alt="Spotify" class="w-14 h-auto">
+                <img src="{{url('image/reseaux/Spotify.png')}}" alt="Spotify" class="w-14 h-auto">
             </a>
         </div>
 
