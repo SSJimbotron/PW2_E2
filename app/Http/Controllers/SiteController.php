@@ -14,4 +14,13 @@ class SiteController extends Controller
     public function index() {
         return view('accueil');
     }
+
+    /**
+     * Affiche la page à propos
+     *
+     * @return View
+     */
+    public function apropos() {
+        return view('apropos.index');
+    }
 }
