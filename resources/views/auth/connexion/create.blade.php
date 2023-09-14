@@ -9,7 +9,6 @@
             <div class="section">
                 <label for="email" class="font-technorace">Courriel</label>
 
-                {{-- <x-forms.erreur champ="email" /> --}}
                 <div>
                     <input id="email" name="email" type="email" autocomplete="email" placeholder="Courriel"
                         value="{{ old('email') }}">
@@ -22,7 +21,6 @@
                 </label>
             </div>
 
-            {{-- <x-forms.erreur champ="password" /> --}}
 
             <input id="password" name="password" type="password" autocomplete="current-password"
                 placeholder="Mot de passe">
