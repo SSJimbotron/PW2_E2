@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class EnregistrementController extends Controller
 {
+
     /**
      * Affiche le formulaire d'enregistrement
      *
      * @return View
      */
-    public function index() {
+    public function create() {
         return view('auth.enregistrement.create');
     }
 
@@ -62,4 +63,5 @@ class EnregistrementController extends Controller
                 ->with('succes', 'Votre compte a été créé');
 
     }
+
 }

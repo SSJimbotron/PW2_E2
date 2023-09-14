@@ -94,7 +94,6 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
 Route::get("/admin", [AdministrationController::class, 'index'])
     ->name('admin.index');
 
-
 // ***ACTIVITES***
     //  edit
 Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
