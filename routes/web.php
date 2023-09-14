@@ -91,8 +91,8 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
 // ======================= ADMINISTRATION ===========================
 
 
-Route::post("/admin", [AdministrationController::class, 'index'])
-    ->name('admin');
+Route::get("/admin", [AdministrationController::class, 'index'])
+    ->name('admin.index');
 
 
 // ***ACTIVITES***
@@ -114,14 +114,14 @@ Route::post("/admin/activites/destroy/{id}", [ActiviteController::class, 'destro
 
 // ***ACTUALITES***
     //  edit
-Route::get("/admin/actualites/edit/{id}", [ActualiteController::class, 'edit'])
+Route::get("/admin/actualites {id}", [ActualiteController::class, 'edit'])
     ->name('admin.actualites.edit');
 Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
     ->name('admin.actualites.update');
 
     // create
 Route::get("/admin/actualites/create", [ActualiteController::class, 'create'])
-    ->name('admin.actualites.create');
+    ->name('admin.actualites.create');  
 Route::post("/admin/actualites/store", [ActualiteController::class, 'store'])
     ->name('admin.actualites.store');
 

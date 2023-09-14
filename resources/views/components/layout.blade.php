@@ -168,6 +168,11 @@
                 <p>Nous joindre</p>
             </div>
         </div>
+
+        @if (Auth::check() && (Auth::user()->role == 2 || Auth::user()->role == 3))
+            <a class="text-white" href="{{ route('admin.index') }}">Administration</a>
+        @endif
+
     </footer>
 </body>
 

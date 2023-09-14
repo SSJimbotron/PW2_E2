@@ -23,177 +23,35 @@
 
             {{-- FORMULAIRE D'ENREGISTREMENT --}}
 
-            <form action="{{ route('enregistrement.store') }}" method="POST" enctype="multipart/form-data">
-
+            <form class="space-y-6" action="{{ route('connexion.authentifier') }}" method="POST">
                 @csrf
 
+                <div>
+                  <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Courriel</label>
 
-
-
-
-                {{-- NOM --}}
+                  <div class="mt-2">
+                    <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value="{{ old('email') }}">
+                  </div>
+                </div>
 
                 <div>
-
-                    <label for="nom" class="">
-
-                        Nom
-
+                  <div class="flex items-center justify-between">
+                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900">
+                      Mot de passe
                     </label>
+                  </div>
 
-                    <div class="">
-
-                        <input id="nom" name="nom" type="text" value="{{ old('nom') }}"
-                            autocomplete="family-name" class="">
-
-
-
-                        {{-- <x-forms.erreur champ="nom" /> --}}
-
-                    </div>
-
-
-
+                  <div class="mt-2">
+                    <input id="password" name="password" type="password" autocomplete="current-password" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  </div>
                 </div>
-
-
-
-                {{-- PRÉNOM --}}
 
                 <div>
-
-                    <label for="prenom" class="">Prénom</label>
-
-                    <div class="">
-
-                        <input id="prenom" name="prenom" type="text" autocomplete="given-name" autofocus
-                            value="{{ old('prenom') }}" class="">
-
-
-
-                        {{-- <x-forms.erreur champ="prenom" /> --}}
-
-
-
-                    </div>
-
+                  <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Connectez-vous!
+                  </button>
                 </div>
-
-
-
-
-
-
-
-                {{-- EMAIL --}}
-
-                <div>
-
-                    <label for="email" class="">Courriel</label>
-
-                    <div class="">
-
-                        <input id="email" name="email" type="email" value="{{ old('email') }}"
-                            autocomplete="email" class="">
-
-
-
-                        {{-- <x-forms.erreur champ="email" /> --}}
-
-                    </div>
-
-
-
-                </div>
-
-
-
-                {{-- PASSWORD --}}
-
-                <div>
-
-                    <div class="flex items-center justify-between">
-
-                        <label for="password" class="">
-
-                            Mot de passe
-
-                        </label>
-
-                    </div>
-
-                    <div class="mt-2">
-
-                        <input id="password" name="password" type="password" autocomplete="current-password"
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-
-
-
-                        {{-- <x-forms.erreur champ="password" /> --}}
-
-                    </div>
-
-
-
-                </div>
-
-
-
-                {{-- CONFIRM PASSWORD --}}
-
-                <div>
-
-                    <div class="">
-
-                        <label for="confirm-password" class="">
-
-                            Confirmation du mot de passe
-
-                        </label>
-
-                    </div>
-
-                    <div class="mt-2">
-
-                        <input id="confirm-password" name="confirmation_password" type="password" class="">
-
-
-
-                        {{-- <x-forms.erreur champ="confirmation_password" /> --}}
-
-                    </div>
-
-
-
-                </div>
-
-
-
-                <div>
-
-
-
-                    <button type="submit" class="">
-
-                        Créez votre compte!
-
-                    </button>
-
-                </div>
-
-
-
-                <p class="">
-
-                    <a href="{{ route('connexion.create') }}" class="">
-
-                        Se connecter
-
-                    </a>
-
-                </p>
-
-            </form>
+              </form>
 
         </div>
 
