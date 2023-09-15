@@ -29,42 +29,42 @@ Route::get('/', [SiteController::class, 'index'])
 // =========================================================
 
 // ***ACTUALITÉS***
-    //  index
+//  index
 Route::get('/actualites', [ActualiteController::class, 'index'])
     ->name('actualite.index');
-    // show
-Route::get('/actualites/{id}', [ActualiteController::class, 'show'])
-    ->name('actualite.show');
+// show
+// Route::get('/actualites/{id}', [ActualiteController::class, 'show'])
+//     ->name('actualite.show');
 
 // =========================================================
 
 // ***ACTIVITÉS***
-    //  index
+//  index
 Route::get('/activites', [ActiviteController::class, 'index'])
     ->name('activites.index');
-    // show
-Route::get('/activites/{id}', [ActiviteController::class, 'show'])
-    ->name('activites.show');
+// show
+// Route::get('/activites/{id}', [ActiviteController::class, 'show'])
+//     ->name('activites.show');
 
 // =========================================================
 
 // ***A PROPOS***
-    //  index
-    Route::get('/apropos', [SiteController::class, 'apropos'])
+//  index
+Route::get('/apropos', [SiteController::class, 'apropos'])
     ->name('apropos.index');
 
 // =========================================================
 
 // ***FORFAITS***
-    //  index
-    Route::get('/forfaits', [ForfaitController::class, 'index'])
+//  index
+Route::get('/forfaits', [ForfaitController::class, 'index'])
     ->name('forfaits.index');
 
 // =========================================================
 
 // ***PROGRAMMATION***
-    //  index
-    Route::get('/programmation', [ProgrammationController::class, 'index'])
+//  index
+Route::get('/programmation', [ProgrammationController::class, 'index'])
     ->name('programmation.index');
 
 
@@ -81,11 +81,12 @@ Route::post("/connexion", [ConnexionController::class, 'authentifier'])
 Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
     ->name('deconnexion');
 
-Route::get("/enregistrement",[EnregistrementController::class, 'create'])
+Route::get("/enregistrement", [EnregistrementController::class, 'create'])
     ->name('enregistrement.create');
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
+
 
 
 // ======================= ADMINISTRATION ===========================
@@ -94,63 +95,58 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
 Route::get("/admin", [AdministrationController::class, 'index'])
     ->name('admin.index');
 
+
 // ***ACTIVITES***
-    //  edit
+//  edit
 Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
     ->name('admin.activites.edit');
 Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
     ->name('admin.activites.update');
 
-    // create
+// create
 Route::get("/admin/activites/create", [ActiviteController::class, 'create'])
     ->name('admin.activites.create');
 Route::post("/admin/activites", [ActiviteController::class, 'store'])
     ->name('admin.activites.store');
 
-    //  destroy
+//  destroy
 Route::post("/admin/activites/destroy/{id}", [ActiviteController::class, 'destroy'])
     ->name('admin.activites.destroy');
 
+
 // ***ACTUALITES***
-    //  edit
-Route::get("/admin/actualites/{id}", [ActualiteController::class, 'edit'])
+//  edit
+Route::get("/admin/actualites/edit/{id}", [ActualiteController::class, 'edit'])
     ->name('admin.actualites.edit');
-Route::post("/admin/actualites", [ActualiteController::class, 'update'])
+
+Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
     ->name('admin.actualites.update');
 
-    // create
+// create
 Route::get("/admin/actualites/create", [ActualiteController::class, 'create'])
     ->name('admin.actualites.create');
+
 Route::post("/admin/actualites", [ActualiteController::class, 'store'])
     ->name('admin.actualites.store');
 
-    //  destroy
+//  destroy
 Route::post("/admin/actualites/destroy/{id}", [ActualiteController::class, 'destroy'])
     ->name('admin.actualites.destroy');
 
-// ***USAGERS***
 
-    //  edit
+// ***USAGERS***
+//  edit
 Route::get("/admin/usagers/edit/{id}", [UsagerController::class, 'edit'])
     ->name('admin.usagers.edit');
-Route::post("/admin/usagers", [UsagerController::class, 'update'])
+Route::post("/admin/usagers/update", [UsagerController::class, 'update'])
     ->name('admin.usagers.update');
 
-    // create
+// create
 Route::get("/admin/usagers/create", [UsagerController::class, 'create'])
     ->name('admin.usagers.create');
 Route::post("/admin/usagers", [UsagerController::class, 'store'])
     ->name('admin.usagers.store');
 
-    //  destroy
+//  destroy
 Route::post("/admin/usagers/destroy/{id}", [UsagerController::class, 'destroy'])
     ->name('admin.usagers.destroy');
-
-
-
-
-
-
-
-
-

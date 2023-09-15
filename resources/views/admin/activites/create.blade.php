@@ -15,8 +15,18 @@
                 </div>
             </div>
 
-            <div>
+                {{-- DESCRIPTION --}}
+
+                <div>
+                    <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Description de l'activité</label>
+                    <div>
+                        <input type="textarea" name="description" id="description">
+                    </div>
+                </div>
+
+                
                 {{-- IMAGE --}}
+            <div>
 
                 <label for="image" class="block text-sm font-medium leading-6 text-gray-900">Image de l'activité</label>
                 <div class="mt-2">
@@ -24,14 +34,7 @@
                 </div>
             </div>
 
-            {{-- DESCRIPTION --}}
 
-            <div>
-                <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Description de l'activité</label>
-                <div>
-                    <input type="textarea" name="description" id="description">
-                </div>
-            </div>
 
             {{-- SUBMIT --}}
             <div>

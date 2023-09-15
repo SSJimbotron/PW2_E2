@@ -64,7 +64,7 @@
                 @if (Auth::check())
                     <form action="{{ route('deconnexion') }}" method="POST">
                         @csrf
-                        <button class="mr-8 mt-8 p-2 border-mauve border-2 rounded drop-shadow-3xl">
+                        <button class="mr-8 mt-8 p-2 border-mauve border-2 rounded drop-shadow-mauve">
                             <a href="{{ route('deconnexion') }}">
                                 <p class="text-gray-400 font-quicksand text-2xl">Déconnexion</p>
                             </a>
