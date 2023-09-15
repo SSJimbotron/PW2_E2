@@ -1,5 +1,7 @@
 <x-layout titre="Nouvelle actualité">
 
+    @dump($errors)
+
     <div class="mt-10 mx-auto w-full max-w-sm">
         {{-- FORMULAIRE --}}
         <form class="space-y-6" action="{{route('admin.actualites.store')}}" method="POST" enctype="multipart/form-data">
