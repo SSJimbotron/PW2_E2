@@ -14,13 +14,15 @@ class ActiviteController extends Controller
      *
      * @return View
      */
-    public function index() {
+    public function index()
+    {
         return view('activites.index');
     }
 
     // ======================= AJOUT =======================
 
-    public function create(){
+    public function create()
+    {
         return view('admin.activites.create');
     }
 
@@ -29,8 +31,9 @@ class ActiviteController extends Controller
      *
      * @param Request $request
      * @return RedirectResponse
-    */
-    public function store(Request $request) {
+     */
+    public function store(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "nom" => "required|min:4|max:150",
@@ -48,7 +51,7 @@ class ActiviteController extends Controller
 
         // Ajouter à la BDD
         $activite = new Activite(); // $activite contient un objet "vide" du modèle (équivalent à une nouvelle entrée dans la table)
-        $activite->nom= $valides["nom"];
+        $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
 
         // Traiter le téléversement
@@ -64,8 +67,8 @@ class ActiviteController extends Controller
 
         // Rediriger
         return redirect()
-                ->route('admin.index')
-                ->with('succes', "L'activité a été ajoutée avec succès!");
+            ->route('admin.index')
+            ->with('succes', "L'activité a été ajoutée avec succès!");
     }
 
     // ======================= MODIFICATION =======================
@@ -76,25 +79,29 @@ class ActiviteController extends Controller
      * @param int $id Id de l'activité à modifier
      * @return View
      */
-    public function edit($id) {
+    public function edit($id)
+    {
         return view('admin.activites.edit', [
             "activite" => Activite::findOrFail($id),
         ]);
     }
 
-            /**
+    /**
      * Traite la modification
      *
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
      */
-    public function update(Request $request) {
+    public function update(Request $request)
+    {
         // Valider
         $valides = $request->validate([
+            "id" => "required",
             "nom" => "required|min:4|max:150",
             "image" => "required|mimes:png,jpg,jpeg",
             "description" => "required|min:10"
         ], [
+            "id.required" => "L'id de l'activité est obligatoire",
             "nom.max" => "Le nom doit avoir un maximum de :max caractères",
             "nom.min" => "Le nom doit avoir un minimum de :min caractères",
             "nom.required" => "Le nom est obligatoire",
@@ -106,13 +113,22 @@ class ActiviteController extends Controller
 
         // Récupération de la note à modifier, suivi de la modification et sauvegarde
         $activite = Activite::findOrFail($valides["id"]);
-        $activite->nom= $valides["nom"];
+        $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
+
+        // Traiter le téléversement
+        if ($request->hasFile('image')) {
+            // Déplacer
+            Storage::putFile("public/uploads", $request->image);
+            // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
+            $activite->image = "/storage/uploads/" . $request->image->hashName();
+        }
+
         $activite->save();
 
         // Rediriger
         return redirect()
-                ->route('admin.index')
-                ->with('succes', "L'activité a été modifiée avec succès!");
+            ->route('admin.index')
+            ->with('succes', "L'activité a été modifiée avec succès!");
     }
 }
