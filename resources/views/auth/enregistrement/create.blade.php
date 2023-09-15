@@ -1,12 +1,12 @@
 <x-layout titre="Enregistrement">
     <div class="conteneur-enregistrement">
-        <h1 class="font-lovelo font-bold neon-mauve">COMPTE UTILISATEUR</h1>
+        <h1 class="font-lovelo">COMPTE UTILISATEUR</h1>
 
 
         <div class="formulaire-enregistrement">
             <div>
 
-                <h2 class="font-lovelo neon-text">
+                <h2 class="font-lovelo neon-mauve">
                     S'inscrire
                 </h2>
 
@@ -22,9 +22,9 @@
                     <label for="nom" class="font-technorace">
                         Nom
                     </label>
-                    <div class="">
+                    <div>
                         <input id="nom" name="nom" type="text" value="{{ old('nom') }}"
-                            autocomplete="family-name" class="">
+                            autocomplete="family-name" placeholder="Nom" >
 
                         {{-- <x-forms.erreur champ="nom" /> --}}
                     </div>
@@ -34,9 +34,9 @@
                 {{-- PRÉNOM --}}
                 <div class="section">
                     <label for="prenom" class="font-technorace">Prénom</label>
-                    <div class="">
-                        <input id="prenom" name="prenom" type="text" autocomplete="given-name" autofocus
-                            value="{{ old('prenom') }}" class="">
+                    <div>
+                        <input id="prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Prénom" autofocus
+                            value="{{ old('prenom') }}" >
 
                         {{-- <x-forms.erreur champ="prenom" /> --}}
 
@@ -48,9 +48,9 @@
                 {{-- EMAIL --}}
                 <div class="section">
                     <label for="email" class="font-technorace">Courriel</label>
-                    <div class="">
+                    <div>
                         <input id="email" name="email" type="email" value="{{ old('email') }}"
-                            autocomplete="email" class="">
+                            autocomplete="email" placeholder="Courriel" >
 
                         {{-- <x-forms.erreur champ="email" /> --}}
                     </div>
@@ -65,7 +65,7 @@
                         </label>
                     </div>
                     <div>
-                        <input id="password" name="password" type="password" autocomplete="current-password">
+                        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Mot de passe">
 
                         {{-- <x-forms.erreur champ="password" /> --}}
                     </div>
@@ -74,13 +74,13 @@
 
                 {{-- CONFIRM PASSWORD --}}
                 <div class="section">
-                    <div class="">
+                    <div>
                         <label for="confirm-password" class="font-technorace">
                             Confirmation du mot de passe
                         </label>
                     </div>
                     <div>
-                        <input id="confirm-password" name="confirmation_password" type="password" class="">
+                        <input id="confirm-password" name="confirmation_password" type="password" placeholder="Confirmation de mot de passe">
 
                         {{-- <x-forms.erreur champ="confirmation_password" /> --}}
                     </div>
@@ -89,7 +89,7 @@
 
                 <div class="submit">
 
-                    <p class="">
+                    <p>
                         <a href="{{ route('connexion.create') }}" class="font-quicksand">
                             Se connecter
                         </a>
