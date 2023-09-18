@@ -56,12 +56,14 @@
                 </a>
             </div>
             <div class="flex flex-col justify-start items-end w-1/3">
+
+                @if (Auth::check())
                 <button class="mr-8 p-2 border-mauve border-2 rounded drop-shadow-3xl">
-                    <a href="{{ route('connexion.create') }}">
+
+                    <a href="{{ route('admin.usagers.edit',  ['id' => 1]) }}">
                         <p class="text-gray-400 font-quicksand text-2xl">Mon compte</p>
                     </a>
                 </button>
-                @if (Auth::check())
                     <form action="{{ route('deconnexion') }}" method="POST">
                         @csrf
                         <button class="mr-8 mt-8 p-2 border-mauve border-2 rounded drop-shadow-mauve">
@@ -71,6 +73,11 @@
                         </button>
                     </form>
                 @else
+                <button class="mr-8 p-2 border-mauve border-2 rounded drop-shadow-3xl">
+                    <a href="{{ route('connexion.create') }}">
+                        <p class="text-gray-400 font-quicksand text-2xl">Mon compte</p>
+                    </a>
+                </button>
                 @endif
                 <button></button>
             </div>

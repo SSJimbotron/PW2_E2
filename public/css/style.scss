@@ -328,6 +328,7 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
 
         h1 {
 
+
             padding: 60px;
             color: $rose;
             font-size: 2.5rem;
@@ -365,6 +366,7 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
                 0 0 150px white;
 
         }
+
 
         p {
 
@@ -585,6 +587,88 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
             border-radius: 5px;
             margin-bottom: 100px;
             box-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
+
+        }
+
+    }
+}
+
+/************
+* Admin
+***********/
+
+.admin_index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #323232;
+    color: white;
+    background-image: url('/image/Plan/backgroundAdmin.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 5px #aaaaaa;
+
+    .admin_index_contenu {
+        padding: 50px 100px;
+        background: rgba(0, 0, 0, 0.5);
+        margin: 50px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #aaaaaa;
+
+
+        h2 {
+            padding: 1.5vw 0vw 0vw 0vw;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
+        }
+
+        .admin_index_usagers h2 {
+            text-shadow:
+                0 0 5px $bleu,
+                0 0 10px $bleu,
+                0 0 20px $bleu,
+                0 0 40px $bleu,
+                0 0 80px $bleu,
+                0 0 90px $bleu,
+                0 0 100px $bleu,
+                0 0 150px $bleu;
+        }
+
+        .admin_index_activites h2 {
+            text-shadow:
+                0 0 5px $rose,
+                0 0 10px $rose,
+                0 0 20px $rose,
+                0 0 40px $rose,
+                0 0 80px $rose,
+                0 0 90px $rose,
+                0 0 100px $rose,
+                0 0 150px $rose;
+        }
+
+        .admin_index_actualites h2 {
+            text-shadow:
                 0 0 5px $jaune,
                 0 0 10px $jaune,
                 0 0 20px $jaune,
@@ -596,6 +680,116 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
 
         }
 
+        .barre_neon {
+            display: flex;
+            position: relative;
+            width: 50vw;
+            height: 2.5vw;
+            left: 2.5vw;
+            object-fit: cover;
+
+        }
+    }
+
+    h1 {
+        margin-top: 100px;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 60px;
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #fff,
+            0 0 80px #fff,
+            0 0 90px #fff,
+            0 0 100px #fff,
+            0 0 150px #fff;
+        box-shadow: 1px 1px 5px #aaaaaa;
+
+    }
+
+    .admin_index_reservations tr:hover {
+        background-color: $gris.5;
+        color: black;
+    }
+
+    .admin_index_usagers tr:hover {
+        background-color: $bleu;
+    }
+
+
+    .admin_index_activites tr:hover {
+        background-color: $rose;
+    }
+
+    .admin_index_actualites tr:hover {
+        background-color: $jaune;
+        color: black;
+    }
+
+    .bouton_create {
+        border: 1px solid white;
+        padding: 3px 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #aaaaaa;
+        position: relative;
+        left: 24.25vw;
+        width: 8vw;
+        text-align: center;
+        transition: all .25s;
+    }
+
+    .bouton_create:hover {
+        padding: 4px 6px;
+        margin: -2px;
+        box-shadow: 2px 2px 7px #313131;
+        font-weight: 600;
+    }
+
+    table {
+
+
+        justify-content: center;
+        display: flex;
+        position: relative;
+        padding: 1vw 2vw;
+
+        tr {
+            width: 50vw;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            transition: all .25s;
+
+            th {
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                width: 20vw;
+                justify-content: flex-start;
+            }
+
+            td {
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                width: 20vw;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .description_courte {
+        display: block;
+
+        height: 25px;
+        overflow: hidden;
+        float: left;
+        position: relative;
     }
 
     .tags {
