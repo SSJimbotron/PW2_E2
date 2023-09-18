@@ -195,11 +195,30 @@
   box-shadow: 1px 1px 5px #aaaaaa;
 }
 .admin_index .admin_index_contenu h2 {
+  padding: 1.5vw 0vw 0vw 0vw;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 3px;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.admin_index .admin_index_contenu .admin_index_usagers h2 {
+  text-shadow: 0 0 5px #78FBFD, 0 0 10px #78FBFD, 0 0 20px #78FBFD, 0 0 40px #78FBFD, 0 0 80px #78FBFD, 0 0 90px #78FBFD, 0 0 100px #78FBFD, 0 0 150px #78FBFD;
+}
+.admin_index .admin_index_contenu .admin_index_activites h2 {
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+}
+.admin_index .admin_index_contenu .admin_index_actualites h2 {
+  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+}
+.admin_index .admin_index_contenu .barre_neon {
+  display: flex;
+  position: relative;
+  width: 50vw;
+  height: 2.5vw;
+  left: 2.5vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .admin_index h1 {
   margin-top: 100px;
@@ -212,13 +231,45 @@
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
   box-shadow: 1px 1px 5px #aaaaaa;
 }
+.admin_index .admin_index_reservations tr:hover {
+  background-color: #ADADAD 0.5;
+  color: black;
+}
+.admin_index .admin_index_usagers tr:hover {
+  background-color: #78FBFD;
+}
+.admin_index .admin_index_activites tr:hover {
+  background-color: #EA33F7;
+}
+.admin_index .admin_index_actualites tr:hover {
+  background-color: #F7CD45;
+  color: black;
+}
+.admin_index .bouton_create {
+  border: 1px solid white;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+  position: relative;
+  left: 24.25vw;
+  width: 8vw;
+  text-align: center;
+  transition: all 0.25s;
+}
+.admin_index .bouton_create:hover {
+  padding: 4px 6px;
+  margin: -2px;
+  box-shadow: 2px 2px 7px #313131;
+  font-weight: 600;
+}
 .admin_index table {
+  justify-content: center;
   display: flex;
   position: relative;
-  padding: 2vw;
+  padding: 1vw 2vw;
 }
 .admin_index table tr {
-  width: 60vw;
+  width: 50vw;
   display: flex;
   position: relative;
   flex-direction: row;
@@ -238,12 +289,8 @@
   width: 20vw;
   justify-content: flex-start;
 }
-.admin_index table tr:hover {
-  background-color: red;
-}
 .admin_index .description_courte {
   display: block;
-  width: 600px;
   height: 25px;
   overflow: hidden;
   float: left;

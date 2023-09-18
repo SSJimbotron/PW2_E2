@@ -4,10 +4,43 @@
     <div class="admin_index">
         <h1 class="font-lovelo">Administration</h1>
         <div class="admin_index_contenu">
+
+            <div class="admin_index_reservations">
+                <h2 class="font-lovelo">Réservation</h2>
+                <div><img src="{{ asset('image/Admin/barre_blanc.png') }}" class="barre_neon" alt="barre_neon"></div>
+                <table>
+                    <tr>
+                        <th class="font-technorace">Client</th>
+                        <th class="font-technorace">Forfait</th>
+                        <th class="font-technorace">Arrivée</th>
+                        <th class="font-technorace">Départ</th>
+                    </tr>
+                    {{-- @foreach ($reservations as $reservation)
+                        <tr>
+                            <p>
+                                <td><a
+                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->client }}</a>
+                                </td>
+                                <td><a
+                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->forfait_id }}</a>
+                                </td>
+                                <td><a
+                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_arrivee }}</a>
+                                </td>
+                                <td><a
+                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_depart }}</a>
+                                </td>
+                            </p>
+                        </tr>
+                    @endforeach --}}
+                </table>
+            </div>
+
             <div class="admin_index_usagers">
 
                 <table>
-                    <h2 class="font-lovelo">Usagers</h2>
+                    <h2 class="text-bleu font-lovelo">Usagers</h2>
+                    <div><img src="{{ asset('image/Admin/barre_bleu.png') }}" class="barre_neon" alt="barre_neon"></div>
                     <tr>
                         <th class="font-technorace">Nom</th>
                         <th class="font-technorace">Prénom</th>
@@ -73,10 +106,13 @@
                         @endif
                     @endforeach
                 </table>
+                <a href="{{ route('admin.usagers.create') }}" class="bouton_create">Créer un usager</a>
             </div>
 
             <div class="admin_index_activites">
-                <h2 class="font-lovelo">Activites</h2>
+
+                <h2 class="text-rose-400 font-lovelo">Activites</h2>
+                <div><img src="{{ asset('image/Admin/barre_rose.png') }}" class="barre_neon" alt="barre_neon"></div>
                 <table>
                     <tr>
                         <th class="font-technorace">nom</th>
@@ -99,10 +135,12 @@
                         </tr>
                     @endforeach
                 </table>
-            </div>
+                <a href="{{ route('admin.activites.create') }}" class="bouton_create">Créer une activité</a>    </div>
 
             <div class="admin_index_actualites">
-                <h2 class="font-lovelo">Actualité</h2>
+
+                <h2 class="font-lovelo text-jaune">Actualité</h2>
+                <div><img src="{{ asset('image/Admin/barre_jaune.png') }}" class="barre_neon" alt="barre_neon"></div>
                 <table>
                     <tr>
                         <th class="font-technorace">Titre</th>
@@ -125,7 +163,7 @@
                         </tr>
                     @endforeach
                 </table>
-            </div>
+                <a href="{{ route('admin.actualites.create') }}" class="bouton_create">Créer une actualité</a></div>
         </div>
     </div>
 
