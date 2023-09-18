@@ -169,4 +169,83 @@
   text-align: center;
   border-radius: 5px;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+
+/************
+* Admin
+***********/
+.admin_index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  color: white;
+  background-image: url("/image/Plan/backgroundAdmin.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.admin_index .admin_index_contenu {
+  padding: 50px 100px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.admin_index .admin_index_contenu h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.admin_index h1 {
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 60px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.admin_index table {
+  display: flex;
+  position: relative;
+  padding: 2vw;
+}
+.admin_index table tr {
+  width: 60vw;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  transition: all 0.25s;
+}
+.admin_index table tr th {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 20vw;
+  justify-content: flex-start;
+}
+.admin_index table tr td {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 20vw;
+  justify-content: flex-start;
+}
+.admin_index table tr:hover {
+  background-color: red;
+}
+.admin_index .description_courte {
+  display: block;
+  width: 600px;
+  height: 25px;
+  overflow: hidden;
+  float: left;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

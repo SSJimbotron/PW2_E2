@@ -24,7 +24,7 @@ $noir: #141414;
 
         margin-top: 100px;
         font-size: 2rem;
-        font-weight:700;
+        font-weight: 700;
         letter-spacing: 3px;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
@@ -58,14 +58,14 @@ $noir: #141414;
             letter-spacing: 3px;
             font-size: 1.2rem;
             text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 40px #fff,
-            0 0 80px #fff,
-            0 0 90px #fff,
-            0 0 100px #fff,
-            0 0 150px #fff;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
 
         }
     }
@@ -75,7 +75,7 @@ $noir: #141414;
         margin-top: 15px;
     }
 
-    label{
+    label {
 
         letter-spacing: 1.5px;
     }
@@ -134,7 +134,7 @@ $noir: #141414;
 
         margin-top: 100px;
         font-size: 2rem;
-        font-weight:700;
+        font-weight: 700;
         letter-spacing: 3px;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
@@ -168,14 +168,14 @@ $noir: #141414;
             font-weight: 700;
             letter-spacing: 3px;
             text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 40px #fff,
-            0 0 80px #fff,
-            0 0 90px #fff,
-            0 0 100px #fff,
-            0 0 150px #fff;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
         }
 
         .section {
@@ -183,7 +183,7 @@ $noir: #141414;
             margin-top: 20px
         }
 
-        label{
+        label {
 
             letter-spacing: 1.5px;
         }
@@ -224,18 +224,19 @@ $noir: #141414;
         }
     }
 }
+
 /************
 * À propos
 ***********/
 
-.apropos{
+.apropos {
 
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('image/Plan/background.png');
 
-    .banniere{
+    .banniere {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -246,7 +247,7 @@ $noir: #141414;
         height: 25vh;
 
 
-        h1{
+        h1 {
 
             color: white;
             font-size: 2rem;
@@ -257,6 +258,72 @@ $noir: #141414;
             text-align: center;
             border-radius: 5px;
             text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
+
+        }
+
+    }
+}
+
+/************
+* Admin
+***********/
+
+.admin_index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #323232;
+    color: white;
+    background-image: url('/image/Plan/backgroundAdmin.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 5px #aaaaaa;
+
+    .admin_index_contenu {
+        padding: 50px 100px;
+        background: rgba(0, 0, 0, 0.5);
+        margin: 50px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #aaaaaa;
+
+        h2 {
+
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
+        }
+    }
+
+    h1 {
+
+        margin-top: 100px;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 60px;
+        text-shadow:
             0 0 5px #fff,
             0 0 10px #fff,
             0 0 20px #fff,
@@ -265,8 +332,52 @@ $noir: #141414;
             0 0 90px #fff,
             0 0 100px #fff,
             0 0 150px #fff;
+        box-shadow: 1px 1px 5px #aaaaaa;
 
+    }
+
+    table {
+
+        display: flex;
+        position: relative;
+        padding: 2vw;
+
+        tr {
+            width: 60vw;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            transition: all .25s;
+
+            th {
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                width: 20vw;
+                justify-content: flex-start;
+            }
+
+            td {
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                width: 20vw;
+
+                justify-content: flex-start;
+            }
         }
 
+        tr:hover {
+            background-color: red;
+        }
+    }
+
+    .description_courte {
+        display: block;
+        width: 600px;
+        height: 25px;
+        overflow: hidden;
+        float: left;
+        position: relative;
     }
 }
