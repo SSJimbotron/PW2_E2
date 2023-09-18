@@ -8,7 +8,9 @@ use App\Http\Controllers\ProgrammationController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EnregistrementController;
 use App\Http\Controllers\AdministrationController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UsagerController;
+use App\Models\Reservation;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -88,6 +90,19 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
 
 
+// ======================= RÉSERVATIONS ===========================
+
+//edit
+Route::get("reservation/edit/{id}", [ReservationController::class, 'edit'])
+    ->name('admin.reservation.edit');
+Route::post("reservation/update", [ReservationController::class, 'update'])
+    ->name('admin.reservation.update');
+
+// create
+Route::get("reservation/create", [ReservationController::class, 'create'])
+    ->name('admin.reservation.create');
+Route::post("reservation", [ReservationController::class, 'store'])
+    ->name('admin.reservation.store');
 
 // ======================= ADMINISTRATION ===========================
 

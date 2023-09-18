@@ -46,7 +46,7 @@
                 </div>
             </form>
 
-            {{-- RETOUR AUX NOTES --}}
+            {{-- RETOUR AUX ACTUALITES --}}
             <p class="mt-10 text-center text-sm text-gray-500">
                 <a href="{{ route('admin.index') }}" class="hover:text-indigo-600">Retour</a>
             </p>
