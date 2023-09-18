@@ -318,6 +318,11 @@
   width: 100%;
   margin: auto;
   color: #78FBFD;
+  padding: 150px 0;
+}
+.activites .activites-index h1 {
+  letter-spacing: 2px;
+  font-size: 1.2rem;
 }
 .activites .activites-index .plan-carte {
   width: 500px;
@@ -326,6 +331,7 @@
   margin-bottom: 50px;
   border-radius: 10px;
   box-shadow: 1px 1px 10px #78FBFD;
+  background-image: url("/image/Plan/planTitre.jpg");
 }
 .activites .activites-index .carte-nom {
   text-align: center;
@@ -333,4 +339,43 @@
 }
 .activites .activites-index .activite-image {
   width: 500px;
+}
+.activites .accessibilites {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.activites .accessibilites h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 90px white, 0 0 100px white, 0 0 150px white;
+}
+.activites .accessibilites .separation {
+  width: 400px;
+  height: 4px;
+  background-color: #F7CD45;
+  border-radius: 5px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+}
+.activites .tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.activites img {
+  width: 200px;
+}
+.activites img.pic-nique {
+  width: 230px;
+}
+.activites img.magasinage {
+  width: 210px;
 }/*# sourceMappingURL=style.css.map */

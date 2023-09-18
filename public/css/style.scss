@@ -240,7 +240,8 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;
-    min-height: 100vh; /* Réglez la hauteur minimale en fonction de votre contenu */
+    min-height: 100vh;
+    /* Réglez la hauteur minimale en fonction de votre contenu */
 
     .banniere {
 
@@ -303,16 +304,18 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
                 0 0 150px $rose;
         }
 
-        p{
+        p {
 
             width: 100%;
-            max-width:850px;
+            max-width: 850px;
             text-align: center;
             margin-bottom: 10px;
             color: #fff;
 
 
-        };
+        }
+
+        ;
 
     }
 
@@ -363,10 +366,10 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
 
         }
 
-        p{
+        p {
 
             width: 100%;
-            max-width:950px;
+            max-width: 950px;
             text-align: center;
             margin-bottom: 10px;
             color: white;
@@ -374,7 +377,7 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
         }
     }
 
-    .adresse{
+    .adresse {
 
         display: flex;
         flex-direction: column;
@@ -422,7 +425,7 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
 
         }
 
-        .joindre{
+        .joindre {
 
             display: flex;
             flex-direction: row;
@@ -432,7 +435,7 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
 
         }
 
-        .coordonnes{
+        .coordonnes {
 
             width: 400px;
             height: 350px;
@@ -443,11 +446,12 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
             text-align: center;
             color: white;
 
-            h2{
+            h2 {
                 font-size: 1.5rem;
 
             }
-            .coordonnes.a{
+
+            .coordonnes.a {
                 padding: 20px;
 
             }
@@ -459,110 +463,159 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
 * Activités index
 ****************/
 
-.activites{
+.activites {
 
     background-image: url('/image/Plan/planTitre.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;
 
-
-
     .banniere {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url('/image/ActiviteIndex/banniere.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: repeat;
-    width: 100%;
-    height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url('/image/ActiviteIndex/banniere.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        width: 100%;
+        height: 25vh;
 
-    h1 {
+        h1 {
 
+            color: $bleu;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px $bleu,
+                0 0 10px $bleu,
+                0 0 20px $bleu,
+                0 0 40px $bleu,
+                0 0 80px $bleu,
+                0 0 90px $bleu,
+                0 0 100px $bleu,
+                0 0 150px $bleu;
+        }
+
+    }
+
+    .activites-index {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: calc(100% - 10px);
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
         color: $bleu;
-        font-size: 2.5rem;
-        font-weight: 700;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 5px 20px;
-        border-radius: 5px;
-        letter-spacing: 3px;
-        text-shadow:
-            0 0 5px $bleu,
-            0 0 10px $bleu,
-            0 0 20px $bleu,
-            0 0 40px $bleu,
-            0 0 80px $bleu,
-            0 0 90px $bleu,
-            0 0 100px $bleu,
-            0 0 150px $bleu;
+        padding: 150px 0;
+
+
+        h1 {
+
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+
+
+        .plan-carte {
+
+            width: 500px;
+            height: 350px;
+            background-image: $arrierePlan;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px $bleu;
+            background-image: url('/image/Plan/planTitre.jpg');
+
+        }
+
+        .carte-nom {
+
+            text-align: center;
+            padding: 9px;
+
+        }
+
+        .activite-image {
+
+            width: 500px;
+
+        }
+    }
+
+    .accessibilites {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px white,
+                0 0 10px white,
+                0 0 20px white,
+                0 0 40px white,
+                0 0 80px white,
+                0 0 90px white,
+                0 0 100px white,
+                0 0 150px white;
+        }
+
+        .separation {
+
+            width: 400px;
+            height: 4px;
+            background-color: $jaune;
+            border-radius: 5px;
+            margin-bottom: 100px;
+            box-shadow:
+                0 0 5px $jaune,
+                0 0 10px $jaune,
+                0 0 20px $jaune,
+                0 0 40px $jaune,
+                0 0 80px $jaune,
+                0 0 90px $jaune,
+                0 0 100px $jaune,
+                0 0 150px $jaune;
+
+        }
+
+    }
+
+    .tags {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 200px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    img.pic-nique {
+        width: 230px;
+    }
+
+    img.magasinage {
+        width: 210px;
     }
 
 }
-
-.activites-index {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: calc(100% - 10px);
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    color: $bleu;
-
-
-    .plan-carte{
-
-        width: 500px;
-        height:350px;
-        background-image: $arrierePlan;
-        margin-bottom: 50px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px $bleu;
-
-    }
-
-  .carte-nom {
-
-    text-align: center;
-    padding: 9px;
-
-  }
-
-  .activite-image {
-
-    width: 500px;
-
-  }
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

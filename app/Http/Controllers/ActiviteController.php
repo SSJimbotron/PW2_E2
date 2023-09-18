@@ -14,11 +14,6 @@ class ActiviteController extends Controller
      *
      * @return View
      */
-    // public function index()
-    // {
-    //     return view('activites.index');
-    // }
-
     public function index()
     {
         // Récupérer toutes les activités de la base de données
@@ -26,8 +21,36 @@ class ActiviteController extends Controller
 
         // Passer les activités à la vue
         return view('activites.index', [
-            'activites' => $activites]);
+            'activites' => $activites
+        ]);
     }
+
+
+
+    /**
+     * Affiche une activité
+     *
+     * @return View
+     */
+
+    public function show($id)
+    {
+        // Récupérez l'activité en fonction de l'identifiant
+        $activite = Activite::find($id);
+
+        // Vérifiez si l'activité existe
+        if (!$activite) {
+
+            // Ceci renverra une page d'erreur 404
+            abort(404);
+        }
+
+        // Affichez la vue des détails de l'activité en passant l'objet $activite
+        return view('activites.show', [
+            'activite'=> $activite
+        ]);
+    }
+
 
     // ======================= AJOUT =======================
 

@@ -13,7 +13,6 @@
         <div class="activites-index">
 
             @foreach ($activites as $activite)
-
                 <div class="plan-carte">
 
                     <div class="carte-activite">
@@ -24,12 +23,26 @@
                     </div>
 
                     <div class="carte-nom">
-
-                        <h2 class="font-lovelo">{{ $activite->nom }}</h2>
-
+                        <a href="{{ route('activites.show', ['id' => $activite->id]) }}" class="font-lovelo">
+                            {{ $activite->nom }}
+                        </a>
                     </div>
+
+
                 </div>
             @endforeach
         </div>
+
+        <div class="accessibilites">
+            <h1 class="font-lovelo">Accessibilités</h1>
+            <div class="separation"></div>
+            <div class="tags" >
+                <img src="{{ asset('image/Accessabilite/ATM.png') }}" alt="">
+                <img class="pic-nique"src="{{ asset('image/Accessabilite/Banc de pique-nique.png') }}" alt="">
+                <img src="{{ asset('image/Accessabilite/Guichet de billetterie.png') }}" alt="">
+                <img class="magasinage" src="{{ asset('image/Accessabilite/Magasinage.png') }}" alt="">
+            </div>
+        </div>
+
     </div>
 </x-layout>
