@@ -14,9 +14,19 @@ class ActiviteController extends Controller
      *
      * @return View
      */
+    // public function index()
+    // {
+    //     return view('activites.index');
+    // }
+
     public function index()
     {
-        return view('activites.index');
+        // Récupérer toutes les activités de la base de données
+        $activites = Activite::get(); // Utilisez la méthode get() pour obtenir toutes les activités
+
+        // Passer les activités à la vue
+        return view('activites.index', [
+            'activites' => $activites]);
     }
 
     // ======================= AJOUT =======================
