@@ -16,8 +16,41 @@ class ActiviteController extends Controller
      */
     public function index()
     {
-        return view('activites.index');
+        // Récupérer toutes les activités de la base de données
+        $activites = Activite::get(); // Utilisez la méthode get() pour obtenir toutes les activités
+
+        // Passer les activités à la vue
+        return view('activites.index', [
+            'activites' => $activites
+        ]);
     }
+
+
+
+    /**
+     * Affiche une activité
+     *
+     * @return View
+     */
+
+    public function show($id)
+    {
+        // Récupérez l'activité en fonction de l'identifiant
+        $activite = Activite::find($id);
+
+        // Vérifiez si l'activité existe
+        if (!$activite) {
+
+            // Ceci renverra une page d'erreur 404
+            abort(404);
+        }
+
+        // Affichez la vue des détails de l'activité en passant l'objet $activite
+        return view('activites.show', [
+            'activite'=> $activite
+        ]);
+    }
+
 
     // ======================= AJOUT =======================
 

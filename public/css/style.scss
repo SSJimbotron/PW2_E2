@@ -3,6 +3,7 @@ $bleu: #78FBFD;
 $jaune: #F7CD45;
 $gris: #ADADAD;
 $noir: #141414;
+$arrierePlan: url('/image/ActiviteIndex/banniere.png');
 
 /***************
 *Enregistrement
@@ -232,32 +233,360 @@ $noir: #141414;
 .apropos {
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('image/Plan/background.png');
+    background-image: url('/image/Plan/planTitre.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    min-height: 100vh;
+    /* Réglez la hauteur minimale en fonction de votre contenu */
 
     .banniere {
+
         display: flex;
         justify-content: center;
         align-items: center;
-
+        text-align: center;
         background-image: url('/image/Apropos/banniereApropos.png');
         background-repeat: no-repeat;
         width: 100%;
         height: 25vh;
 
-
         h1 {
 
             color: white;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            padding: 2px;
             background-color: rgba(0, 0, 0, 0.7);
-            width: 250px;
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
+        }
+
+    }
+
+    .origine {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        h1 {
+
+            padding: 60px;
+            color: $rose;
+            font-size: 2.5rem;
+            font-weight: 700;
             text-align: center;
             border-radius: 5px;
+            letter-spacing: 3px;
             text-shadow:
+                0 0 5px $rose,
+                0 0 10px $rose,
+                0 0 20px $rose,
+                0 0 40px $rose,
+                0 0 80px $rose,
+                0 0 90px $rose,
+                0 0 100px $rose,
+                0 0 150px $rose;
+        }
+
+        p {
+
+            width: 100%;
+            max-width: 850px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #fff;
+
+
+        }
+
+        ;
+
+    }
+
+    .valeur {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+
+
+            padding: 60px;
+            color: $rose;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px $rose,
+                0 0 10px $rose,
+                0 0 20px $rose,
+                0 0 40px $rose,
+                0 0 80px $rose,
+                0 0 90px $rose,
+                0 0 100px $rose,
+                0 0 150px $rose;
+
+        }
+
+        .separation {
+
+            width: 500px;
+            height: 4px;
+            background-color: $rose;
+            margin-top: 80px;
+            border-radius: 5px;
+            box-shadow:
+                0 0 5px $rose,
+                0 0 10px white,
+                0 0 20px $rose,
+                0 0 40px white,
+                0 0 80px $rose,
+                0 0 90px white,
+                0 0 100px $rose,
+                0 0 150px white;
+
+        }
+
+
+        p {
+
+            width: 100%;
+            max-width: 950px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: white;
+
+        }
+    }
+
+    .adresse {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+
+
+        h1 {
+
+            padding: 60px;
+            color: $rose;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px $rose,
+                0 0 10px $rose,
+                0 0 20px $rose,
+                0 0 40px $rose,
+                0 0 80px $rose,
+                0 0 90px $rose,
+                0 0 100px $rose,
+                0 0 150px $rose;
+
+        }
+
+        .separation {
+
+            width: 500px;
+            height: 4px;
+            background-color: $rose;
+            border-radius: 5px;
+            box-shadow:
+                0 0 5px $rose,
+                0 0 10px white,
+                0 0 20px $rose,
+                0 0 40px white,
+                0 0 80px $rose,
+                0 0 90px white,
+                0 0 100px $rose,
+                0 0 150px white;
+
+        }
+
+        .joindre {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+
+        }
+
+        .coordonnes {
+
+            width: 400px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            color: white;
+
+            h2 {
+                font-size: 1.5rem;
+
+            }
+
+            .coordonnes.a {
+                padding: 20px;
+
+            }
+        }
+    }
+}
+
+/*****************
+* Activités index
+****************/
+
+.activites {
+
+    background-image: url('/image/Plan/planTitre.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+
+    .banniere {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url('/image/ActiviteIndex/banniere.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        width: 100%;
+        height: 25vh;
+
+        h1 {
+
+            color: $bleu;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px $bleu,
+                0 0 10px $bleu,
+                0 0 20px $bleu,
+                0 0 40px $bleu,
+                0 0 80px $bleu,
+                0 0 90px $bleu,
+                0 0 100px $bleu,
+                0 0 150px $bleu;
+        }
+
+    }
+
+    .activites-index {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: calc(100% - 10px);
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        color: $bleu;
+        padding: 150px 0;
+
+
+        h1 {
+
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+
+
+        .plan-carte {
+
+            width: 500px;
+            height: 350px;
+            background-image: $arrierePlan;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px $bleu;
+            background-image: url('/image/Plan/planTitre.jpg');
+
+        }
+
+        .carte-nom {
+
+            text-align: center;
+            padding: 9px;
+
+        }
+
+        .activite-image {
+
+            width: 500px;
+
+        }
+    }
+
+    .accessibilites {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px white,
+                0 0 10px white,
+                0 0 20px white,
+                0 0 40px white,
+                0 0 80px white,
+                0 0 90px white,
+                0 0 100px white,
+                0 0 150px white;
+        }
+
+        .separation {
+
+            width: 400px;
+            height: 4px;
+            background-color: $jaune;
+            border-radius: 5px;
+            margin-bottom: 100px;
+            box-shadow:
                 0 0 5px #fff,
                 0 0 10px #fff,
                 0 0 20px #fff,
@@ -348,6 +677,7 @@ $noir: #141414;
                 0 0 90px $jaune,
                 0 0 100px $jaune,
                 0 0 150px $jaune;
+
         }
 
         .barre_neon {
@@ -390,6 +720,7 @@ $noir: #141414;
     .admin_index_usagers tr:hover {
         background-color: $bleu;
     }
+
 
     .admin_index_activites tr:hover {
         background-color: $rose;
@@ -460,4 +791,25 @@ $noir: #141414;
         float: left;
         position: relative;
     }
+
+    .tags {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 200px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    img.pic-nique {
+        width: 230px;
+    }
+
+    img.magasinage {
+        width: 210px;
+    }
+
 }

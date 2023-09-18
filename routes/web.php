@@ -45,8 +45,8 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
 Route::get('/activites', [ActiviteController::class, 'index'])
     ->name('activites.index');
 // show
-// Route::get('/activites/{id}', [ActiviteController::class, 'show'])
-//     ->name('activites.show');
+Route::get('/activites/{id}', [ActiviteController::class, 'show'])
+    ->name('activites.show');
 
 // =========================================================
 
