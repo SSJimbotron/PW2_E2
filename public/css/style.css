@@ -341,6 +341,11 @@
 .activites .activites-index .activite-image {
   width: 500px;
 }
+
+.activites .activites-index a {
+  font-size: 1.2rem;
+}
+
 .activites .accessibilites {
   display: flex;
   flex-direction: column;
@@ -363,7 +368,43 @@
   background-color: #F7CD45;
   border-radius: 5px;
   margin-bottom: 100px;
+  box-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+}
+.activites .tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+/************
+* ActiviteShow
+***********/
+.activite-show .conteneur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+}
+.activite-show .conteneur .image {
+  width: 400px;
+}
+.activite-show .conteneur .information {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.activite-show .conteneur .information h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #78FBFD;
+  margin-bottom: 50px;
+  text-align: center;
   box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+
 }
 
 /************
@@ -427,6 +468,7 @@
   box-shadow: 1px 1px 5px #aaaaaa;
 }
 .admin_index .admin_index_reservations tr:hover {
+  
   background-color: #ADADAD;
   color: black;
 }

@@ -34,15 +34,19 @@
         </div>
 
         <div class="accessibilites">
+
             <h1 class="font-lovelo">Accessibilités</h1>
+
             <div class="separation"></div>
-            <div class="tags" >
-                <img src="{{ asset('image/Accessabilite/ATM.png') }}" alt="">
-                <img class="pic-nique"src="{{ asset('image/Accessabilite/Banc de pique-nique.png') }}" alt="">
-                <img src="{{ asset('image/Accessabilite/Guichet de billetterie.png') }}" alt="">
-                <img class="magasinage" src="{{ asset('image/Accessabilite/Magasinage.png') }}" alt="">
+
+            <div class="tags">
+
+                <img src="{{ asset('image/Accessibilite/ATM.png') }}" alt="" width="200px">
+                <img src="{{ asset('image/Accessibilite/Banc de pique-nique.png') }}" alt="" width="230px">
+                <img src="{{ asset('image/Accessibilite/Guichet de billetterie.png') }}" alt="" width="200px">
+                <img src="{{ asset('image/Accessibilite/Magasinage.png') }}" alt="" width="200px">
+
             </div>
         </div>
-
     </div>
 </x-layout>

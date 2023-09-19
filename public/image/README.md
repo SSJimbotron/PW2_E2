@@ -139,6 +139,7 @@ Un bonhomme simple avec un sourire en jauges de volume avec des écouteurs devan
 
 # 4. Présentation de la planification du travail synthèse
 ## Liens
+
 ### Lien vers le logiciel de gestion de projet choisi               
 https://app.clickup.com/    
 ## Portrait global 
@@ -199,7 +200,7 @@ https://app.clickup.com/
 
 
 ### Wafaa: 
-- Initiation de la structure de la base de donnée et validationa avec Éric de celle-ci.
+- Initiation de la structure de la base de donnée et validation  avec Éric de celle-ci.
 - Recherche d'image et de vidéos déterminante de l'identité visuelle. 
 - Montage Vidéo du héro.
 - Aide à la structuration de la carte des pages.
