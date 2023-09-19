@@ -93,16 +93,16 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
 // ======================= RÉSERVATIONS ===========================
 
 //edit
-Route::get("reservation/edit/{id}", [ReservationController::class, 'edit'])
-    ->name('admin.reservation.edit');
-Route::post("reservation/update", [ReservationController::class, 'update'])
-    ->name('admin.reservation.update');
+Route::get("/admin/reservations/edit/{id}", [ReservationController::class, 'edit'])
+    ->name('admin.reservations.edit');
+Route::post("reservations/update", [ReservationController::class, 'update'])
+    ->name('admin.reservations.update');
 
 // create
-Route::get("reservation/create", [ReservationController::class, 'create'])
-    ->name('admin.reservation.create');
-Route::post("reservation", [ReservationController::class, 'store'])
-    ->name('admin.reservation.store');
+Route::get("/admin/reservations/create", [ReservationController::class, 'create'])
+    ->name('admin.reservations.create');
+Route::post("reservations", [ReservationController::class, 'store'])
+    ->name('admin.reservations.store');
 
 // ======================= ADMINISTRATION ===========================
 
