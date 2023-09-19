@@ -1,0 +1,508 @@
+@charset "UTF-8";
+/***************
+*Enregistrement
+*************/
+.conteneur-enregistrement {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-image: url("/image/Plan/backgroundAdmin.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.conteneur-enregistrement h1 {
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 60px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.conteneur-enregistrement .formulaire-enregistrement {
+  padding: 50px 100px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.conteneur-enregistrement .formulaire-enregistrement h2 {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.conteneur-enregistrement .section {
+  margin-top: 15px;
+}
+.conteneur-enregistrement label {
+  letter-spacing: 1.5px;
+}
+.conteneur-enregistrement input {
+  width: 300px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  opacity: 0.1s;
+  background-color: #323232;
+  box-shadow: 0 0 5px #fff;
+  padding-left: 5px;
+}
+.conteneur-enregistrement .submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.conteneur-enregistrement .submit button {
+  border: 1px solid white;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+
+/************
+*Connexion
+***********/
+.formulaire-connexion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  color: white;
+  background-image: url("/image/Plan/backgroundAdmin.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.formulaire-connexion h1 {
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 60px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.formulaire-connexion form {
+  padding: 50px 100px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.formulaire-connexion form h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.formulaire-connexion form .section {
+  margin-top: 20px;
+}
+.formulaire-connexion form label {
+  letter-spacing: 1.5px;
+}
+.formulaire-connexion form input {
+  width: 300px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  opacity: 0.1s;
+  background-color: #323232;
+  padding-left: 5px;
+  box-shadow: 0 0 5px #fff;
+}
+.formulaire-connexion form button {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  border: 1px solid white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.formulaire-connexion form p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+}
+
+/************
+* À propos
+***********/
+.apropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/image/Plan/planTitre.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  min-height: 100vh;
+  /* Réglez la hauteur minimale en fonction de votre contenu */
+}
+.apropos .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/image/Apropos/banniereApropos.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 25vh;
+}
+.apropos .banniere h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.apropos .origine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.apropos .origine h1 {
+  padding: 60px;
+  color: #EA33F7;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+}
+.apropos .origine p {
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.apropos .valeur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.apropos .valeur h1 {
+  padding: 60px;
+  color: #EA33F7;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+}
+.apropos .valeur .separation {
+  width: 500px;
+  height: 4px;
+  background-color: #EA33F7;
+  margin-top: 80px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #EA33F7, 0 0 10px white, 0 0 20px #EA33F7, 0 0 40px white, 0 0 80px #EA33F7, 0 0 90px white, 0 0 100px #EA33F7, 0 0 150px white;
+}
+.apropos .valeur p {
+  width: 100%;
+  max-width: 950px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+.apropos .adresse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.apropos .adresse h1 {
+  padding: 60px;
+  color: #EA33F7;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+}
+.apropos .adresse .separation {
+  width: 500px;
+  height: 4px;
+  background-color: #EA33F7;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #EA33F7, 0 0 10px white, 0 0 20px #EA33F7, 0 0 40px white, 0 0 80px #EA33F7, 0 0 90px white, 0 0 100px #EA33F7, 0 0 150px white;
+}
+.apropos .adresse .joindre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.apropos .adresse .coordonnes {
+  width: 400px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.apropos .adresse .coordonnes h2 {
+  font-size: 1.5rem;
+}
+.apropos .adresse .coordonnes .coordonnes.a {
+  padding: 20px;
+}
+
+/*****************
+* Activités index
+****************/
+.activites {
+  background-image: url("/image/Plan/planTitre.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+}
+.activites .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/image/ActiviteIndex/banniere.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  width: 100%;
+  height: 25vh;
+}
+.activites .banniere h1 {
+  color: #78FBFD;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #78FBFD, 0 0 10px #78FBFD, 0 0 20px #78FBFD, 0 0 40px #78FBFD, 0 0 80px #78FBFD, 0 0 90px #78FBFD, 0 0 100px #78FBFD, 0 0 150px #78FBFD;
+}
+.activites .activites-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: calc(100% - 10px);
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  color: #78FBFD;
+  padding: 150px 0;
+}
+.activites .activites-index h1 {
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+.activites .activites-index .plan-carte {
+  width: 500px;
+  height: 350px;
+  background-image: url("/image/ActiviteIndex/banniere.png");
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #78FBFD;
+  background-image: url("/image/Plan/planTitre.jpg");
+}
+.activites .activites-index .carte-nom {
+  text-align: center;
+  padding: 9px;
+}
+.activites .activites-index .activite-image {
+  width: 500px;
+}
+.activites .accessibilites {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.activites .accessibilites h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 90px white, 0 0 100px white, 0 0 150px white;
+}
+.activites .accessibilites .separation {
+  width: 400px;
+  height: 4px;
+  background-color: #F7CD45;
+  border-radius: 5px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+
+/************
+* Admin
+***********/
+.admin_index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  color: white;
+  background-image: url("/image/Plan/backgroundAdmin.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.admin_index .admin_index_contenu {
+  padding: 50px 100px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.admin_index .admin_index_contenu h2 {
+  padding: 1.5vw 0vw 0vw 0vw;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.admin_index .admin_index_contenu .admin_index_usagers h2 {
+  text-shadow: 0 0 5px #78FBFD, 0 0 10px #78FBFD, 0 0 20px #78FBFD, 0 0 40px #78FBFD, 0 0 80px #78FBFD, 0 0 90px #78FBFD, 0 0 100px #78FBFD, 0 0 150px #78FBFD;
+}
+.admin_index .admin_index_contenu .admin_index_activites h2 {
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+}
+.admin_index .admin_index_contenu .admin_index_actualites h2 {
+  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+}
+.admin_index .admin_index_contenu .barre_neon {
+  display: flex;
+  position: relative;
+  width: 50vw;
+  height: 2.5vw;
+  left: 2.5vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.admin_index h1 {
+  margin-top: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 60px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.admin_index .admin_index_reservations tr:hover {
+  background-color: #ADADAD;
+  color: black;
+}
+.admin_index .admin_index_usagers tr:hover {
+  background-color: #78FBFD;
+}
+.admin_index .admin_index_activites tr:hover {
+  background-color: #EA33F7;
+}
+.admin_index .admin_index_actualites tr:hover {
+  background-color: #F7CD45;
+  color: black;
+}
+.admin_index .bouton_create {
+  border: 1px solid white;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+  position: relative;
+  left: 24.25vw;
+  width: 8vw;
+  text-align: center;
+  transition: all 0.25s;
+}
+.admin_index .bouton_create:hover {
+  padding: 4px 6px;
+  margin: -2px;
+  box-shadow: 2px 2px 7px #313131;
+  font-weight: 600;
+}
+.admin_index table {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  padding: 1vw 2vw;
+}
+.admin_index table tr {
+  width: 50vw;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  transition: all 0.25s;
+}
+.admin_index table tr th {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 20vw;
+  justify-content: flex-start;
+}
+.admin_index table tr td {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 20vw;
+  justify-content: flex-start;
+}
+.admin_index .description_courte {
+  display: block;
+  height: 25px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+.admin_index .tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.admin_index img {
+  width: 200px;
+}
+.admin_index img.pic-nique {
+  width: 230px;
+}
+.admin_index img.magasinage {
+  width: 210px;
+}/*# sourceMappingURL=style.css.map */

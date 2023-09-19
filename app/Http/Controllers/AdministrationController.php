@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Activite;
 use App\Models\Actualite;
+use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -20,11 +21,13 @@ class AdministrationController extends Controller
         $usagers = User::all();
         $activites = Activite::all();
         $actualites = Actualite::all();
+        $reservations = Reservation::all();
 
         return view('admin.index', [
             "usagers" => $usagers,
             "activites" => $activites,
             "actualites" => $actualites,
+            "reservations" => $reservations,
         ]);
     }
 }

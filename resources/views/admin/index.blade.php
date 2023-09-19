@@ -15,24 +15,29 @@
                         <th class="font-technorace">Arrivée</th>
                         <th class="font-technorace">Départ</th>
                     </tr>
-                    {{-- @foreach ($reservations as $reservation)
+                    @foreach ($reservations as $reservation)
                         <tr>
                             <p>
-                                <td><a
-                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->client }}</a>
+                                <td><a href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">
+                                        @foreach ($usagers as $usager)
+                                            @if ($reservation->user_id == $usager->id)
+                                                {{ $usager->nom }}   {{ $usager->prenom }}
+                                            @endif
+                                        @endforeach
+                                    </a>
                                 </td>
                                 <td><a
-                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->forfait_id }}</a>
+                                        href="{{ route('admin.reservations.edit', ['id' => $reservation->id, 'usager_id' => $usager->id]) }}">{{ $reservation->forfait_id }}</a>
                                 </td>
                                 <td><a
-                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_arrivee }}</a>
+                                        href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_arrivee }}</a>
                                 </td>
                                 <td><a
-                                        href="{{ route('admin.actualites.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_depart }}</a>
+                                        href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_depart }}</a>
                                 </td>
                             </p>
                         </tr>
-                    @endforeach --}}
+                    @endforeach
                 </table>
             </div>
 
@@ -40,7 +45,8 @@
 
                 <table>
                     <h2 class="text-bleu font-lovelo">Usagers</h2>
-                    <div><img src="{{ asset('image/Admin/barre_bleu.png') }}" class="barre_neon" alt="barre_neon"></div>
+                    <div><img src="{{ asset('image/Admin/barre_bleu.png') }}" class="barre_neon" alt="barre_neon">
+                    </div>
                     <tr>
                         <th class="font-technorace">Nom</th>
                         <th class="font-technorace">Prénom</th>
@@ -135,7 +141,8 @@
                         </tr>
                     @endforeach
                 </table>
-                <a href="{{ route('admin.activites.create') }}" class="bouton_create">Créer une activité</a>    </div>
+                <a href="{{ route('admin.activites.create') }}" class="bouton_create">Créer une activité</a>
+            </div>
 
             <div class="admin_index_actualites">
 
@@ -163,7 +170,8 @@
                         </tr>
                     @endforeach
                 </table>
-                <a href="{{ route('admin.actualites.create') }}" class="bouton_create">Créer une actualité</a></div>
+                <a href="{{ route('admin.actualites.create') }}" class="bouton_create">Créer une actualité</a>
+            </div>
         </div>
     </div>
 
