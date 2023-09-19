@@ -552,6 +552,10 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
             width: 500px;
 
         }
+
+        a {
+            font-size: 1.2rem;
+        }
     }
 
     .accessibilites {
@@ -587,18 +591,67 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
             border-radius: 5px;
             margin-bottom: 100px;
             box-shadow:
-                0 0 5px #fff,
-                0 0 10px #fff,
-                0 0 20px #fff,
-                0 0 40px #fff,
-                0 0 80px #fff,
-                0 0 90px #fff,
-                0 0 100px #fff,
-                0 0 150px #fff;
+                0 0 5px $jaune,
+                0 0 10px $jaune,
+                0 0 20px $jaune,
+                0 0 40px $jaune,
+                0 0 80px $jaune,
+                0 0 90px $jaune,
+                0 0 100px $jaune,
+                0 0 150px $jaune;
 
         }
 
     }
+
+    .tags {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+
+
+    }
+}
+
+/************
+* ActiviteShow
+***********/
+.activite-show {
+
+
+    .conteneur {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 150px;
+
+        .image {
+            width: 400px;
+
+        }
+
+        .information {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+
+            h1 {
+
+                font-size: 2rem;
+                font-weight: 700;
+                color: $bleu;
+                margin-bottom: 50px;
+                text-align: center;
+
+            }
+        }
+    }
+
 }
 
 /************
