@@ -341,9 +341,11 @@
 .activites .activites-index .activite-image {
   width: 500px;
 }
+
 .activites .activites-index a {
   font-size: 1.2rem;
 }
+
 .activites .accessibilites {
   display: flex;
   flex-direction: column;
@@ -401,6 +403,8 @@
   color: #78FBFD;
   margin-bottom: 50px;
   text-align: center;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+
 }
 
 /************
@@ -464,7 +468,8 @@
   box-shadow: 1px 1px 5px #aaaaaa;
 }
 .admin_index .admin_index_reservations tr:hover {
-  background-color: #ADADAD 0.5;
+  
+  background-color: #ADADAD;
   color: black;
 }
 .admin_index .admin_index_usagers tr:hover {
