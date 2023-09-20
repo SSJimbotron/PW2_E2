@@ -13,9 +13,15 @@ class ActualiteController extends Controller
      *
      * @return View
      */
-    public function index()
-    {
-        return view('actualites.index');
+    public function index() {
+        // Récupérer toutes les actualites de la base de données
+        $actualites = Actualite::get();
+
+        // Passer les actualites à la vue
+        return view('actualites.index',  [
+            'actualites' => $actualites
+        ]);
+
     }
 
     // ======================= AJOUT =======================

@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="carte-nom">
-                        <a href="{{ route('activites.show', ['id' => $activite->id]) }}" class="font-lovelo">
+                        <a href="{{ route('activites.show', ['id' => $activite->id]) }}" class="font-quicksand">
                             {{ $activite->nom }}
                         </a>
                     </div>

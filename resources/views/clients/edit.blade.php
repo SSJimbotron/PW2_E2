@@ -1,18 +1,18 @@
-<x-layout titre="Enregistrement">
+<x-layout titre="Modification de mon compte">
 
     <div class="conteneur-enregistrement">
-        <h1 class="font-lovelo font-bold neon-mauve">ADMINISTRATION</h1>
+        <h1 class="font-lovelo font-bold neon-mauve">ZONE CLIENT</h1>
 
 
         <div class="formulaire-enregistrement">
             <div>
                 <h2 class="font-lovelo neon-text">
-                    Modifiez l'utilisateur
+                    USAGER
                 </h2>
             </div>
 
             {{-- FORMULAIRE DE MODIFICATION --}}
-            <form action="{{ route('admin.usagers.update') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('moncompte.update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 {{-- ID --}}
@@ -59,58 +59,76 @@
 
                 </div>
 
-                {{-- ROLE --}}
+                <div class="submit">
 
+                    <button type="submit" class="font-quicksand hover:text-bleu">
+                        Modifier
+                    </button>
+
+
+                </div>
+            </form>
+
+            {{-- ========================================================================== --}}
+
+            {{-- *** MOT DE PASSE *** --}}
+
+            {{-- FORMULAIRE DE MODIFICATION --}}
+            <form action="{{ route('moncompte.mdp.update') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                {{-- ID --}}
+                <input type="hidden" name="id" value="{{ $usager->id }}">
+
+
+                {{-- PASSWORD --}}
                 <div class="section">
-                    <div>
-                        <label for="role" class="font-technorace">
-                            Role de l'utilisateur
+                    <div class="flex items-center justify-between">
+                        <label for="password" class="font-technorace">
+                            Mot de passe
                         </label>
                     </div>
                     <div>
-                        <select id="role" name="role" class="text-noir">
-                            @if ($usager->role = 1)
-                                <option selected value="1">Clients</option>
-                            @else
-                                <option value="1">Clients</option>
-                            @endif
-                            @if ($usager->role == 2)
-                                <option selected value="2">Employé</option>
-                            @else
-                                <option value="1">Employé</option>
-                            @endif
-                            @if ($usager->role == 3)
-                                <option selected value="3">Administrateur</option>
-                            @else
-                                <option value="1">Administrateur</option>
-                            @endif
-                        </select>
+                        <input id="password" name="password" type="password" autocomplete="current-password">
+
+                        {{-- <x-forms.erreur champ="password" /> --}}
+                    </div>
+
+                </div>
+
+                {{-- CONFIRM PASSWORD --}}
+                <div class="section">
+                    <div class="">
+                        <label for="confirm-password" class="font-technorace">
+                            Confirmation du mot de passe
+                        </label>
+                    </div>
+                    <div>
+                        <input id="confirm-password" name="confirmation_password" type="password" class="">
+
+                        {{-- <x-forms.erreur champ="confirmation_password" /> --}}
                     </div>
                 </div>
 
                 <div class="submit">
 
                     <button type="submit" class="font-quicksand hover:text-bleu">
-                        Modifiez le compte
+                        Modifier
                     </button>
 
 
                 </div>
-                 {{-- Suppression --}}
-                 <div class="mt-2">
-                    <p class="mt-10 text-center text-sm text-gray-500">
-                        <a class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="{{ route('admin.usagers.destroy') }}">Supprimer</a>
-                    </p>
-                </div>
-                {{-- RETOUR AUX ACTUALITES --}}
-                <p class="mt-10 text-center text-sm text-gray-500">
-                    <a href="{{ route('admin.index') }}" class="hover:text-bleu">Retour</a>
-
-                </p>
             </form>
+            {{-- RETOUR À L'ACCUEIL --}}
+            <p class="mt-10 text-center text-sm text-gray-500">
+                <a href="{{ route('accueil') }}" class="hover:text-bleu">Retour</a>
+
+            </p>
         </div>
     </div>
+
+
+
 
 
 

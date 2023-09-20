@@ -21,7 +21,7 @@
                                 <td><a href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">
                                         @foreach ($usagers as $usager)
                                             @if ($reservation->user_id == $usager->id)
-                                                {{ $usager->nom }}   {{ $usager->prenom }}
+                                                {{ $usager->nom }} {{ $usager->prenom }}
                                             @endif
                                         @endforeach
                                     </a>
@@ -57,14 +57,13 @@
                     @foreach ($usagers as $usager)
                         <tr>
                             @if ($usager->role == 1 || $usager->role == 2)
-                                <p>
                                     <td><a
                                             href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">{{ $usager->nom }}</a>
                                     </td>
                                     <td><a
                                             href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">{{ $usager->prenom }}</a>
                                     </td>
-                                    <td><a
+                                    <td><a class="truncate max-w-[90%]"
                                             href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">{{ $usager->email }}</a>
                                     </td>
                                     <td><a href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">
@@ -79,21 +78,19 @@
                                             @endif
                                         </a>
                                     </td>
-                                </p>
                             @endif
                         </tr>
 
 
                         @if (Auth::check() && (Auth::user()->role == 2 || Auth::user()->role == 3) && $usager->role == 3)
                             <tr>
-                                <p>
                                     <td><a
                                             href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">{{ $usager->nom }}</a>
                                     </td>
                                     <td><a
                                             href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">{{ $usager->prenom }}</a>
                                     </td>
-                                    <td><a
+                                    <td><a class="truncate max-w-[90%]"
                                             href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">{{ $usager->email }}</a>
                                     </td>
                                     <td><a href="{{ route('admin.usagers.edit', ['id' => $usager->id]) }}">
@@ -108,7 +105,6 @@
                                             @endif
                                         </a>
                                     </td>
-                                </p>
                             </tr>
                         @endif
                     @endforeach
