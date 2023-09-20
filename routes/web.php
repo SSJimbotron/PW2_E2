@@ -104,6 +104,10 @@ Route::get("/admin/reservations/create", [ReservationController::class, 'create'
 Route::post("reservations", [ReservationController::class, 'store'])
     ->name('admin.reservations.store');
 
+//destroy
+Route::post("/admin/reservations/destroy/{id}", [ReservationController::class, 'destroy'])
+    ->name('admin.reservations.destroy');
+
 // ======================= ADMINISTRATION ===========================
 
 

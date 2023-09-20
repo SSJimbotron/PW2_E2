@@ -69,9 +69,21 @@
                     </div>
                     <div>
                         <select id="role" name="role" class="text-noir">
-                            <option value="1">Clients</option>
-                            <option value="2">Employé</option>
-                            <option value="3">Administrateur</option>
+                            @if ($usager->role = 1)
+                                <option selected value="1">Clients</option>
+                            @else
+                                <option value="1">Clients</option>
+                            @endif
+                            @if ($usager->role == 2)
+                                <option selected value="2">Employé</option>
+                            @else
+                                <option value="1">Employé</option>
+                            @endif
+                            @if ($usager->role == 3)
+                                <option selected value="3">Administrateur</option>
+                            @else
+                                <option value="1">Administrateur</option>
+                            @endif
                         </select>
                     </div>
                 </div>
@@ -84,12 +96,19 @@
 
 
                 </div>
+                 {{-- Suppression --}}
+                 <div class="mt-2">
+                    <p class="mt-10 text-center text-sm text-gray-500">
+                        <a class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            href="{{ route('admin.usagers.destroy', ['id' => $usager->id]) }}">Supprimer</a>
+                    </p>
+                </div>
                 {{-- RETOUR AUX ACTUALITES --}}
                 <p class="mt-10 text-center text-sm text-gray-500">
                     <a href="{{ route('admin.index') }}" class="hover:text-bleu">Retour</a>
-                    {{-- ===================================================================--}}
-                    {{-- ****** UN CLIENT PEUX ACCEDER A ADMIN INDEX PRÉSENTEMENT **********--}}
-                    {{-- ===================================================================--}}
+                    {{-- =================================================================== --}}
+                    {{-- ****** UN CLIENT PEUX ACCEDER A ADMIN INDEX PRÉSENTEMENT ********** --}}
+                    {{-- =================================================================== --}}
 
                 </p>
             </form>
