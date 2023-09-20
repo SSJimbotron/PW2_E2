@@ -105,7 +105,7 @@ Route::post("reservations", [ReservationController::class, 'store'])
     ->name('admin.reservations.store');
 
 //destroy
-Route::post("/admin/reservations/destroy/{id}", [ReservationController::class, 'destroy'])
+Route::post("/admin/reservations/destroy", [ReservationController::class, 'destroy'])
     ->name('admin.reservations.destroy');
 
 // ======================= ADMINISTRATION ===========================
@@ -129,7 +129,7 @@ Route::post("/admin/activites", [ActiviteController::class, 'store'])
     ->name('admin.activites.store');
 
 //  destroy
-Route::post("/admin/activites/destroy/{id}", [ActiviteController::class, 'destroy'])
+Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
     ->name('admin.activites.destroy');
 
 
@@ -149,7 +149,7 @@ Route::post("/admin/actualites", [ActualiteController::class, 'store'])
     ->name('admin.actualites.store');
 
 //  destroy
-Route::post("/admin/actualites/destroy/{id}", [ActualiteController::class, 'destroy'])
+Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
     ->name('admin.actualites.destroy');
 
 
@@ -167,5 +167,5 @@ Route::post("/admin/usagers", [UsagerController::class, 'store'])
     ->name('admin.usagers.store');
 
 //  destroy
-Route::post("/admin/usagers/destroy/{id}", [UsagerController::class, 'destroy'])
+Route::post("/admin/usagers/destroy", [UsagerController::class, 'destroy'])
     ->name('admin.usagers.destroy');

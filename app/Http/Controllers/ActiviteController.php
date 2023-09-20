@@ -164,4 +164,17 @@ class ActiviteController extends Controller
             ->route('admin.index')
             ->with('succes', "L'activité a été modifiée avec succès!");
     }
+
+    /**
+     * Traite la suppression
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function destroy(Request $request) {
+        Activite::destroy($request->id);
+
+        return redirect()->route('admin.index')
+                ->with('succes', "L'activite a été supprimée!");
+    }
 }

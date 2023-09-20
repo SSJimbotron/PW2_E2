@@ -13,7 +13,8 @@ class ActualiteController extends Controller
      *
      * @return View
      */
-    public function index() {
+    public function index()
+    {
         return view('actualites.index');
     }
 
@@ -128,5 +129,18 @@ class ActualiteController extends Controller
         return redirect()
             ->route('admin.index')
             ->with('succes', "L'actualité a été modifiée avec succès!");
+    }
+    /**
+     * Traite la suppression
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function destroy(Request $request)
+    {
+        Actualite::destroy($request->id);
+
+        return redirect()->route('admin.index')
+            ->with('succes', "L'actualité a été supprimée!");
     }
 }

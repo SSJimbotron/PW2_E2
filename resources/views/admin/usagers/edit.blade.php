@@ -100,7 +100,7 @@
                  <div class="mt-2">
                     <p class="mt-10 text-center text-sm text-gray-500">
                         <a class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="{{ route('admin.usagers.destroy', ['id' => $usager->id]) }}">Supprimer</a>
+                            href="{{ route('admin.usagers.destroy') }}">Supprimer</a>
                     </p>
                 </div>
                 {{-- RETOUR AUX ACTUALITES --}}
