@@ -1,45 +1,32 @@
 <x-layout titre="Actualités">
     <div class="actualites">
-
         <div class="banniere">
-
             <h1 class="font-lovelo">
                 Toutes les actualités
             </h1>
-
         </div>
         <div class="actualites-index">
-
             @foreach ($actualites as $actualite)
                 <div class="plan-carte">
-
                     <div class="carte-actualites">
-
-                        <img src="{{ asset('image/Actualites/' . $actualite->image) }}"
-                            alt="{{ $actualite->titre }}">
-
+                        <img src="{{ asset('image/Actualites/' . $actualite->image) }}" alt="{{ $actualite->titre }}">
                     </div>
-
-                    <div class="carte-information">
+                    <div class="carte-information carte-info-{{ $actualite->id }}" data-state="hidden">
                         <a href="{{ route('activites.show', ['id' => $actualite->id]) }}" class="font-quicksand">
                             <h1 class="font-lovelo">{{ $actualite->titre }}</h1>
                         </a>
-
                         <p>Publié le : {{ $actualite->created_at->format('d/m/Y H:i') }}</p>
-
-
-                        <p> {{ $actualite->contenu }}</p>
+                        <!-- Partie initialement visible -->
+                        <p class="intro">{{ substr($actualite->contenu, 0, 400) }}{{ strlen($actualite->contenu) > 200 ? '...' : '' }}</p>
+                        <!-- Le reste du contenu (initiallement caché) -->
+                        <p class="contenu">{{ substr($actualite->contenu, 400) }}</p>
                         <div class="charger">
-                            <button id="charger">Voir plus</button>
+                            <button class="voir-plus">Voir plus</button>
                         </div>
-
                     </div>
-
-
                 </div>
             @endforeach
         </div>
-
     </div>
-
 </x-layout>
+
