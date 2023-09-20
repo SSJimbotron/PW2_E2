@@ -745,18 +745,15 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 /******************
 * Actualites Index
 ******************/
-
 .actualites {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: $arrierePlan;
-    color: white;
+    color: $gris;
 
     .banniere {
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -769,7 +766,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         height: 25vh;
 
         h1 {
-
             color: white;
             font-size: 2.5rem;
             font-weight: 700;
@@ -777,82 +773,77 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             padding: 5px 20px;
             border-radius: 5px;
             letter-spacing: 3px;
-            text-shadow:
-                0 0 5px #fff,
-                0 0 10px #fff,
-                0 0 20px #fff,
-                0 0 40px #fff,
-                0 0 80px #fff,
-                0 0 90px #fff,
-                0 0 100px #fff,
-                0 0 150px #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
         }
     }
 
     .actualites-index {
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        border: 2px solid white;
-
+        margin: 100px;
 
         .plan-carte {
-
             display: flex;
             flex-direction: row;
+            justify-content: center;
             align-items: center;
-            justify-content: space-evenly;
-            width: 100%;
-            margin: 100px auto;
-
+            margin: 40px;
 
             .carte-actualites {
-
                 width: 400px;
-                background-size: cover;
-                background-position: center center;
-                background-repeat: no-repeat;
+                max-height: 500px;
+                overflow: hidden;
 
             }
 
             .carte-information {
+                max-width: 800px;
+                width: 100%;
+                margin-left:20px;
 
-                width: 1000px;
-                background-color: rgba(0, 0, 0, 0.9);
-                box-shadow: 1px 1px 5px #aaaaaa;
-                padding: 20px;
-                border-radius: 15px;
 
                 h1{
-
+                    font-size: 1.8rem;
+                    font-weight: 700;
                     text-align: center;
+                    margin-bottom: 30px;
+                    color: $bleu;
 
                 }
+                p{
+                    margin-bottom: 10px;
+                }
 
-            }
+                .contenu {
+                    display: none;
+                    max-height: 500px; /* Hauteur maximale pour la partie "contenu" */
+                    overflow: hidden;
+                }
 
-        }
+                .charger {
+                    text-align: center;
+                    margin-top: 20px;
 
-        .charger {
-            text-align: center;
-            margin-top: 20px;
+                    .voir-plus {
+                        background-color: $bleu;
+                        color: rgb(0, 0, 0);
+                        border: none;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        transition: background-color 0.3s ease;
 
-            button {
-                background-color: $bleu;
-                color: rgb(0, 0, 0);
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-                border-radius: 5px;
-                transition: background-color 0.3s ease; // Ajoute une transition de couleur de fond
-
-                &:hover {
-                    background-color: White;
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
                 }
             }
         }
-
     }
-
 }
 
 
