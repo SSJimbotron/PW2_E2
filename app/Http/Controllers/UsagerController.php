@@ -9,23 +9,26 @@ use Illuminate\Support\Facades\Hash;
 
 class UsagerController extends Controller
 {
+    // ======================= AJOUT =======================
     /**
      * Affiche le formulaire d'enregistrement
      *
      * @return View
      */
-    public function create() {
+    public function create()
+    {
         return view('admin.usagers.create', [
             "usagers" => User::all()
         ]);
     }
-     /**
+    /**
      * Traite l'enregistrement
      *
      * @param Request $request
      * @return RedirectResponse
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "prenom" => "required",
@@ -34,7 +37,7 @@ class UsagerController extends Controller
             "password" => "required|min:8",
             "confirmation_password" => "required|same:password",
             "role" => "required|min:1|max:3"
-        ],[
+        ], [
             "prenom.required" => "Le prénom est requis",
             "nom.required" => "Le nom est requis",
             "email.required" => "Le courriel est requis",
@@ -61,12 +64,11 @@ class UsagerController extends Controller
 
         // Rediriger
         return redirect()
-                ->route('admin.index')
-                ->with('succes', "Le compte de l'usager à été créer !");
-
+            ->route('admin.index')
+            ->with('succes', "Le compte de l'usager à été créer !");
     }
 
-
+    // ======================= MODIFICATION =======================
     /**
      * Affiche le formulaire de modification
      *
@@ -81,13 +83,14 @@ class UsagerController extends Controller
     }
 
 
-         /**
+    /**
      * Traite l'enregistrement
      *
      * @param Request $request
      * @return RedirectResponse
      */
-    public function update(Request $request) {
+    public function update(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "id" => "required",
@@ -95,7 +98,7 @@ class UsagerController extends Controller
             "nom" => "required",
             "email" => "required|email",
             "role" => "required|min:1|max:3"
-        ],[
+        ], [
             "id.required" => "L'id de l'usager est obligatoire",
             "prenom.required" => "Le prénom est requis",
             "nom.required" => "Le nom est requis",
@@ -117,8 +120,20 @@ class UsagerController extends Controller
 
         // Rediriger
         return redirect()
-                ->route('admin.index')
-                ->with('succes', "La modification de l'usager à été effectuer");
+            ->route('admin.index')
+            ->with('succes', "La modification de l'usager à été effectuer");
+    }
+    /**
+     * Traite la suppression
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function destroy(Request $request)
+    {
+        User::destroy($request->id);
 
+        return redirect()->route('admin.index')
+            ->with('succes', "L'usager a été supprimée!");
     }
 }

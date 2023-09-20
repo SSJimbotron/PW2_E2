@@ -19,31 +19,10 @@
                         <input type="hidden" name="id" value="{{ $reservations->id }}">
 
                         {{-- CLIENT --}}
-                        {{-- <div>
-                            <label for="client"
-                                class="block text-sm font-medium leading-6 text-gray-900">Client</label>
-                            <div class="mt-2">
-                                <select
-                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
-                                    name="client" id="client">
-                                    @foreach ($usagers as $usager)
-                                        @if ($usager->id == $reservations->user_id)
-                                            <option selected value="{{ old('client') ?? $reservations->user_id }}">
-                                                {{ $usager->id }} {{ $usager->nom }} {{ $usager->prenom }}
-                                            </option>
-                                        @endif
-                                        @if ($usager->id != $reservations->user_id)
-                                        <option value="{{ old('client') ?? $reservations->user_id }}">
-                                            {{ $usager->id }} {{ $usager->nom }} {{ $usager->prenom }}
-                                        </option>
-                                        @endif
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div> --}}
                         @foreach ($usagers as $usager)
                             @if ($usager->id == $reservations->user_id)
-                                {{ $usager->id }} {{ $usager->nom }} {{ $usager->prenom }}
+                                <h2>{{ $usager->nom }} {{ $usager->prenom }}</h2>
+                                <input type="hidden" name="client" id="client" value="{{ $usager->id }}">
                             @endif
                         @endforeach
                         {{-- FORFAIT --}}
@@ -97,7 +76,15 @@
                                 class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 value="Modifier!">
                         </div>
+                        {{-- Suppression --}}
+                        <div class="mt-2">
+                            <p class="mt-10 text-center text-sm text-gray-500">
+                                <a class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    href="{{ route('admin.reservations.destroy') }}">Supprimer</a>
+                            </p>
+                        </div>
                     </form>
+
 
                     {{-- RETOUR AUX À L'ADMINISTRATION --}}
                     <p class="mt-10 text-center text-sm text-gray-500">

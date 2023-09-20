@@ -1,5 +1,24 @@
 @charset "UTF-8";
 /***************
+    HEADER
+*************/
+.lien-header {
+  transition: 0.1s ease-in-out;
+}
+
+.lien-header:hover {
+  text-shadow: 0 0 5px #c2c2c2, 0 0 10px #c2c2c2, 0 0 15px #c2c2c2;
+}
+
+.lien-h3-footer {
+  transition: 0.1s ease-in-out;
+}
+
+.lien-h3-footer:hover {
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 15px #EA33F7;
+}
+
+/***************
 *Enregistrement
 *************/
 .conteneur-enregistrement {
@@ -671,6 +690,7 @@
   flex-direction: row;
   width: 20vw;
   justify-content: flex-start;
+  text-align: left;
 }
 .admin_index table tr td {
   display: flex;
@@ -678,6 +698,7 @@
   flex-direction: row;
   width: 20vw;
   justify-content: flex-start;
+  text-align: left;
 }
 .admin_index .description_courte {
   display: block;
