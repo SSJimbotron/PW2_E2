@@ -7,6 +7,7 @@ use App\Models\Actualite;
 use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdministrationController extends Controller
 {
@@ -17,6 +18,7 @@ class AdministrationController extends Controller
      */
     public function index()
     {
+
         // Récupération de tous les usagers
         $usagers = User::all();
         $activites = Activite::all();
@@ -29,5 +31,7 @@ class AdministrationController extends Controller
             "actualites" => $actualites,
             "reservations" => $reservations,
         ]);
+
+
     }
 }
