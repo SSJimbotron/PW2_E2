@@ -154,7 +154,6 @@
   background-position: center center;
   background-repeat: repeat;
   min-height: 100vh;
-  /* Réglez la hauteur minimale en fonction de votre contenu */
 }
 .apropos .banniere {
   display: flex;
@@ -327,8 +326,7 @@
 }
 .activites .activites-index .plan-carte {
   width: 500px;
-  height: 350px;
-  background-image: url("/image/ActiviteIndex/banniere.png");
+  height: 380px;
   margin-bottom: 50px;
   border-radius: 10px;
   box-shadow: 1px 1px 10px #78FBFD;
@@ -336,16 +334,15 @@
 }
 .activites .activites-index .carte-nom {
   text-align: center;
-  padding: 9px;
+  padding: 20px;
 }
 .activites .activites-index .activite-image {
   width: 500px;
 }
-
 .activites .activites-index a {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-
 .activites .accessibilites {
   display: flex;
   flex-direction: column;
@@ -381,30 +378,175 @@
 /************
 * ActiviteShow
 ***********/
-.activite-show .conteneur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 150px;
-}
-.activite-show .conteneur .image {
-  width: 400px;
-}
-.activite-show .conteneur .information {
-  width: 600px;
+.activite-show {
+  background-image: url("/image/Plan/planTitre.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
+}
+.activite-show .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/image/ActiviteShow/banniere.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 25vh;
+}
+.activite-show .banniere h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.activite-show .conteneur {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+  height: 650px;
+  color: white;
+  margin: 150px;
+}
+.activite-show .conteneur .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 650px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.activite-show .conteneur .image img {
+  width: 100%;
+  height: 100%;
+}
+.activite-show .conteneur .information {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 550px;
+  height: 650px;
+  padding: 30px 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 1px 5px #aaaaaa;
 }
 .activite-show .conteneur .information h1 {
   font-size: 2rem;
   font-weight: 700;
+  letter-spacing: 3px;
   color: #78FBFD;
   margin-bottom: 50px;
   text-align: center;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.activite-show .conteneur .information h2 {
+  margin-bottom: 20px;
+}
+.activite-show .conteneur .information h2 .fas {
+  margin-right: 5px;
+}
+.activite-show .conteneur .information .reseaux {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 30px;
+}
+.activite-show .conteneur .information .reseaux img {
+  margin: 10px;
+}
 
+/******************
+* Actualites Index
+******************/
+.actualites {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/image/Plan/planTitre.jpg");
+  color: white;
+}
+.actualites .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/image/Actualites/banniere.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 25vh;
+}
+.actualites .banniere h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.actualites .actualites-index {
+  width: 100%;
+  border: 2px solid white;
+}
+.actualites .actualites-index .plan-carte {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 100px auto;
+}
+.actualites .actualites-index .plan-carte .carte-actualites {
+  width: 400px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.actualites .actualites-index .plan-carte .carte-information {
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 1px 5px #aaaaaa;
+  padding: 20px;
+  border-radius: 15px;
+}
+.actualites .actualites-index .plan-carte .carte-information h1 {
+  text-align: center;
+}
+.actualites .actualites-index .charger {
+  text-align: center;
+  margin-top: 20px;
+}
+.actualites .actualites-index .charger button {
+  background-color: #78FBFD;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.actualites .actualites-index .charger button:hover {
+  background-color: White;
 }
 
 /************
@@ -468,7 +610,6 @@
   box-shadow: 1px 1px 5px #aaaaaa;
 }
 .admin_index .admin_index_reservations tr:hover {
-  
   background-color: #ADADAD;
   color: black;
 }

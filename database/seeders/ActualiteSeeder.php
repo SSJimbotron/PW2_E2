@@ -27,7 +27,7 @@ class ActualiteSeeder extends Seeder
                 Ces efforts contribuent non seulement à rendre la scène techno plus diversifiée, mais aussi à briser les stéréotypes de genre qui ont longtemps prévalu dans le monde de la musique électronique. Ils montrent que le talent n'a pas de genre, et que la créativité peut s'épanouir chez tous ceux qui sont passionnés par la musique.
 
                 À mesure que la scène techno féminine continue de prospérer et de s'épanouir, il est évident qu'elle apporte une contribution significative à l'évolution de la musique électronique. Elle incite à repenser les normes et à célébrer la diversité, tout en offrant une nouvelle perspective sur ce que la musique techno peut être. Les artistes féminines repoussent les limites de l'expérimentation sonore et continuent de nous surprendre avec leur créativité. Le futur de la musique électronique s'annonce passionnant et plus inclusif que jamais.",
-                "image" => "public\image\Actualites\feminin.png",
+                "image" => "feminin.png",
                 "created_at" => "2023-09-12 17:50:03"
             ]);
         Actualite::factory()
@@ -42,7 +42,7 @@ class ActualiteSeeder extends Seeder
                 Dreams est le fruit de nombreuses heures de travail en studio, de recherches sonores et d'expérimentations artistiques. Il illustre parfaitement l'évolution constante de la musique électronique et la capacité des artistes à innover et à surprendre leur public.
 
                 Cet album promet de rester dans les mémoires en tant qu'œuvre marquante de la musique électronique contemporaine, et il représente un nouvel accomplissement pour Hugo Lee dans sa carrière de producteur et de DJ. Alors que les mélodies de Dreams résonnent dans les clubs et les casques d'écoute du monde entier, il est clair que la musique électronique continue de se réinventer et de nous emmener vers de nouveaux horizons sonores.",
-                "image" => "public\image\Actualites\hugoLee.png",
+                "image" => "hugoLee.png",
                 "created_at" => "2023-09-11 17:50:03"
             ]);
         Actualite::factory()
@@ -59,7 +59,7 @@ class ActualiteSeeder extends Seeder
                 Les plateformes de streaming et les réseaux sociaux ont également joué un rôle majeur en permettant à ces nouveaux talents d'atteindre un public mondial plus rapidement que jamais. Le partage de mixsets, de morceaux originaux et de performances en direct sur Internet a contribué à créer des communautés en ligne de passionnés de techno.
 
                 Alors que ces talents émergents continuent de gravir les échelons de l'industrie, ils offrent une perspective rafraîchissante et novatrice à la musique électronique. Leurs contributions uniques enrichissent la scène techno en l'inscrivant dans une évolution constante, tout en célébrant la créativité et la diversité qui font de ce genre musical l'une des forces motrices de la musique électronique contemporaine. Le futur de la techno s'annonce prometteur grâce à ces artistes passionnés et déterminés.",
-                "image" => "public\image\Actualites\emergeant.png",
+                "image" => "emergeant.png",
                 "created_at" => "2023-08-29 17:50:03"
             ]);
         Actualite::factory()
@@ -76,7 +76,7 @@ class ActualiteSeeder extends Seeder
                 L'un des avantages les plus significatifs de cette révolution est la réduction des coûts associés à la production musicale. Auparavant, la création de musique techno exigeait un investissement considérable dans du matériel coûteux. Aujourd'hui, un ordinateur personnel puissant et un logiciel de production sont tout ce dont un artiste a besoin pour commencer à produire de la musique de haute qualité.
 
                 En fin de compte, la révolution des logiciels de production a rendu la création musicale plus accessible, plus abordable et plus créative que jamais. Cela a permis à de nombreux artistes de se lancer dans la production de musique techno depuis chez eux, contribuant ainsi à une diversité et à une innovation accrues dans le genre. Cette révolution est une source d'inspiration pour la prochaine génération d'artistes qui façonnent l'avenir de la musique électronique.",
-                "image" => "public\image\Actualites\revolution.png",
+                "image" => "revolution.png",
                 "created_at" => "2023-09-01 17:50:03"
             ]);
     }
