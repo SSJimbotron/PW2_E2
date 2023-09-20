@@ -127,6 +127,11 @@ Route::post("reservations", [ReservationController::class, 'store'])
     ->name('admin.reservations.store')
     ->middleware('auth', 'checkrole:3');
 
+//destroy
+Route::post("/admin/reservations/destroy", [ReservationController::class, 'destroy'])
+    ->name('admin.reservations.destroy');
+    ->middleware('auth', 'checkrole:3');
+
 // ======================= ADMINISTRATION ===========================
 
 
@@ -153,9 +158,10 @@ Route::post("/admin/activites", [ActiviteController::class, 'store'])
     ->middleware('auth', 'checkrole:3');
 
 //  destroy
-Route::post("/admin/activites/destroy/{id}", [ActiviteController::class, 'destroy'])
-    ->name('admin.activites.destroy')
+Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
+    ->name('admin.activites.destroy');
     ->middleware('auth', 'checkrole:3');
+
 
 
 // ***ACTUALITES***
@@ -177,9 +183,14 @@ Route::post("/admin/actualites", [ActualiteController::class, 'store'])
     ->name('admin.actualites.store')
     ->middleware('auth', 'checkrole:3');
 
-//  destroy
-Route::post("/admin/actualites/destroy/{id}", [ActualiteController::class, 'destroy'])
-    ->name('admin.actualites.destroy')
+//  
+
+
+
+
+
+Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
+    ->name('admin.actualites.destroy');
     ->middleware('auth', 'checkrole:3');
 
 
@@ -201,6 +212,8 @@ Route::post("/admin/usagers", [UsagerController::class, 'store'])
     ->middleware('auth', 'checkrole:3');
 
 //  destroy
-Route::post("/admin/usagers/destroy/{id}", [UsagerController::class, 'destroy'])
-    ->name('admin.usagers.destroy')
+
+Route::post("/admin/usagers/destroy", [UsagerController::class, 'destroy'])
+    ->name('admin.usagers.destroy');
     ->middleware('auth', 'checkrole:3');
+

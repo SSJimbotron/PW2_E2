@@ -39,6 +39,7 @@
                         </tr>
                     @endforeach
                 </table>
+                <a href="{{ route('admin.reservations.create') }}" class="bouton_create">Créer une réservation</a>
             </div>
 
             <div class="admin_index_usagers">
