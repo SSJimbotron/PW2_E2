@@ -1,5 +1,24 @@
 @charset "UTF-8";
 /***************
+    HEADER
+*************/
+.lien-header {
+  transition: 0.1s ease-in-out;
+}
+
+.lien-header:hover {
+  text-shadow: 0 0 5px #c2c2c2, 0 0 10px #c2c2c2, 0 0 15px #c2c2c2;
+}
+
+.lien-h3-footer {
+  transition: 0.1s ease-in-out;
+}
+
+.lien-h3-footer:hover {
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 15px #EA33F7;
+}
+
+/***************
 *Enregistrement
 *************/
 .conteneur-enregistrement {
@@ -341,11 +360,9 @@
 .activites .activites-index .activite-image {
   width: 500px;
 }
-
 .activites .activites-index a {
   font-size: 1.2rem;
 }
-
 .activites .accessibilites {
   display: flex;
   flex-direction: column;
@@ -403,8 +420,6 @@
   color: #78FBFD;
   margin-bottom: 50px;
   text-align: center;
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
-
 }
 
 /************
@@ -468,7 +483,6 @@
   box-shadow: 1px 1px 5px #aaaaaa;
 }
 .admin_index .admin_index_reservations tr:hover {
-  
   background-color: #ADADAD;
   color: black;
 }
@@ -518,6 +532,7 @@
   flex-direction: row;
   width: 20vw;
   justify-content: flex-start;
+  text-align: left;
 }
 .admin_index table tr td {
   display: flex;
@@ -525,6 +540,7 @@
   flex-direction: row;
   width: 20vw;
   justify-content: flex-start;
+  text-align: left;
 }
 .admin_index .description_courte {
   display: block;

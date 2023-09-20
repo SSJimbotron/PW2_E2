@@ -6,6 +6,31 @@ $noir: #141414;
 $arrierePlan: url('/image/ActiviteIndex/banniere.png');
 
 /***************
+    HEADER
+*************/
+.lien-header{
+    transition: 0.1s ease-in-out;
+}
+
+.lien-header:hover{
+    text-shadow:
+    0 0 5px #c2c2c2,
+    0 0 10px #c2c2c2,
+    0 0 15px #c2c2c2,
+
+}
+
+.lien-h3-footer{transition: 0.1s ease-in-out;}
+.lien-h3-footer:hover{
+    text-shadow:
+    0 0 5px $rose,
+    0 0 10px $rose,
+    0 0 15px $rose,
+}
+
+
+
+/***************
 *Enregistrement
 *************/
 
@@ -818,12 +843,14 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
             flex-direction: row;
             transition: all .25s;
 
+
             th {
                 display: flex;
                 position: relative;
                 flex-direction: row;
                 width: 20vw;
                 justify-content: flex-start;
+                text-align: left;
             }
 
             td {
@@ -832,6 +859,7 @@ $arrierePlan: url('/image/ActiviteIndex/banniere.png');
                 flex-direction: row;
                 width: 20vw;
                 justify-content: flex-start;
+                text-align: left;
             }
         }
     }
