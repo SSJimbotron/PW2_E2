@@ -26,7 +26,7 @@
                         <input id="nom" name="nom" type="text"
                             autocomplete="family-name" class="">
 
-                        {{-- <x-forms.erreur champ="nom" /> --}}
+                        <x-forms.erreur champ="nom" />
                     </div>
 
                 </div>
@@ -37,7 +37,7 @@
                     <div class="">
                         <input id="prenom" name="prenom" type="text" autocomplete="given-name" autofocus>
 
-                        {{-- <x-forms.erreur champ="prenom" /> --}}
+                        <x-forms.erreur champ="prenom" />
 
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="">
                         <input id="email" name="email" type="email" autocomplete="email">
 
-                        {{-- <x-forms.erreur champ="email" /> --}}
+                        <x-forms.erreur champ="email" />
                     </div>
 
                 </div>
@@ -65,7 +65,7 @@
                     <div>
                         <input id="password" name="password" type="password" autocomplete="current-password">
 
-                        {{-- <x-forms.erreur champ="password" /> --}}
+                        <x-forms.erreur champ="password" />
                     </div>
 
                 </div>
@@ -80,7 +80,7 @@
                     <div>
                         <input id="confirm-password" name="confirmation_password" type="password" class="">
 
-                        {{-- <x-forms.erreur champ="confirmation_password" /> --}}
+                        <x-forms.erreur champ="confirmation_password" />
                     </div>
                 </div>
 
@@ -99,6 +99,7 @@
                            <option value="3">Administrateur</option>
                         </select>
                     </div>
+                    <x-forms.erreur champ="role" />
                 </div>
 
                 <div class="submit">

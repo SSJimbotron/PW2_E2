@@ -30,6 +30,7 @@
                                 @endforeach
                             </select>
                         </div>
+                        <x-forms.erreur champ="client" />
                     </div>
 
                     {{-- FORFAIT --}}
@@ -46,6 +47,7 @@
                                 @endforeach
                             </select>
                         </div>
+                        <x-forms.erreur champ="forfait" />
                     </div>
 
                     {{-- DATE ARRIVEE --}}
@@ -57,6 +59,7 @@
                             <input type="date" id="date_arrivee" name="date_arrivee" value="2024-08-19"
                                 min="2024-08-19" max="2024-08-21" />
                         </div>
+                        <x-forms.erreur champ="date_arrivee" />
                     </div>
                     {{-- DATE DEPART --}}
                     <div>
@@ -68,6 +71,7 @@
                             <input type="date" id="date_depart" name="date_depart" value="2024-08-21"
                                 min="2024-08-19" max="2024-08-21" />
                         </div>
+                        <x-forms.erreur champ="date_depart" />
                     </div>
 
                     {{-- SUBMIT --}}

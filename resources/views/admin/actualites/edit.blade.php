@@ -1,6 +1,7 @@
 <x-layout titre="Modification de l'actualité">
     <div class="conteneur-enregistrement">
         <div class="formulaire-enregistrement">
+
             <div>
 
                 <h2 class="font-lovelo neon-text">
@@ -29,6 +30,7 @@
                                     value="{{ old('titre') ?? $actualite->titre }}">
 
                             </div>
+                            <x-forms.erreur champ="titre" />
                         </div>
 
                         {{-- CONTENU --}}
@@ -38,7 +40,23 @@
                                 <input type="textarea" id="contenu" name="contenu" col="15" row="30"
                                     value="{{ old('contenu') ?? $actualite->contenu }}">
                             </div>
+                            <x-forms.erreur champ="contenu" />
                         </div>
+
+                        {{-- SUBMIT --}}
+                        <div class="mt-2">
+                            <input type="submit"
+                                class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                value="Modifier">
+                        </div>
+                    </form>
+
+                    <form class="space-y-6" action="{{ route('admin.actualites.updateimg') }}" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
+
+                        {{-- ID --}}
+                        <input type="hidden" name="id" value="{{ $actualite->id }}">
 
                         {{-- IMAGE --}}
                         <div>
@@ -48,23 +66,34 @@
                             <div class="mt-2">
                                 <input type="file" name="image" id="image">
                             </div>
+                            <x-forms.erreur champ="image" />
                         </div>
 
                         {{-- SUBMIT --}}
                         <div class="mt-2">
                             <input type="submit"
                                 class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                value="Modifier!">
+                                value="Modifier">
                         </div>
-                        {{-- Suppression --}}
-                        <div class="mt-2">
-                            <p class="mt-10 text-center text-sm text-gray-500">
-                                <a class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                    href="{{ route('admin.actualites.destroy') }}">Supprimer</a>
-                            </p>
-                        </div>
+
+
                     </form>
 
+                    <form class="space-y-6" action="{{ route('admin.actualites.destroy') }}" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
+
+                        <div class="mt-2">
+
+                            {{-- ID --}}
+                            <input type="hidden" name="id" value="{{ $actualite->id }}">
+
+                            <input type="submit"
+                                class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                value="Supprimer">
+                        </div>
+
+                    </form>
                     {{-- RETOUR AUX ACTUALITES --}}
                     <p class="mt-10 text-center text-sm text-gray-500">
                         <a href="{{ route('admin.index') }}" class="hover:text-indigo-600">Retour à l'administration</a>

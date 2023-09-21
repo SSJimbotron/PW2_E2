@@ -99,7 +99,7 @@ class ReservationController extends Controller
         $forfaits = Forfait::all();
 
         return view('admin.reservations.edit', [
-            "usagers" => $usagers, "forfaits" => $forfaits,  "reservations" => Reservation::findOrFail($id),
+            "usagers" => $usagers, "forfaits" => $forfaits,  "reservation" => Reservation::findOrFail($id),
         ]);
     }
     /**

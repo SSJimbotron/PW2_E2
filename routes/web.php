@@ -129,7 +129,7 @@ Route::post("reservations", [ReservationController::class, 'store'])
 
 //destroy
 Route::post("/admin/reservations/destroy", [ReservationController::class, 'destroy'])
-    ->name('admin.reservations.destroy');
+    ->name('admin.reservations.destroy')
     ->middleware('auth', 'checkrole:3');
 
 // ======================= ADMINISTRATION ===========================
@@ -159,7 +159,7 @@ Route::post("/admin/activites", [ActiviteController::class, 'store'])
 
 //  destroy
 Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
-    ->name('admin.activites.destroy');
+    ->name('admin.activites.destroy')
     ->middleware('auth', 'checkrole:3');
 
 
@@ -173,6 +173,10 @@ Route::get("/admin/actualites/edit/{id}", [ActualiteController::class, 'edit'])
 Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
     ->name('admin.actualites.update')
     ->middleware('auth', 'checkrole:3');
+//  edit de l'image
+Route::post("/admin/actualites/updateimg", [ActualiteController::class, 'updateimg'])
+    ->name('admin.actualites.updateimg')
+    ->middleware('auth', 'checkrole:3');
 
 // create
 Route::get("/admin/actualites/create", [ActualiteController::class, 'create'])
@@ -183,14 +187,9 @@ Route::post("/admin/actualites", [ActualiteController::class, 'store'])
     ->name('admin.actualites.store')
     ->middleware('auth', 'checkrole:3');
 
-//  
-
-
-
-
-
+// delete
 Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
-    ->name('admin.actualites.destroy');
+    ->name('admin.actualites.destroy')
     ->middleware('auth', 'checkrole:3');
 
 
@@ -214,6 +213,6 @@ Route::post("/admin/usagers", [UsagerController::class, 'store'])
 //  destroy
 
 Route::post("/admin/usagers/destroy", [UsagerController::class, 'destroy'])
-    ->name('admin.usagers.destroy');
+    ->name('admin.usagers.destroy')
     ->middleware('auth', 'checkrole:3');
 
