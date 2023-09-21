@@ -8,24 +8,27 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 /***************
     HEADER
 *************/
-.lien-header{
+.lien-header {
     transition: 0.1s ease-in-out;
 }
 
-.lien-header:hover{
+.lien-header:hover {
     text-shadow:
-    0 0 5px #c2c2c2,
-    0 0 10px #c2c2c2,
-    0 0 15px #c2c2c2,
+        0 0 5px #c2c2c2,
+        0 0 10px #c2c2c2,
+        0 0 15px #c2c2c2,
 
 }
 
-.lien-h3-footer{transition: 0.1s ease-in-out;}
-.lien-h3-footer:hover{
+.lien-h3-footer {
+    transition: 0.1s ease-in-out;
+}
+
+.lien-h3-footer:hover {
     text-shadow:
-    0 0 5px $rose,
-    0 0 10px $rose,
-    0 0 15px $rose,
+        0 0 5px $rose,
+        0 0 10px $rose,
+        0 0 15px $rose,
 }
 
 
@@ -252,9 +255,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 }
 
 /************
-* À propos
-***********/
-
+* À propos ***********/
 .apropos {
 
     display: flex;
@@ -464,7 +465,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         .coordonnes {
 
             width: 400px;
-            height: 350px;
+            // height: 350px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -472,14 +473,36 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             text-align: center;
             color: white;
 
-            h2 {
-                font-size: 1.5rem;
-
-            }
-
             .coordonnes.a {
-                padding: 20px;
+                margin-bottom: 40px;
 
+                img {
+                    display: inline-block; // Display the image inline
+                    vertical-align: middle; // Align vertically to middle
+
+
+                }
+
+                .image {
+                    margin-right: 20px;
+
+                }
+
+
+
+
+                h2 {
+                    display: inline-block; // Display the image inline
+                    vertical-align: middle; // Align vertically to middle
+                    font-size: 1.5rem;
+                    margin-bottom: 10px;
+
+                }
+
+                .coordonnes.a {
+                    padding: 20px;
+
+                }
             }
         }
     }
@@ -643,6 +666,9 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 /************
 * ActiviteShow
 ***********/
+// Define your Sass variables here:
+$bleu: /* Your blue color value */;
+
 .activite-show {
     background-image: $arrierePlan;
     display: flex;
@@ -651,7 +677,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
     align-items: center;
 
     .banniere {
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -664,7 +689,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         height: 25vh;
 
         h1 {
-
             color: white;
             font-size: 2.5rem;
             font-weight: 700;
@@ -684,7 +708,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         }
     }
 
-
     .conteneur {
         position: relative;
         display: flex;
@@ -699,7 +722,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         margin: 150px;
 
         .image {
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -717,7 +739,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             }
         }
 
-
         .information {
             margin: auto;
             position: absolute;
@@ -730,24 +751,20 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             box-shadow: 1px 1px 5px #aaaaaa;
 
             h1 {
-
                 font-size: 2rem;
                 font-weight: 700;
                 letter-spacing: 3px;
-                color: $bleu;
+                color: $bleu; // Make sure to define $bleu
                 margin-bottom: 50px;
                 text-align: center;
             }
 
             h2 {
-
                 margin-bottom: 20px;
 
                 .fas {
-
                     margin-right: 5px;
                 }
-
             }
 
             .reseaux {
@@ -756,16 +773,14 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 align-items: center;
                 margin-top: 30px;
 
-
                 img {
                     margin: 10px;
                 }
             }
-
         }
     }
-
 }
+
 
 /******************
 * Actualites Index
@@ -791,18 +806,19 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         height: 25vh;
 
         h1 {
-            color: white;
+            color: $jaune;
             font-size: 2.5rem;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 5px 20px;
             border-radius: 5px;
             letter-spacing: 3px;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+            text-shadow: 0 0 5px $jaune, 0 0 10px $jaune, 0 0 20px $jaune, 0 0 40px $jaune, 0 0 80px $jaune, 0 0 90px $jaune, 0 0 100px $jaune, 0 0 150px $jaune;
         }
     }
 
     .actualites-index {
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -811,40 +827,51 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         margin: 100px;
 
         .plan-carte {
+
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             margin: 40px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 1px 1px 5px #aaaaaa;
 
-            .carte-actualites {
-                width: 400px;
-                max-height: 500px;
+            .actualite-image {
+
                 overflow: hidden;
+
+                img {
+
+                    width: 300px;
+                }
 
             }
 
             .carte-information {
-                max-width: 800px;
+
+                max-width: 900px;
                 width: 100%;
-                margin-left:20px;
+                margin-left: 20px;
 
+                h1 {
 
-                h1{
                     font-size: 1.8rem;
                     font-weight: 700;
                     text-align: center;
                     margin-bottom: 30px;
-                    color: $bleu;
+                    color: $jaune;
 
                 }
-                p{
+
+                p {
                     margin-bottom: 10px;
                 }
 
                 .contenu {
+
                     display: none;
-                    max-height: 500px; /* Hauteur maximale pour la partie "contenu" */
+                    max-height: 500px;
                     overflow: hidden;
                 }
 
@@ -852,17 +879,53 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                     text-align: center;
                     margin-top: 20px;
 
-                    .voir-plus {
-                        background-color: $bleu;
-                        color: rgb(0, 0, 0);
-                        border: none;
-                        padding: 10px 20px;
-                        cursor: pointer;
-                        border-radius: 5px;
-                        transition: background-color 0.3s ease;
+                    .btn-9 {
 
-                        &:hover {
-                            background-color: white;
+                        width: 130px;
+                        height: 40px;
+                        padding: 10px 25px;
+                        font-weight: 500;
+                        background: transparent;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        position: relative;
+                        display: inline-block;
+                        color: $jaune;
+                        border: 1px solid $jaune;
+                        box-shadow: 0 0 5px $jaune, 0 0 5px $jaune inset;
+                        z-index: 2;
+                        transition: all 0.3s ease;
+                        overflow: hidden;
+
+                        &:after {
+                            position: absolute;
+                            content: " ";
+                            z-index: -1;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transition: all 0.5s ease;
+
+                        }
+
+                        .btn-9:hover {
+
+                            color: #000;
+                        }
+
+                        &:hover:after {
+
+                            background: $jaune;
+                            color: black;
+                            -webkit-transform: scale(2) rotate(180deg);
+                            transform: scale(2) rotate(180deg);
+                            box-shadow:
+                                4px 4px 6px 0 rgba(255, 255, 255, 1),
+                                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                                inset -4px -4px 6px 0 rgba(255, 255, 255, 1),
+                                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+
                         }
                     }
                 }
@@ -870,6 +933,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         }
     }
 }
+
 
 
 

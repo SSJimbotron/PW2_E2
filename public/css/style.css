@@ -161,8 +161,7 @@
 }
 
 /************
-* À propos
-***********/
+* À propos ***********/
 .apropos {
   display: flex;
   flex-direction: column;
@@ -281,7 +280,6 @@
 }
 .apropos .adresse .coordonnes {
   width: 400px;
-  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -289,10 +287,23 @@
   text-align: center;
   color: white;
 }
-.apropos .adresse .coordonnes h2 {
-  font-size: 1.5rem;
-}
 .apropos .adresse .coordonnes .coordonnes.a {
+  margin-bottom: 40px;
+}
+.apropos .adresse .coordonnes .coordonnes.a img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.apropos .adresse .coordonnes .coordonnes.a .image {
+  margin-right: 20px;
+}
+.apropos .adresse .coordonnes .coordonnes.a h2 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.apropos .adresse .coordonnes .coordonnes.a .coordonnes.a {
   padding: 20px;
 }
 
@@ -514,14 +525,14 @@
   height: 25vh;
 }
 .actualites .banniere h1 {
-  color: white;
+  color: #F7CD45;
   font-size: 2.5rem;
   font-weight: 700;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 5px 20px;
   border-radius: 5px;
   letter-spacing: 3px;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
 }
 .actualites .actualites-index {
   display: flex;
@@ -537,14 +548,18 @@
   justify-content: center;
   align-items: center;
   margin: 40px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px #aaaaaa;
 }
-.actualites .actualites-index .plan-carte .carte-actualites {
-  width: 400px;
-  max-height: 500px;
+.actualites .actualites-index .plan-carte .actualite-image {
   overflow: hidden;
 }
+.actualites .actualites-index .plan-carte .actualite-image img {
+  width: 300px;
+}
 .actualites .actualites-index .plan-carte .carte-information {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   margin-left: 20px;
 }
@@ -553,31 +568,56 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
-  color: #78FBFD;
+  color: #F7CD45;
 }
 .actualites .actualites-index .plan-carte .carte-information p {
   margin-bottom: 10px;
 }
 .actualites .actualites-index .plan-carte .carte-information .contenu {
   display: none;
-  max-height: 500px; /* Hauteur maximale pour la partie "contenu" */
+  max-height: 500px;
   overflow: hidden;
 }
 .actualites .actualites-index .plan-carte .carte-information .charger {
   text-align: center;
   margin-top: 20px;
 }
-.actualites .actualites-index .plan-carte .carte-information .charger .voir-plus {
-  background-color: #78FBFD;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 10px 20px;
+.actualites .actualites-index .plan-carte .carte-information .charger .btn-9 {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  color: #F7CD45;
+  border: 1px solid #F7CD45;
+  box-shadow: 0 0 5px #F7CD45, 0 0 5px #F7CD45 inset;
+  z-index: 2;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
-.actualites .actualites-index .plan-carte .carte-information .charger .voir-plus:hover {
-  background-color: white;
+.actualites .actualites-index .plan-carte .carte-information .charger .btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  color: black;
+}
+.actualites .actualites-index .plan-carte .carte-information .charger .btn-9:after .btn-9:hover {
+  color: #000;
+}
+.actualites .actualites-index .plan-carte .carte-information .charger .btn-9:hover:after {
+  background: #F7CD45;
+  color: black;
+  transform: scale(2) rotate(180deg);
+  box-shadow: 4px 4px 6px 0 rgb(255, 255, 255), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgb(255, 255, 255), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
 }
 
 /************

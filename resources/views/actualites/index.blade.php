@@ -8,7 +8,7 @@
         <div class="actualites-index">
             @foreach ($actualites as $actualite)
                 <div class="plan-carte">
-                    <div class="carte-actualites">
+                    <div class="actualite-image">
                         <img src="{{ asset('image/Actualites/' . $actualite->image) }}" alt="{{ $actualite->titre }}">
                     </div>
                     <div class="carte-information carte-info-{{ $actualite->id }}" data-state="hidden">
@@ -21,7 +21,7 @@
                         <!-- Le reste du contenu (initiallement caché) -->
                         <p class="contenu">{{ substr($actualite->contenu, 400) }}</p>
                         <div class="charger">
-                            <button class="voir-plus">Voir plus</button>
+                            <button class="voir-plus btn-9 ">Voir plus</button>
                         </div>
                     </div>
                 </div>
