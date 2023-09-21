@@ -17,7 +17,7 @@
 
                     <div class="carte-activite">
 
-                        <img class="activite-image" src="{{ asset('image/ActiviteIndex/' . $activite->image) }}"
+                        <img class="activite-image" src="{{ asset($activite->image) }}"
                             alt="{{ $activite->nom }}">
 
                     </div>

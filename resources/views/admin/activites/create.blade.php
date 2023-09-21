@@ -1,6 +1,7 @@
 <x-layout titre="Nouvelle activité">
     <div class="conteneur-enregistrement">
         <div class="formulaire-enregistrement">
+            @dump($errors)
             <div>
 
                 <h2 class="font-lovelo neon-text">
