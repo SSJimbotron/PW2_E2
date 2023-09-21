@@ -13,7 +13,8 @@ class ActualiteController extends Controller
      *
      * @return View
      */
-    public function index() {
+    public function index()
+    {
         // Récupérer toutes les actualites de la base de données
         $actualites = Actualite::get();
 
@@ -21,7 +22,6 @@ class ActualiteController extends Controller
         return view('actualites.index',  [
             'actualites' => $actualites
         ]);
-
     }
 
     // ======================= AJOUT =======================
@@ -114,7 +114,7 @@ class ActualiteController extends Controller
         ]);
 
         // Récupération de la note à modifier, suivi de la modification et sauvegarde
-        $actualite = actualite::findOrFail($valides["id"]);
+        $actualite = Actualite::findOrFail($valides["id"]);
         $actualite->titre = $valides["titre"];
         $actualite->contenu = $valides["contenu"];
 

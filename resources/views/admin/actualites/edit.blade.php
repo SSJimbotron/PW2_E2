@@ -1,5 +1,7 @@
 <x-layout titre="Modification de l'actualité">
+    @dump($errors)
     <div class="conteneur-enregistrement">
+
         <div class="formulaire-enregistrement">
 
             <div>

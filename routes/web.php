@@ -148,6 +148,9 @@ Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
 Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
     ->name('admin.activites.update')
     ->middleware('auth', 'checkrole:3');
+Route::post("/admin/activites/updateimg", [ActiviteController::class, 'updateimg'])
+    ->name('admin.activites.updateimg')
+    ->middleware('auth', 'checkrole:3');
 
 // create
 Route::get("/admin/activites/create", [ActiviteController::class, 'create'])
@@ -188,6 +191,7 @@ Route::post("/admin/actualites", [ActualiteController::class, 'store'])
     ->middleware('auth', 'checkrole:3');
 
 // delete
+
 Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
     ->name('admin.actualites.destroy')
     ->middleware('auth', 'checkrole:3');
