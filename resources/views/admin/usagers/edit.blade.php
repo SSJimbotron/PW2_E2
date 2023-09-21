@@ -28,7 +28,7 @@
                         <input id="nom" name="nom" type="text" value="{{ old('nom') ?? $usager->nom }}"
                             autocomplete="family-name" class="">
 
-                        {{-- <x-forms.erreur champ="nom" /> --}}
+                        <x-forms.erreur champ="nom" />
                     </div>
 
                 </div>
@@ -40,7 +40,7 @@
                         <input id="prenom" name="prenom" type="text"
                             value="{{ old('prenom') ?? $usager->prenom }}">
 
-                        {{-- <x-forms.erreur champ="prenom" /> --}}
+                        <x-forms.erreur champ="prenom" />
 
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                         <input id="email" name="email" type="email"
                             value="{{ old('email') ?? $usager->email }}">
 
-                        {{-- <x-forms.erreur champ="email" /> --}}
+                        <x-forms.erreur champ="email" />
                     </div>
 
                 </div>
@@ -86,6 +86,7 @@
                             @endif
                         </select>
                     </div>
+                    <x-forms.erreur champ="role" />
                 </div>
 
                 <div class="submit">
@@ -96,19 +97,30 @@
 
 
                 </div>
-                 {{-- Suppression --}}
-                 <div class="mt-2">
-                    <p class="mt-10 text-center text-sm text-gray-500">
-                        <a class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="{{ route('admin.usagers.destroy') }}">Supprimer</a>
-                    </p>
-                </div>
-                {{-- RETOUR AUX ACTUALITES --}}
-                <p class="mt-10 text-center text-sm text-gray-500">
-                    <a href="{{ route('admin.index') }}" class="hover:text-bleu">Retour</a>
-
-                </p>
             </form>
+
+            {{-- SUPPRESSION --}}
+            <form class="space-y-6" action="{{ route('admin.usagers.destroy') }}" method="POST"
+                enctype="multipart/form-data">
+                @csrf
+
+                <div class="mt-2">
+
+                    {{-- ID --}}
+                    <input type="hidden" name="id" value="{{ $usager->id }}">
+
+                    <input type="submit"
+                        class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        value="Supprimer">
+                </div>
+
+            </form>
+
+            {{-- RETOUR AUX ACTUALITES --}}
+            <p class="mt-10 text-center text-sm text-gray-500">
+                <a href="{{ route('admin.index') }}" class="hover:text-bleu">Retour</a>
+
+            </p>
         </div>
     </div>
 

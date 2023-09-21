@@ -47,6 +47,9 @@
 
 <body>
 
+    <x-alertes.succes cle="succes" />
+    <x-alertes.succes cle="erreur" />
+
     {{-- HEADER --}}
     <header class="bg-noir h-96 w-full pt-14 pb-96 mb-10">
 

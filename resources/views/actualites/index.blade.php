@@ -9,7 +9,9 @@
             @foreach ($actualites as $actualite)
                 <div class="plan-carte">
                     <div class="carte-actualites">
-                        <img src="{{ asset('storage/uploads/' . $actualite->image) }}" alt="{{ $actualite->titre }}">
+
+                        <img src="{{ asset($actualite->image) }}" alt="{{ $actualite->titre }}">
+
                     </div>
                     <div class="carte-information carte-info-{{ $actualite->id }}" data-state="hidden">
                         <a href="{{ route('activites.show', ['id' => $actualite->id]) }}" class="font-quicksand">

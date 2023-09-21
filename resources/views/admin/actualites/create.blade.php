@@ -24,6 +24,7 @@
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
                                 value="{{ old('titre') }}">
                         </div>
+                        <x-forms.erreur champ="titre" />
                     </div>
 
                     {{-- CONTENU --}}
@@ -34,6 +35,7 @@
                         <div>
                             <input type="textarea" name="contenu" id="contenu">
                         </div>
+                        <x-forms.erreur champ="contenu" />
                     </div>
 
 
@@ -45,6 +47,7 @@
                         <div class="mt-2">
                             <input type="file" name="image" id="image">
                         </div>
+                        <x-forms.erreur champ="image" />
                     </div>
 
 
