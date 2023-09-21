@@ -47,7 +47,7 @@ class ActiviteController extends Controller
 
         // Affichez la vue des détails de l'activité en passant l'objet $activite
         return view('activites.show', [
-            'activite'=> $activite
+            'activite' => $activite
         ]);
     }
 
@@ -131,15 +131,12 @@ class ActiviteController extends Controller
         $valides = $request->validate([
             "id" => "required",
             "nom" => "required|min:4|max:150",
-            "image" => "required|mimes:png,jpg,jpeg",
             "description" => "required|min:10"
         ], [
             "id.required" => "L'id de l'activité est obligatoire",
             "nom.max" => "Le nom doit avoir un maximum de :max caractères",
             "nom.min" => "Le nom doit avoir un minimum de :min caractères",
             "nom.required" => "Le nom est obligatoire",
-            "image.required" => "L'image est obligatoire'",
-            "image.mimes" => "L'image doit avoir une des extensions suivantes: PNG, JPG, JPEG",
             "description.required" => "La description est obligatoire",
             "description.min" => "La description doit avoir un minimum de :min caractères",
         ]);
@@ -148,6 +145,35 @@ class ActiviteController extends Controller
         $activite = Activite::findOrFail($valides["id"]);
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
+
+
+        $activite->save();
+
+        // Rediriger
+        return redirect()
+            ->route('admin.index')
+            ->with('succes', "L'activité a été modifiée avec succès!");
+    }
+    /**
+     * Traite la modification de l'image
+     *
+     * @param Request $request Objet qui contient tous les champs reçus dans la requête
+     * @return RedirectResponse
+     */
+    public function updateimg(Request $request)
+    {
+        // Valider
+        $valides = $request->validate([
+            "id" => "required",
+            "image" => "required|mimes:png,jpg,jpeg",
+        ], [
+            "id.required" => "L'id de l'activité est obligatoire",
+            "image.required" => "L'image est obligatoire'",
+            "image.mimes" => "L'image doit avoir une des extensions suivantes: PNG, JPG, JPEG",
+        ]);
+
+        // Récupération de la note à modifier, suivi de la modification et sauvegarde
+        $activite = Activite::findOrFail($valides["id"]);
 
         // Traiter le téléversement
         if ($request->hasFile('image')) {
@@ -171,10 +197,11 @@ class ActiviteController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function destroy(Request $request) {
+    public function destroy(Request $request)
+    {
         Activite::destroy($request->id);
 
         return redirect()->route('admin.index')
-                ->with('succes', "L'activite a été supprimée!");
+            ->with('succes', "L'activite a été supprimée!");
     }
 }
