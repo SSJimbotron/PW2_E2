@@ -8,8 +8,11 @@
         <div class="actualites-index">
             @foreach ($actualites as $actualite)
                 <div class="plan-carte">
-                    <div class="actualite-image">
-                        <img src="{{ asset('image/Actualites/' . $actualite->image) }}" alt="{{ $actualite->titre }}">
+
+                    <div class="carte-actualites">
+
+                        <img src="{{ asset($actualite->image) }}" alt="{{ $actualite->titre }}">
+
                     </div>
                     <div class="carte-information carte-info-{{ $actualite->id }}" data-state="hidden">
                         <a href="{{ route('activites.show', ['id' => $actualite->id]) }}" class="font-quicksand">
@@ -17,7 +20,9 @@
                         </a>
                         <p>Publié le : {{ $actualite->created_at->format('d/m/Y H:i') }}</p>
                         <!-- Partie initialement visible -->
-                        <p class="intro">{{ substr($actualite->contenu, 0, 400) }}{{ strlen($actualite->contenu) > 200 ? '...' : '' }}</p>
+                        <p class="intro">
+                            {{ substr($actualite->contenu, 0, 400) }}{{ strlen($actualite->contenu) > 200 ? '...' : '' }}
+                        </p>
                         <!-- Le reste du contenu (initiallement caché) -->
                         <p class="contenu">{{ substr($actualite->contenu, 400) }}</p>
                         <div class="charger">
@@ -29,4 +34,3 @@
         </div>
     </div>
 </x-layout>
-

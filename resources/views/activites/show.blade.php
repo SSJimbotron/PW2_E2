@@ -7,7 +7,7 @@
         </div>
         <div class="conteneur">
             <div class="image">
-                <img src="{{ asset('image/ActiviteShow/' . $activite->image) }}" alt="{{ $activite->nom }}">
+                <img src="{{ asset($activite->image) }}" alt="{{ $activite->nom }}">
             </div>
             <div class="information">
                 <h1 class="font-lovelo">{{ $activite->nom }}</h1>

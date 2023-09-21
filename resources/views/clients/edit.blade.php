@@ -28,7 +28,7 @@
                         <input id="nom" name="nom" type="text" value="{{ old('nom') ?? $usager->nom }}"
                             autocomplete="family-name" class="">
 
-                        {{-- <x-forms.erreur champ="nom" /> --}}
+                        <x-forms.erreur champ="nom" />
                     </div>
 
                 </div>
@@ -40,7 +40,7 @@
                         <input id="prenom" name="prenom" type="text"
                             value="{{ old('prenom') ?? $usager->prenom }}">
 
-                        {{-- <x-forms.erreur champ="prenom" /> --}}
+                        <x-forms.erreur champ="prenom" />
 
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                         <input id="email" name="email" type="email"
                             value="{{ old('email') ?? $usager->email }}">
 
-                        {{-- <x-forms.erreur champ="email" /> --}}
+                        <x-forms.erreur champ="email" />
                     </div>
 
                 </div>
@@ -91,7 +91,7 @@
                     <div>
                         <input id="password" name="password" type="password" autocomplete="current-password">
 
-                        {{-- <x-forms.erreur champ="password" /> --}}
+                        <x-forms.erreur champ="password" />
                     </div>
 
                 </div>
@@ -106,7 +106,7 @@
                     <div>
                         <input id="confirm-password" name="confirmation_password" type="password" class="">
 
-                        {{-- <x-forms.erreur champ="confirmation_password" /> --}}
+                        <x-forms.erreur champ="confirmation_password" />
                     </div>
                 </div>
 

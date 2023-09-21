@@ -785,6 +785,7 @@ $bleu: /* Your blue color value */;
 /******************
 * Actualites Index
 ******************/
+
 .actualites {
     display: flex;
     flex-direction: column;
@@ -854,6 +855,7 @@ $bleu: /* Your blue color value */;
                 width: 100%;
                 margin-left: 20px;
 
+
                 h1 {
 
                     font-size: 1.8rem;
@@ -872,6 +874,7 @@ $bleu: /* Your blue color value */;
 
                     display: none;
                     max-height: 500px;
+                    /* Hauteur maximale pour la partie "contenu" */
                     overflow: hidden;
                 }
 
@@ -933,8 +936,122 @@ $bleu: /* Your blue color value */;
         }
     }
 }
+/************
+* PROGRAMMATION
+***********/
+.programmation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: $arrierePlan;
+    color: $gris;
 
+    .banniere {
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url('/image/Programmation/banniere.png');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 25vh;
+
+        h1 {
+
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
+        }
+
+    }
+}
+
+/******************
+* Forfaits Index
+******************/
+.forfaits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: $arrierePlan;
+    color: $gris;
+    .banniere {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url('/image/Forfaits/banniere.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        width: 100%;
+        height: 25vh;
+
+        h1 {
+
+            color: $jaune;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px $jaune,
+                0 0 10px $jaune,
+                0 0 20px $jaune,
+                0 0 40px $jaune,
+                0 0 80px $jaune,
+                0 0 90px $jaune,
+                0 0 100px $jaune,
+                0 0 150px $jaune;
+        }
+
+    }
+    .forfait_carte{
+        display: flex;
+        position: relative;
+        width: 80vw;
+        flex-direction: column;
+
+        div{
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+
+            p{
+                width: 50vw;
+            }
+            .forfait_infos{
+                display: flex;
+                position: relative;
+                flex-direction: column;
+            }
+        }
+    }
+    img{width: 5vw;}
+    h2{
+        font-size: 3vw;
+    }
+}
 
 
 /************
@@ -1152,3 +1269,5 @@ $bleu: /* Your blue color value */;
     }
 
 }
+
+

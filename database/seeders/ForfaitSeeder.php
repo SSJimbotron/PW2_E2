@@ -16,14 +16,15 @@ class ForfaitSeeder extends Seeder
     {
 
         // Forfaits spécifiques
+
         Forfait::factory()->create([
-            "nom" => "Platine",
-            "description" => "Accès exclusif aux zones VIP du festival.
-            Billets pour tous les jours du festival, y compris les pré-événements.
-            Rencontrez des artistes en backstage en scéance personnelle
-            Repas gratuits et boissons illimitées dans les espaces VIP.
-            Accès à des toilettes propres et confortables.",
-            "jour" => "3",
+            "nom" => "Argent",
+            "description" => "Billets pour le festival à un prix abordable.
+            Accès à toutes les scènes et zones d'animation.
+            Possibilité d'apporter votre propre nourriture et boissons
+            Expérience authentique de festival avec une ambiance animée.
+            Idéal pour les étudiants et les amateurs de musique soucieux de leur budget.",
+            "jour" => "1",
         ]);
         Forfait::factory()->create([
             "nom" => "Or",
@@ -35,13 +36,13 @@ class ForfaitSeeder extends Seeder
             "jour" => "2",
         ]);
         Forfait::factory()->create([
-            "nom" => "Argent",
-            "description" => "Billets pour le festival à un prix abordable.
-            Accès à toutes les scènes et zones d'animation.
-            Possibilité d'apporter votre propre nourriture et boissons
-            Expérience authentique de festival avec une ambiance animée.
-            Idéal pour les étudiants et les amateurs de musique soucieux de leur budget.",
-            "jour" => "1",
+            "nom" => "Platine",
+            "description" => "Accès exclusif aux zones VIP du festival.
+            Billets pour tous les jours du festival, y compris les pré-événements.
+            Rencontrez des artistes en backstage en scéance personnelle
+            Repas gratuits et boissons illimitées dans les espaces VIP.
+            Accès à des toilettes propres et confortables.",
+            "jour" => "3",
         ]);
     }
 }

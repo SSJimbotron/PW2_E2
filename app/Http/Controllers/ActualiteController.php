@@ -13,7 +13,8 @@ class ActualiteController extends Controller
      *
      * @return View
      */
-    public function index() {
+    public function index()
+    {
         // Récupérer toutes les actualites de la base de données
         $actualites = Actualite::get();
 
@@ -21,7 +22,6 @@ class ActualiteController extends Controller
         return view('actualites.index',  [
             'actualites' => $actualites
         ]);
-
     }
 
     // ======================= AJOUT =======================
@@ -103,23 +103,49 @@ class ActualiteController extends Controller
         $valides = $request->validate([
             "id" => "required",
             "titre" => "required|min:4|max:150",
-            "image" => "required|mimes:png,jpg,jpeg",
             "contenu" => "required|min:10"
         ], [
             "id.required" => "L'id de l'activité est obligatoire",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
             "titre.required" => "Le titre est obligatoire",
-            "image.required" => "L'image est obligatoire'",
-            "image.mimes" => "L'image doit avoir une des extensions suivantes: PNG, JPG, JPEG",
             "contenu.required" => "Le contenu est obligatoire",
             "contenu.min" => "Le contenu doit avoir un minimum de :min caractères",
         ]);
 
         // Récupération de la note à modifier, suivi de la modification et sauvegarde
-        $actualite = actualite::findOrFail($valides["id"]);
+        $actualite = Actualite::findOrFail($valides["id"]);
         $actualite->titre = $valides["titre"];
         $actualite->contenu = $valides["contenu"];
+
+        $actualite->save();
+
+        // Rediriger
+        return redirect()
+            ->route('admin.index')
+            ->with('succes', "L'actualité a été modifiée avec succès!");
+    }
+
+    /**
+     * Traite la modification de l'image
+     *
+     * @param Request $request Objet qui contient tous les champs reçus dans la requête
+     * @return RedirectResponse
+     */
+    public function updateimg(Request $request)
+    {
+        // Valider
+        $valides = $request->validate([
+            "id" => "required",
+            "image" => "required|mimes:png,jpg,jpeg",
+        ], [
+            "id.required" => "L'id de l'activité est obligatoire",
+            "image.required" => "L'image est obligatoire'",
+            "image.mimes" => "L'image doit avoir une des extensions suivantes: PNG, JPG, JPEG",
+        ]);
+
+        // Récupération de la note à modifier, suivi de la modification et sauvegarde
+        $actualite = actualite::findOrFail($valides["id"]);
 
         // Traiter le téléversement
         if ($request->hasFile('image')) {
@@ -134,7 +160,7 @@ class ActualiteController extends Controller
         // Rediriger
         return redirect()
             ->route('admin.index')
-            ->with('succes', "L'actualité a été modifiée avec succès!");
+            ->with('succes', "L'image de l'actualité a été modifiée avec succès!");
     }
     /**
      * Traite la suppression

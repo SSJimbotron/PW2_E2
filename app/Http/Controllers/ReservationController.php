@@ -73,9 +73,10 @@ class ReservationController extends Controller
                 ->route('admin.index')
                 ->with('succes', "La réservation a été ajoutée avec succès!");
         } else {
-             // Rediriger
+            // Rediriger
             return redirect()
-                ->route('admin.reservations.create');
+                ->route('admin.reservations.create')
+                ->with('error', "Les dates doivent respecter votre forfait");
         }
     }
 
@@ -99,7 +100,7 @@ class ReservationController extends Controller
         $forfaits = Forfait::all();
 
         return view('admin.reservations.edit', [
-            "usagers" => $usagers, "forfaits" => $forfaits,  "reservations" => Reservation::findOrFail($id),
+            "usagers" => $usagers, "forfaits" => $forfaits,  "reservation" => Reservation::findOrFail($id),
         ]);
     }
     /**
@@ -128,32 +129,46 @@ class ReservationController extends Controller
             "date_depart.after_or_equal" => "La date de départ doit être égale ou supérieur à la date d'arrivée",
             "client.required" => "Un client est obligatoire",
         ]);
+        $forfaits = Forfait::all();
+        foreach ($forfaits as $forfait) {
+            if ($forfait->id == $valides["forfait"]) {
+                $jours_forfait = $forfait->jour - 1;
+            }
+        }
 
-        // Ajouter à la BDD
-        $reservation = Reservation::findOrFail($valides["id"]);
-        $reservation->user_id = $valides["client"];
-        $reservation->forfait_id = $valides["forfait"];
-        $reservation->date_arrivee = $valides["date_arrivee"];
-        $reservation->date_depart = $valides["date_depart"];
+        if (Carbon::parse($valides["date_arrivee"])->addDays($jours_forfait) <= Carbon::parse($valides["date_depart"])) {
+            // Ajouter à la BDD
+            $reservation = Reservation::findOrFail($valides["id"]);
+            $reservation->user_id = $valides["client"];
+            $reservation->forfait_id = $valides["forfait"];
+            $reservation->date_arrivee = $valides["date_arrivee"];
+            $reservation->date_depart = $valides["date_depart"];
 
 
-        $reservation->save();
+            $reservation->save();
 
-        // Rediriger
-        return redirect()
-            ->route('admin.index')
-            ->with('succes', "La réservation a été modifiée avec succès!");
+            // Rediriger
+            return redirect()
+                ->route('admin.index')
+                ->with('succes', "La réservation a été modifiée avec succès!");
+        } else {
+            // Rediriger
+            return redirect()
+                ->route('admin.reservations.create')
+                ->with('error', "Les dates doivent respecter votre forfait");
+        }
     }
-        /**
+    /**
      * Traite la suppression
      *
      * @param Request $request
      * @return RedirectResponse
      */
-    public function destroy(Request $request) {
+    public function destroy(Request $request)
+    {
         Reservation::destroy($request->id);
 
         return redirect()->route('admin.index')
-                ->with('succes', "La réservation a été supprimée!");
+            ->with('succes', "La réservation a été supprimée!");
     }
 }

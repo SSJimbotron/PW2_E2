@@ -1,6 +1,7 @@
 <x-layout titre="Administration">
 
 
+
     <div class="admin_index">
         <h1 class="font-lovelo">Administration</h1>
         <div class="admin_index_contenu">

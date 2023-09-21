@@ -576,6 +576,7 @@
 .actualites .actualites-index .plan-carte .carte-information .contenu {
   display: none;
   max-height: 500px;
+  /* Hauteur maximale pour la partie "contenu" */
   overflow: hidden;
 }
 .actualites .actualites-index .plan-carte .carte-information .charger {
@@ -618,6 +619,98 @@
   color: black;
   transform: scale(2) rotate(180deg);
   box-shadow: 4px 4px 6px 0 rgb(255, 255, 255), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgb(255, 255, 255), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+
+/******************
+* Forfaits Index
+******************/
+.forfaits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/image/Plan/planTitre.jpg");
+  color: #ADADAD;
+}
+.forfaits .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/image/Forfaits/banniere.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  width: 100%;
+  height: 25vh;
+}
+.forfaits .banniere h1 {
+  color: #F7CD45;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+}
+.forfaits .forfait_carte {
+  display: flex;
+  position: relative;
+  width: 80vw;
+  flex-direction: column;
+}
+.forfaits .forfait_carte div {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.forfaits .forfait_carte div p {
+  width: 50vw;
+}
+.forfaits .forfait_carte div .forfait_infos {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.forfaits img {
+  width: 5vw;
+}
+.forfaits h2 {
+  font-size: 3vw;
+}
+
+/************
+* PROGRAMMATION
+***********/
+.programmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/image/Plan/planTitre.jpg");
+  color: #ADADAD;
+}
+.programmation .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/image/Programmation/banniere.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 25vh;
+}
+.programmation .banniere h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
 
 /************
