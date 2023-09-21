@@ -8,24 +8,27 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 /***************
     HEADER
 *************/
-.lien-header{
+.lien-header {
     transition: 0.1s ease-in-out;
 }
 
-.lien-header:hover{
+.lien-header:hover {
     text-shadow:
-    0 0 5px #c2c2c2,
-    0 0 10px #c2c2c2,
-    0 0 15px #c2c2c2,
+        0 0 5px #c2c2c2,
+        0 0 10px #c2c2c2,
+        0 0 15px #c2c2c2,
 
 }
 
-.lien-h3-footer{transition: 0.1s ease-in-out;}
-.lien-h3-footer:hover{
+.lien-h3-footer {
+    transition: 0.1s ease-in-out;
+}
+
+.lien-h3-footer:hover {
     text-shadow:
-    0 0 5px $rose,
-    0 0 10px $rose,
-    0 0 15px $rose,
+        0 0 5px $rose,
+        0 0 10px $rose,
+        0 0 15px $rose,
 }
 
 
@@ -770,6 +773,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 /******************
 * Actualites Index
 ******************/
+
 .actualites {
     display: flex;
     flex-direction: column;
@@ -827,10 +831,10 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             .carte-information {
                 max-width: 800px;
                 width: 100%;
-                margin-left:20px;
+                margin-left: 20px;
 
 
-                h1{
+                h1 {
                     font-size: 1.8rem;
                     font-weight: 700;
                     text-align: center;
@@ -838,13 +842,15 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                     color: $bleu;
 
                 }
-                p{
+
+                p {
                     margin-bottom: 10px;
                 }
 
                 .contenu {
                     display: none;
-                    max-height: 500px; /* Hauteur maximale pour la partie "contenu" */
+                    max-height: 500px;
+                    /* Hauteur maximale pour la partie "contenu" */
                     overflow: hidden;
                 }
 
@@ -871,7 +877,77 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
     }
 }
 
+/******************
+* Forfaits Index
+******************/
+.forfaits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: $arrierePlan;
+    color: $gris;
+    .banniere {
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url('/image/Forfaits/banniere.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        width: 100%;
+        height: 25vh;
+
+        h1 {
+
+            color: $jaune;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 20px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-shadow:
+                0 0 5px $jaune,
+                0 0 10px $jaune,
+                0 0 20px $jaune,
+                0 0 40px $jaune,
+                0 0 80px $jaune,
+                0 0 90px $jaune,
+                0 0 100px $jaune,
+                0 0 150px $jaune;
+        }
+
+    }
+    .forfait_carte{
+        display: flex;
+        position: relative;
+        width: 80vw;
+        flex-direction: column;
+
+        div{
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+
+            p{
+                width: 50vw;
+            }
+            .forfait_infos{
+                display: flex;
+                position: relative;
+                flex-direction: column;
+            }
+        }
+    }
+    img{width: 5vw;}
+    h2{
+        font-size: 3vw;
+    }
+}
 
 /************
 * Admin
