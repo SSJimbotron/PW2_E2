@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory(10)->create();
 
-        $this->call([ActiviteSeeder::class, ActualiteSeeder::class, ForfaitSeeder::class]);
+        $this->call([ActiviteSeeder::class, ActualiteSeeder::class, ForfaitSeeder::class, ArtisteSeeder::class]);
         \App\Models\Reservation::factory(10)->create();
     }
 }
