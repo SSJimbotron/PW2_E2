@@ -652,6 +652,197 @@
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
 
+
+.programmation .haut-page {
+  width: 100%;
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.programmation .haut-page h2.date {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.programmation .haut-page div {
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 10px 25px;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+.programmation .haut-page div:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 110px #fff;
+}
+.programmation .contenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+.programmation .contenu .journee {
+  font-size: 2.2rem;
+  margin: 30px 0px;
+}
+.programmation .contenu .vendredi {
+  color: #EA33F7;
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+}
+.programmation .contenu .samedi {
+  color: #78FBFD;
+  text-shadow: 0 0 5px #78FBFD, 0 0 10px #78FBFD, 0 0 20px #78FBFD, 0 0 40px #78FBFD, 0 0 80px #78FBFD, 0 0 90px #78FBFD, 0 0 100px #78FBFD, 0 0 150px #78FBFD;
+}
+.programmation .contenu .dimanche {
+  color: #F7CD45;
+  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+}
+.programmation .contenu .artiste {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 10px 0px;
+}
+.programmation .contenu .artiste .img {
+  width: 42%;
+}
+.programmation .contenu .artiste .img img {
+  width: 100%;
+}
+.programmation .contenu .artiste .infos {
+  background-color: rgba(119, 119, 119, 0.2274509804);
+  width: 55%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 20px;
+}
+.programmation .contenu .artiste .infos .nom-artiste {
+  font-size: 1.5rem;
+  transition: all 0.1s ease-in;
+}
+.programmation .contenu .artiste .infos .nom-artiste:hover {
+  font-weight: 600;
+}
+.programmation .contenu .artiste .infos .heure {
+  width: 30%;
+  text-align: center;
+}
+.programmation .contenu .artiste .infos .heure h3 {
+  color: #fff;
+  font-size: 1.75rem;
+}
+.programmation .contenu .artiste .infos .nom {
+  width: 70%;
+  text-align: left;
+}
+.programmation .contenu .artiste .infos-vendredi {
+  border: 2px solid #EA33F7;
+}
+.programmation .contenu .artiste .infos-samedi {
+  border: 2px solid #78FBFD;
+}
+.programmation .contenu .artiste .infos-dimanche {
+  border: 2px solid #F7CD45;
+}
+.programmation .contenu .artiste-principal {
+  width: 98%;
+  height: 53vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 10px 0px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 85px;
+}
+.programmation .contenu .artiste-principal .heure {
+  color: #fff;
+  margin-right: 50px;
+}
+.programmation .contenu .artiste-principal .nom-artiste {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  font-weight: bolder;
+  transition: all 0.2s ease-in-out;
+}
+.programmation .contenu .artiste-principal .nom-artiste:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 110px #fff, 0 0 120px #fff, 0 0 130px #fff, 0 0 140px #fff, 0 0 150px #fff;
+  font-weight: bolder;
+}
+
+/******************
+* Artistes Index
+******************/
+.artistes {
+  background-image: url("/image/Plan/planTitre.jpg");
+  color: #ADADAD;
+}
+.artistes .banniere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/image/Programmation/banniere.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 25vh;
+}
+.artistes .banniere h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 20px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.artistes .contenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: calc(100% - 10px);
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  padding: 150px 0;
+}
+.artistes .contenu .plan-carte-artiste {
+  width: 500px;
+  height: 250px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-image: url("/image/Plan/planTitre.jpg");
+}
+.artistes .contenu .carte-nom-artiste {
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+  background-color: rgba(156, 156, 156, 0.2392156863);
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+}
+.artistes .contenu .carte-nom-artiste:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
+}
+.artistes .contenu .artiste-image {
+  width: 500px;
+  height: 200px;
+}
+
+
 /******************
 * Forfaits Index
 ******************/
