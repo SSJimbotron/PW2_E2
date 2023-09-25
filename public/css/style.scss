@@ -667,7 +667,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 * ActiviteShow
 ***********/
 // Define your Sass variables here:
-$bleu: /* Your blue color value */;
+
 
 .activite-show {
     background-image: $arrierePlan;
@@ -936,10 +936,11 @@ $bleu: /* Your blue color value */;
         }
     }
 }
+
 /************
 * PROGRAMMATION
 ***********/
-.programmation{
+.programmation {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -987,10 +988,12 @@ $bleu: /* Your blue color value */;
 .forfaits {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
+    height: 65vw;
     background-image: $arrierePlan;
     color: $gris;
+
     .banniere {
 
         display: flex;
@@ -1025,32 +1028,135 @@ $bleu: /* Your blue color value */;
         }
 
     }
-    .forfait_carte{
+
+    .forfait_carte {
         display: flex;
         position: relative;
         width: 80vw;
+        height: 15vw;
         flex-direction: column;
+        padding: 2.5vw 0vw 2.5vw 0vw;
 
-        div{
+
+        div {
             display: flex;
             position: relative;
             flex-direction: row;
             justify-content: space-between;
+            padding: .5vw;
 
-            p{
-                width: 50vw;
+            p {
+                width: 37.5vw;
+                font-size: 1vw;
             }
-            .forfait_infos{
+
+            .platine {
+                color: white;
+                border-color: white;
+            }
+
+            button:hover.platine {
+                background-color: white;
+            }
+
+            h2.platine {
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+                    0 0 80px #fff,
+                    0 0 90px #fff,
+                    0 0 100px #fff,
+                    0 0 150px #fff;
+            }
+
+            .or {
+                color: rgb(255, 208, 0);
+                border-color: rgb(255, 208, 0);
+            }
+
+            button:hover.or {
+                background-color: rgb(255, 208, 0);
+            }
+
+            h2.or {
+                text-shadow:
+                    0 0 5px $jaune,
+                    0 0 10px $jaune,
+                    0 0 20px $jaune,
+                    0 0 40px $jaune,
+                    0 0 80px $jaune,
+                    0 0 90px $jaune,
+                    0 0 100px $jaune,
+                    0 0 150px $jaune;
+            }
+
+            .argent {
+                color: $gris;
+                border-color: $gris;
+            }
+
+            button:hover.argent {
+                background-color: $gris;
+            }
+
+            h2.argent {
+                text-shadow:
+                    0 0 5px $gris,
+                    0 0 10px $gris,
+                    0 0 20px $gris,
+                    0 0 40px $gris,
+                    0 0 80px $gris,
+                    0 0 90px $gris,
+                    0 0 100px $gris,
+                    0 0 150px $gris;
+            }
+
+            .forfait_infos {
                 display: flex;
                 position: relative;
                 flex-direction: column;
+                padding: 0vw 5vw 2vw 0vw;
+                font-size: 1.75vw;
             }
+
+            button {
+                display: flex;
+                position: absolute;
+                left: 65vw;
+                top: 2vw;
+                width: 10vw;
+                height: 3vw;
+                padding: .5vw 1.5vw 0vw 2.25vw;
+                margin-right: 5vw;
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                color: $jaune;
+                border: 1px solid $jaune;
+                font-size: 1.25vw;
+            }
+
+            button:hover {
+                color: #000;
+            }
+
+
         }
     }
-    img{width: 5vw;}
-    h2{
-        font-size: 3vw;
+
+    img {
+        width: 5vw;
+
     }
+
+    h2 {
+        font-size: 3vw;
+        padding-left: 2vw;
+
+    }
+
 }
 
 
@@ -1269,5 +1375,3 @@ $bleu: /* Your blue color value */;
     }
 
 }
-
-
