@@ -119,6 +119,38 @@
 
                 </div>
             </form>
+
+            {{-- ========================================================================== --}}
+
+            {{-- *** RESERVATIONS *** --}}
+
+            @foreach ($reservations as $reservation)
+                @if ($reservation->user_id == Auth::user()->id)
+                <tr>
+                    <p>
+                        <td><a href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">
+                                @foreach ($usagers as $usager)
+                                    @if ($reservation->user_id == $usager->id)
+                                        {{ $usager->nom }} {{ $usager->prenom }}
+                                    @endif
+                                @endforeach
+                            </a>
+                        </td>
+                        <td><a
+                                href="{{ route('admin.reservations.edit', ['id' => $reservation->id, 'usager_id' => $usager->id]) }}">{{ $reservation->forfait_id }}</a>
+                        </td>
+                        <td><a
+                                href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_arrivee }}</a>
+                        </td>
+                        <td><a
+                                href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_depart }}</a>
+                        </td>
+                    </p>
+                </tr>
+                @endif
+
+            @endforeach
+
             {{-- RETOUR À L'ACCUEIL --}}
             <p class="mt-10 text-center text-sm text-gray-500">
                 <a href="{{ route('accueil') }}" class="hover:text-bleu">Retour</a>

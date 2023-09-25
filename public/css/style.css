@@ -651,6 +651,8 @@
   letter-spacing: 3px;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
+
+
 .programmation .haut-page {
   width: 100%;
   margin: 50px 0px;
@@ -840,14 +842,15 @@
   height: 200px;
 }
 
+
 /******************
 * Forfaits Index
 ******************/
 .forfaits {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 65vw;
   background-image: url("/image/Plan/planTitre.jpg");
   color: #ADADAD;
 }
@@ -877,27 +880,83 @@
   display: flex;
   position: relative;
   width: 80vw;
+  height: 15vw;
   flex-direction: column;
+  padding: 2.5vw 0vw 2.5vw 0vw;
 }
 .forfaits .forfait_carte div {
   display: flex;
   position: relative;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0.5vw;
 }
 .forfaits .forfait_carte div p {
-  width: 50vw;
+  width: 37.5vw;
+  font-size: 1vw;
+}
+.forfaits .forfait_carte div .platine {
+  color: white;
+  border-color: white;
+}
+.forfaits .forfait_carte div button:hover.platine {
+  background-color: white;
+}
+.forfaits .forfait_carte div h2.platine {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.forfaits .forfait_carte div .or {
+  color: rgb(255, 208, 0);
+  border-color: rgb(255, 208, 0);
+}
+.forfaits .forfait_carte div button:hover.or {
+  background-color: rgb(255, 208, 0);
+}
+.forfaits .forfait_carte div h2.or {
+  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+}
+.forfaits .forfait_carte div .argent {
+  color: #ADADAD;
+  border-color: #ADADAD;
+}
+.forfaits .forfait_carte div button:hover.argent {
+  background-color: #ADADAD;
+}
+.forfaits .forfait_carte div h2.argent {
+  text-shadow: 0 0 5px #ADADAD, 0 0 10px #ADADAD, 0 0 20px #ADADAD, 0 0 40px #ADADAD, 0 0 80px #ADADAD, 0 0 90px #ADADAD, 0 0 100px #ADADAD, 0 0 150px #ADADAD;
 }
 .forfaits .forfait_carte div .forfait_infos {
   display: flex;
   position: relative;
   flex-direction: column;
+  padding: 0vw 5vw 2vw 0vw;
+  font-size: 1.75vw;
+}
+.forfaits .forfait_carte div button {
+  display: flex;
+  position: absolute;
+  left: 65vw;
+  top: 2vw;
+  width: 10vw;
+  height: 3vw;
+  padding: 0.5vw 1.5vw 0vw 2.25vw;
+  margin-right: 5vw;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #F7CD45;
+  border: 1px solid #F7CD45;
+  font-size: 1.25vw;
+}
+.forfaits .forfait_carte div button:hover {
+  color: #000;
 }
 .forfaits img {
   width: 5vw;
 }
 .forfaits h2 {
   font-size: 3vw;
+  padding-left: 2vw;
 }
 
 /************

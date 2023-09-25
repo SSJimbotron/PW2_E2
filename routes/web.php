@@ -121,6 +121,14 @@ Route::post("/moncompte/mdp/update", [ClientController::class, 'updatemdp'])
 
 // ======================= RÉSERVATIONS ===========================
 
+//Index
+Route::get("/reservations", [ReservationController::class, 'index'])
+    ->name('reservations.index')
+    ->middleware('auth');
+Route::post("/clients/store", [ReservationController::class, 'store'])
+    ->name('clients.store')
+    ->middleware('auth');
+
 //edit
 Route::get("/admin/reservations/edit/{id}", [ReservationController::class, 'edit'])
     ->name('admin.reservations.edit')
@@ -229,4 +237,3 @@ Route::post("/admin/usagers", [UsagerController::class, 'store'])
 Route::post("/admin/usagers/destroy", [UsagerController::class, 'destroy'])
     ->name('admin.usagers.destroy')
     ->middleware('auth', 'checkrole:3');
-

@@ -11,6 +11,21 @@ use Illuminate\Support\Facades\Storage;
 
 class ReservationController extends Controller
 {
+    /**
+     * Affiche la liste des actualités
+     *
+     * @return View
+     */
+    public function index()
+    {
+        // Récupérer toutes les actualites de la base de données
+        $forfaits = Forfait::all();
+        $usagers = User::all();
+        $reservations = Reservation::all();
+
+        // Passer les actualites à la vue
+        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits, "reservations" => $reservations,]);
+    }
 
     // ======================= AJOUT =======================
     public function create()
@@ -21,6 +36,7 @@ class ReservationController extends Controller
 
         return view('admin.reservations.create', ["usagers" => $usagers, "forfaits" => $forfaits, "reservations" => $reservations,]);
     }
+
 
     /**
      * Traite l'ajout
@@ -57,8 +73,10 @@ class ReservationController extends Controller
                 $jours_forfait = $forfait->jour - 1;
             }
         }
+        $date_limite = Carbon::parse($valides["date_arrivee"])->addDays($jours_forfait);
+        $date_depart = Carbon::parse($valides["date_depart"]);
 
-        if (Carbon::parse($valides["date_arrivee"])->addDays($jours_forfait) <= Carbon::parse($valides["date_depart"])) {
+        if ($date_limite->gte($date_depart)) {
             // Ajouter à la BDD
             $reservation = new Reservation(); // $reservation contient un objet "vide" du modèle (équivalent à une nouvelle entrée dans la table)
             $reservation->user_id = $valides["client"];
@@ -76,7 +94,7 @@ class ReservationController extends Controller
             // Rediriger
             return redirect()
                 ->route('admin.reservations.create')
-                ->with('error', "Les dates doivent respecter votre forfait");
+                ->with('erreur', "Les dates doivent respecter votre forfait");
         }
     }
 
@@ -136,7 +154,11 @@ class ReservationController extends Controller
             }
         }
 
-        if (Carbon::parse($valides["date_arrivee"])->addDays($jours_forfait) <= Carbon::parse($valides["date_depart"])) {
+        $date_limite = Carbon::parse($valides["date_arrivee"])->addDays($jours_forfait);
+        $date_depart = Carbon::parse($valides["date_depart"]);
+        dd($valides["forfait"]);
+
+        if ($date_limite->gte($date_depart)) {
             // Ajouter à la BDD
             $reservation = Reservation::findOrFail($valides["id"]);
             $reservation->user_id = $valides["client"];

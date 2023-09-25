@@ -38,8 +38,7 @@
                                             <option selected value="{{ old('forfait') ?? $reservation->forfait_id }}">
                                                 {{ $forfait->id }} {{ $forfait->nom }}
                                             </option>
-                                        @endif
-                                        @if ($forfait->id != $reservation->forfait_id)
+                                        @else
                                             <option value="{{ old('forfait') ?? $reservation->forfait_id }}">
                                                 {{ $forfait->id }} {{ $forfait->nom }}
                                             </option>
