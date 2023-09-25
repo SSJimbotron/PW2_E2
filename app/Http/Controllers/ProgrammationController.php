@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artiste;
 use Illuminate\Http\Request;
 
 class ProgrammationController extends Controller
@@ -12,6 +13,9 @@ class ProgrammationController extends Controller
      * @return View
      */
     public function index() {
-        return view('programmation.index');
+
+        return view('programmation.index', [
+            "artistes" => Artiste::all()
+        ]);
     }
 }

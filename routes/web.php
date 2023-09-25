@@ -11,6 +11,7 @@ use App\Http\Controllers\AdministrationController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UsagerController;
+use App\Http\Controllers\ArtisteController;
 use App\Models\Reservation;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
@@ -70,6 +71,15 @@ Route::get('/forfaits', [ForfaitController::class, 'index'])
 //  index
 Route::get('/programmation', [ProgrammationController::class, 'index'])
     ->name('programmation.index');
+
+// ***ARTISTES***
+//  index
+Route::get('/artistes', [ArtisteController::class, 'index'])
+    ->name('artistes.index');
+
+//  show
+Route::get('/artistes/{id}', [ArtisteController::class, 'show'])
+    ->name('artistes.show');
 
 
 // ================= CONNEXION / ENREGISTREMENT / MODIFICATION CLIENT =====================
