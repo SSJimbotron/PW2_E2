@@ -21,13 +21,16 @@
             @foreach ($artistes as $artiste)
                 @if ($artiste->journee == 'vendredi')
                     <div class="artiste">
+
                         <div class="img">
                             <img src="{{ $artiste->image }}" alt="">
                         </div>
                         <div class="infos infos-vendredi">
-                            <div class="nom">
-                                <h3 class="vendredi font-lovelo nom-artiste">{{ $artiste->nom }}</h3>
-                            </div>
+                            <a class="w-full" href="{{route('artistes.show',["id" => $artiste->id])}}">
+                                <div class="nom">
+                                    <h3 class="vendredi font-lovelo nom-artiste">{{ $artiste->nom }}</h3>
+                                </div>
+                            </a>
                             <div class="heure">
                                 <h3 class="font-technorace">{{ $artiste->heure }}</h3>
                             </div>
@@ -48,9 +51,11 @@
                             <div class="heure">
                                 <h3 class="font-technorace">{{ $artiste->heure }}</h3>
                             </div>
-                            <div class="nom">
-                                <h3 class="font-lovelo nom-artiste">{{ $artiste->nom }}</h3>
-                            </div>
+                            <a class="w-full" href="{{route('artistes.show',["id" => $artiste->id])}}">
+                                <div class="nom">
+                                    <h3 class="font-lovelo nom-artiste">{{ $artiste->nom }}</h3>
+                                </div>
+                            </a>
                         </div>
                     @else
                         <div class="artiste">
@@ -81,9 +86,11 @@
                             <img src="{{ $artiste->image }}" alt="">
                         </div>
                         <div class="infos infos-dimanche">
-                            <div class="nom">
-                                <h3 class="dimanche font-lovelo nom-artiste">{{ $artiste->nom }}</h3>
-                            </div>
+                            <a class="w-full" href="{{route('artistes.show',["id" => $artiste->id])}}">
+                                <div class="nom">
+                                    <h3 class="dimanche font-lovelo nom-artiste">{{ $artiste->nom }}</h3>
+                                </div>
+                            </a>
                             <div class="heure">
                                 <h3 class="font-technorace">{{ $artiste->heure }}</h3>
                             </div>

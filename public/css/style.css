@@ -128,7 +128,8 @@
 .conteneur-enregistrement .submit {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: right;
+  align-items: center;
   margin-top: 30px;
 }
 .conteneur-enregistrement .submit button {
@@ -136,6 +137,32 @@
   padding: 3px 5px;
   border-radius: 5px;
   box-shadow: 1px 1px 5px #aaaaaa;
+}
+.conteneur-enregistrement .submit button:hover {
+  border: 1px solid rgb(0, 255, 0);
+  color: rgb(0, 255, 0);
+  box-shadow: 1px 1px 5px rgb(0, 255, 0);
+}
+.conteneur-enregistrement .submit .supprime {
+  margin: auto;
+  background-color: #fff;
+  color: rgb(197, 0, 0);
+  transition: all 0.2s ease-in-out;
+}
+.conteneur-enregistrement .submit .supprime:hover {
+  margin: auto;
+  background-color: red;
+  color: #fff;
+  box-shadow: 1px 1px 5px red;
+  border: 1px solid red;
+}
+.conteneur-enregistrement .retour {
+  text-align: center;
+  margin-top: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.conteneur-enregistrement .retour:hover {
+  color: #EA33F7;
 }
 
 /************
@@ -543,13 +570,18 @@
 .activite-show .conteneur .information h2 .fas {
   margin-right: 5px;
 }
-.activite-show .conteneur .information .reseaux {
+.activite-show .conteneur .information .bas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.activite-show .conteneur .information .bas .reseaux {
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-top: 30px;
 }
-.activite-show .conteneur .information .reseaux img {
+.activite-show .conteneur .information .bas .reseaux img {
   margin: 10px;
 }
 

@@ -1,5 +1,7 @@
 <x-layout titre="Nouvelle réservation">
     <div class="conteneur-enregistrement">
+        <h1 class="font-lovelo font-bold neon-mauve">ADMINISTRATION</h1>
+
         <div class="formulaire-enregistrement">
             <div>
 
@@ -8,84 +10,89 @@
                 </h2>
 
             </div>
-            <div class="mt-10 mx-auto w-full max-w-sm">
-                {{-- FORMULAIRE --}}
-                <form class="space-y-6" action="{{ route('admin.reservations.store') }}" method="POST"
-                    enctype="multipart/form-data">
-                    @csrf
+
+            {{-- FORMULAIRE --}}
+            <form action="{{ route('admin.reservations.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
 
 
-                    {{-- CLIENT --}}
+                {{-- CLIENT --}}
+                <div class="section">
+                    <label for="client" class="font-technorace">Client</label>
                     <div>
-                        <label for="client" class="block text-sm font-medium leading-6 text-gray-900">Client</label>
-                        <div class="mt-2">
-                            <select
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
-                                name="client" id="client">
-                                @foreach ($usagers as $usager)
-                                    <option value="{{ $usager->id }}">
-                                        {{ $usager->id }} {{ $usager->nom }} {{ $usager->prenom }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
+                        <select name="client" id="client">
+                            @foreach ($usagers as $usager)
+                                <option value="{{ $usager->id }}">
+                                    {{ $usager->id }} {{ $usager->nom }} {{ $usager->prenom }}
+                                </option>
+                            @endforeach
+                        </select>
+
                         <x-forms.erreur champ="client" />
                     </div>
+                </div>
 
-                    {{-- FORFAIT --}}
+                {{-- FORFAIT --}}
+                <div class="section">
+                    <label for="forfait" class="font-technorace">Forfait</label>
                     <div>
-                        <label for="forfait">Forfait</label>
-                        <div>
-                            <select
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
-                                name="forfait" id="forfait">
-                                @foreach ($forfaits as $forfait)
-                                    <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}">
-                                        {{ $forfait->id }} {{ $forfait->nom }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
+                        <select
+
+                            name="forfait" id="forfait">
+                            @foreach ($forfaits as $forfait)
+                                <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}">
+                                    {{ $forfait->id }} {{ $forfait->nom }}
+                                </option>
+                            @endforeach
+                        </select>
+
                         <x-forms.erreur champ="forfait" />
                     </div>
+                </div>
 
-                    {{-- DATE ARRIVEE --}}
+                {{-- DATE ARRIVEE --}}
+                <div class="section">
+
+                    <label for="date_arrivee" class="font-technorace">Date
+                        d'arrivée</label>
                     <div>
+                        <input type="date" id="date_arrivee" name="date_arrivee" value="2024-08-19" min="2024-08-19"
+                            max="2024-08-21" />
 
-                        <label for="date_arrivee" class="block text-sm font-medium leading-6 text-gray-900">Date
-                            d'arrivée</label>
-                        <div class="mt-2">
-                            <input type="date" id="date_arrivee" name="date_arrivee" value="2024-08-19"
-                                min="2024-08-19" max="2024-08-21" />
-                        </div>
-                        <x-forms.erreur champ="date_arrivee" />
+                            <x-forms.erreur champ="date_arrivee" />
                     </div>
-                    {{-- DATE DEPART --}}
+                </div>
+                {{-- DATE DEPART --}}
+                <div class="section">
+
+                    <label for="date_depart" class="font-technorace">Date de
+                        depart
+                    </label>
                     <div>
+                        <input type="date" id="date_depart" name="date_depart" value="2024-08-21" min="2024-08-19"
+                            max="2024-08-21" />
 
-                        <label for="date_depart" class="block text-sm font-medium leading-6 text-gray-900">Date de
-                            depart
-                        </label>
-                        <div class="mt-2">
-                            <input type="date" id="date_depart" name="date_depart" value="2024-08-21"
-                                min="2024-08-19" max="2024-08-21" />
-                        </div>
-                        <x-forms.erreur champ="date_depart" />
+                            <x-forms.erreur champ="date_depart" />
                     </div>
+                </div>
 
-                    {{-- SUBMIT --}}
-                    <div class="mt-2">
-                        <input type="submit"
-                            class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            value="Réserver!">
-                    </div>
-                </form>
+                {{-- SUBMIT --}}
+                <div class="submit">
 
-                {{-- LIEN RETOUR --}}
-                <p class="mt-10 text-center text-sm text-gray-500">
-                    <a href="{{ route('admin.index') }}" class="hover:text-indigo-600">Retour à l'administration</a>
+                    <button type="submit" class="font-quicksand">
+                        Créez la réservation
+                    </button>
+
+                </div>
+            </form>
+
+            {{-- LIEN RETOUR --}}
+            <div class="retour">
+                <p>
+                    <a href="{{ route('admin.index') }}">Retour à l'administration</a>
                 </p>
             </div>
         </div>
+    </div>
     </div>
 </x-layout>

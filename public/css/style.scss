@@ -192,7 +192,8 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: right;
+        align-items: center;
         margin-top: 30px;
 
 
@@ -202,6 +203,37 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             border-radius: 5px;
             box-shadow: 1px 1px 5px #aaaaaa;
         }
+
+        button:hover{
+            border: 1px solid rgb(0, 255, 0);
+            color: rgb(0, 255, 0);
+            box-shadow: 1px 1px 5px rgb(0, 255, 0);
+        }
+
+        .supprime{
+            margin: auto;
+            background-color: #fff;
+            color: rgb(197, 0, 0);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .supprime:hover{
+            margin: auto;
+            background-color: red;
+            color: #fff;
+            box-shadow: 1px 1px 5px red;
+            border: 1px solid red;
+        }
+    }
+
+    .retour{
+        text-align: center;
+        margin-top: 20px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .retour:hover{
+        color: $rose;
     }
 }
 
@@ -832,16 +864,24 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 }
             }
 
-            .reseaux {
+            .bas{
                 display: flex;
-                justify-content: right;
                 align-items: center;
-                margin-top: 30px;
+                justify-content: space-between;
+                margin-top: 40px;
 
-                img {
-                    margin: 10px;
+                .reseaux {
+                    display: flex;
+                    justify-content: right;
+                    align-items: center;
+
+                    img {
+                        margin: 10px;
+                    }
                 }
             }
+
+
         }
     }
 }

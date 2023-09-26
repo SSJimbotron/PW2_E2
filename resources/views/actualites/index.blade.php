@@ -7,6 +7,7 @@
         </div>
         <div class="actualites-index">
             @foreach ($actualites as $actualite)
+            <div id="{{ $actualite->id }}"></div>
                 <div class="plan-carte">
 
                     <div class="carte-actualites">
