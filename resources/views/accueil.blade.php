@@ -1,4 +1,4 @@
-<x-layout titre="acceuil">
+<x-layout>
 
     <div class="acceuil">
         <div class="forfaits">
