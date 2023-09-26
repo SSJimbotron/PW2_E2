@@ -11,7 +11,9 @@
         <div class="activites">
             <div>
                 <h1>Nos activités</h1>
-
+                @foreach ($activites as $actualite)
+                    {{ $actualite->nom }}
+                @endforeach
             </div>
 
         </div>

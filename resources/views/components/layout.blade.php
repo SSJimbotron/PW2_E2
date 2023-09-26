@@ -92,9 +92,7 @@
                         </button>
 
                     </form>
-
                 @else
-
                     {{-- Bouton mon compte si utilisateur n'est pas connecté --}}
                     <button class="mr-8 p-2 border-mauve border-2 rounded drop-shadow-3xl lien-header">
 
@@ -103,7 +101,6 @@
                         </a>
 
                     </button>
-
                 @endif
             </div>
 
@@ -179,24 +176,24 @@
         <div class="flex justify-around w-full mt-10 mb-10 text-white font-quicksand text-xl">
 
             {{-- Programmation --}}
-            <div>
+            <div class="flex flex-col">
                 <h3 class="text-mauve font-technorace text-3xl lien-h3-footer"><a
                         href="{{ route('programmation.index') }}">PROGRAMMATION</a></h3>
 
-                <p>Artistes</p>
-                <p>Horraires</p>
+                <a class="lien-header" href="{{ route('artistes.index') }}">Artistes</a>
+                <a class="lien-header" href="{{ route('programmation.index') }}">Horaires</a>
             </div>
 
             {{-- Forfaits --}}
-            <div>
+            <div class="flex flex-col">
                 <h3 class="text-mauve font-technorace text-3xl lien-h3-footer"><a
                         href="{{ route('forfaits.index') }}">FORFAITS</a>
                 </h3>
 
-                <p>Tous les forfaits</p>
-                <p>Forfait Or</p>
-                <p>Forfait Platine</p>
-                <p>Forfait Argent</p>
+                <a class="lien-header" href="{{ route('forfaits.index') }}">Tous les forfaits</a>
+                <a class="lien-header" href="{{ route('forfaits.index') }}#or">Forfait Or</a>
+                <a class="lien-header" href="{{ route('forfaits.index') }}#platine">Forfait Platine</a>
+                <a class="lien-header" href="{{ route('forfaits.index') }}#argent">Forfait Argent</a>
             </div>
 
             {{-- Activités --}}
@@ -205,26 +202,30 @@
                         href="{{ route('activites.index') }}">ACTIVITÉS</a>
                 </h3>
 
-                <a class="lien-header" href="{{ route('activites.show', ['id' => 1]) }}">Genglerie Lumineuse</a>
-                <a class="lien-header" href="{{ route('activites.show', ['id' => 2]) }}">Magasinage</a>
-                <a class="lien-header" href="{{ route('activites.show', ['id' => 3]) }}">Arcades</a>
-                <a class="lien-header" href="{{ route('activites.show', ['id' => 4]) }}">Feux d'artifices</a>
+                @foreach ($activites->take(4) as $activite)
+                    <a class="lien-header"
+                        href="{{ route('activites.show', ['id' => $activite->id]) }}">{{ $activite->nom }}</a>
+                @endforeach
+
             </div>
 
             {{-- Actualités --}}
-            <div>
+            <div class="flex flex-col">
                 <h3 class="text-mauve font-technorace text-3xl lien-h3-footer"><a
                         href="{{ route('actualite.index') }}">ACTUALITÉS</a>
                 </h3>
 
-                <p>Techno féminin</p>
-                <p>Album de Hugo Lee</p>
-                <p>Nouveaux talents</p>
+
+                @foreach ($actualites->take(4) as $actualite)
+                    <a class="lien-header" href="{{ route('actualite.index') }}#{{$actualite->id}}">{{ $actualite->titre }}</a>
+                @endforeach
+
             </div>
 
             {{-- À propos --}}
             <div class=" flex flex-col">
-                <h3 class="text-mauve font-technorace text-3xl lien-h3-footer"><a href="{{ route('apropos.index') }}">À
+                <h3 class="text-mauve font-technorace text-3xl lien-h3-footer"><a
+                        href="{{ route('apropos.index') }}">À
                         PROPOS</a>
                 </h3>
 

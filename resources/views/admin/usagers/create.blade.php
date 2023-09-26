@@ -1,4 +1,4 @@
-<x-layout titre="Enregistrement">
+<x-layout titre="Créez un nouvel utilisateur">
     <div class="conteneur-enregistrement">
         <h1 class="font-lovelo font-bold neon-mauve">ADMINISTRATION</h1>
 
@@ -22,9 +22,8 @@
                     <label for="nom" class="font-technorace">
                         Nom
                     </label>
-                    <div class="">
-                        <input id="nom" name="nom" type="text"
-                            autocomplete="family-name" class="">
+                    <div>
+                        <input id="nom" name="nom" type="text" autocomplete="family-name">
 
                         <x-forms.erreur champ="nom" />
                     </div>
@@ -47,7 +46,7 @@
                 {{-- EMAIL --}}
                 <div class="section">
                     <label for="email" class="font-technorace">Courriel</label>
-                    <div class="">
+                    <div>
                         <input id="email" name="email" type="email" autocomplete="email">
 
                         <x-forms.erreur champ="email" />
@@ -94,23 +93,30 @@
                     </div>
                     <div>
                         <select id="role" name="role" class="text-noir">
-                           <option value="1">Clients</option>
-                           <option value="2">Employé</option>
-                           <option value="3">Administrateur</option>
+                            <option value="1">Clients</option>
+                            <option value="2">Employé</option>
+                            <option value="3">Administrateur</option>
                         </select>
                     </div>
                     <x-forms.erreur champ="role" />
                 </div>
 
+                {{-- SUBMIT --}}
                 <div class="submit">
 
                     <button type="submit" class="font-quicksand">
                         Créez le compte
                     </button>
 
-
                 </div>
             </form>
+
+            {{-- LIEN RETOUR --}}
+            <div class="retour">
+                <p >
+                    <a href="{{ route('admin.index') }}">Retour à l'administration</a>
+                </p>
+            </div>
         </div>
     </div>
 
