@@ -12,6 +12,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UsagerController;
 use App\Http\Controllers\ArtisteController;
+use App\Http\Controllers\InfolettreController;
 use App\Models\Reservation;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +33,9 @@ Route::get('/', [SiteController::class, 'index'])
     ->name('accueil');
 
 // =========================================================
+// ***INFOLETTRE**
+Route::post('/infolettre', [InfolettreController::class, 'store'])
+    ->name('infolettre.store');
 
 // ***ACTUALITÉS***
 //  index

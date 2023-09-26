@@ -145,10 +145,32 @@
             <p class="font-quicksand">Restez à jour et soyez au courant des événements à venir</p>
 
 
-            {{-- INPUT INFOLETTRE --}}
-            <div class=" border-white border-2 rounded drop-shadow-blanc flex items-center justify-end">
-                <img src="{{ url('image/enter.png') }}" alt="">
-            </div>
+            {{-- FORMULAIRE D'ENREGISTREMENT --}}
+            <form action="{{ route('infolettre.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+
+                {{-- EMAIL --}}
+                <div>
+                    <div class="flex items-center justify-center">
+                        <input class="border-white border-2 rounded drop-shadow-blanc pt-6 pr-28 flex bg-red-900" id="email" name="email" type="email" value="{{ old('email') }}"
+                            autocomplete="email" placeholder="Courriel" >
+                        <button type="submit">
+                            <img src="{{ url('image/enter.png') }}" alt="">
+                        </button>
+                    </div>
+                    <x-forms.erreur champ="email" />
+
+                </div>
+
+                <div class="submit">
+
+                    <button type="submit" class="font-quicksand">
+                        Créez votre compte!
+                    </button>
+
+                </div>
+            </form>
 
         </div>
 
