@@ -179,24 +179,24 @@
         <div class="flex justify-around w-full mt-10 mb-10 text-white font-quicksand text-xl">
 
             {{-- Programmation --}}
-            <div>
+            <div class="flex flex-col">
                 <h3 class="text-mauve font-technorace text-3xl lien-h3-footer"><a
                         href="{{ route('programmation.index') }}">PROGRAMMATION</a></h3>
 
-                <p>Artistes</p>
-                <p>Horraires</p>
+                <a class="lien-header" href="{{ route('artistes.index') }}">Artistes</a>
+                <a class="lien-header" href="{{ route('programmation.index') }}">Horaires</a>
             </div>
 
             {{-- Forfaits --}}
-            <div>
+            <div class="flex flex-col">
                 <h3 class="text-mauve font-technorace text-3xl lien-h3-footer"><a
                         href="{{ route('forfaits.index') }}">FORFAITS</a>
                 </h3>
 
-                <p>Tous les forfaits</p>
-                <p>Forfait Or</p>
-                <p>Forfait Platine</p>
-                <p>Forfait Argent</p>
+                <a class="lien-header" href="{{ route('forfaits.index') }}">Tous les forfaits</a>
+                <a class="lien-header" href="{{ route('forfaits.index') }}#or">Forfait Or</a>
+                <a class="lien-header" href="{{ route('forfaits.index') }}#platine">Forfait Platine</a>
+                <a class="lien-header" href="{{ route('forfaits.index') }}#argent">Forfait Argent</a>
             </div>
 
             {{-- Activités --}}
