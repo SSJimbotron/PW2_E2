@@ -2,15 +2,15 @@
 
 namespace App\Providers;
 
-use App\Models\Activite;
 use App\Models\Actualite;
+use App\View\Composers\PostComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class ViewServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */
@@ -20,12 +20,12 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */
     public function boot()
     {
-        View::share(["activites" => Activite::get(),"actualites" => Actualite::get()]);
+
     }
 }

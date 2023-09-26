@@ -1,4 +1,4 @@
-<x-layout titre="Enregistrement">
+<x-layout titre="Modification de l'utilisateur">
 
     <div class="conteneur-enregistrement">
         <h1 class="font-lovelo font-bold neon-mauve">ADMINISTRATION</h1>
@@ -6,9 +6,11 @@
 
         <div class="formulaire-enregistrement">
             <div>
+
                 <h2 class="font-lovelo neon-text">
                     Modifiez l'utilisateur
                 </h2>
+
             </div>
 
             {{-- FORMULAIRE DE MODIFICATION --}}
@@ -24,9 +26,9 @@
                     <label for="nom" class="font-technorace">
                         Nom
                     </label>
-                    <div class="">
+                    <div>
                         <input id="nom" name="nom" type="text" value="{{ old('nom') ?? $usager->nom }}"
-                            autocomplete="family-name" class="">
+                            autocomplete="family-name">
 
                         <x-forms.erreur champ="nom" />
                     </div>
@@ -104,23 +106,28 @@
                 enctype="multipart/form-data">
                 @csrf
 
-                <div class="mt-2">
 
-                    {{-- ID --}}
-                    <input type="hidden" name="id" value="{{ $usager->id }}">
 
-                    <input type="submit"
-                        class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                        value="Supprimer">
+                {{-- ID --}}
+                <input type="hidden" name="id" value="{{ $usager->id }}">
+
+                {{-- SUBMIT --}}
+                <div class="submit">
+
+                    <button type="submit" class="font-quicksand supprime">
+                        Supprimez l'usager
+                    </button>
+
                 </div>
 
             </form>
 
             {{-- RETOUR AUX ACTUALITES --}}
-            <p class="mt-10 text-center text-sm text-gray-500">
-                <a href="{{ route('admin.index') }}" class="hover:text-bleu">Retour</a>
-
-            </p>
+            <div class="retour">
+                <p>
+                    <a href="{{ route('admin.index') }}">Retour à l'administration</a>
+                </p>
+            </div>
         </div>
     </div>
 
