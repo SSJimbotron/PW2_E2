@@ -32,8 +32,6 @@
             descriptionDiv.innerHTML = description;
             jourDiv.innerHTML = jour;
             nomDiv.innerHTML = nom;
-
-
         });
     });
 </script>
@@ -66,15 +64,15 @@
 
                     {{-- CLIENT --}}
                     <div>
-                        <label for="client" class="block text-sm font-medium leading-6 text-gray-900">Client</label>
-                        <div class="mt-2 ">
+
+                        <div>
                             <select
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset select-client"
+                                class=" select-client block w-full rounded-md border-0 py-1.5 text-blanc-900 shadow-sm font font-quicksand"
                                 name="client" id="client">
                                 @foreach ($usagers as $usager)
                                     @if ($usager->id == Auth::user()->id)
                                         <option value="{{ $usager->id }}">
-                                            {{ $usager->nom }} {{ $usager->prenom }}
+                                            <h2>{{ $usager->nom }} {{ $usager->prenom }}</h2>
                                         </option>
                                     @endif
                                 @endforeach
@@ -85,10 +83,10 @@
 
                     {{-- FORFAIT --}}
                     <div>
-                        <label for="forfait">Forfait</label>
+                        <label for="forfait" class="font-technorace">Forfait</label>
                         <div>
                             <select
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+                                class="font-quicksand block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
                                 name="forfait" id="forfait">
                                 @foreach ($forfaits as $forfait)
                                     <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
@@ -104,7 +102,7 @@
                     {{-- DATE ARRIVEE --}}
                     <div>
 
-                        <label for="date_arrivee" class="block text-sm font-medium leading-6 text-gray-900">Date
+                        <label for="date_arrivee" class="font-technorace ">Date
                             d'arrivée</label>
                         <div class="mt-2">
                             <input type="date" id="date_arrivee" name="date_arrivee" value="2024-08-19"
@@ -115,7 +113,7 @@
                     {{-- DATE DEPART --}}
                     <div>
 
-                        <label for="date_depart" class="block text-sm font-medium leading-6 text-gray-900">Date de
+                        <label for="date_depart" class="font-technorace">Date de
                             depart
                         </label>
                         <div class="mt-2">
@@ -126,10 +124,8 @@
                     </div>
 
                     {{-- SUBMIT --}}
-                    <div class="mt-2">
-                        <input type="submit"
-                            class="max-w-min m-auto flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            value="Réserver!">
+                    <div class="submit">
+                        <button type="submit" class="font-quicksand">Réserver</button>
                     </div>
                 </form>
 
