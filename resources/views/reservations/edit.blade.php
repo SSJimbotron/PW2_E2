@@ -1,7 +1,5 @@
 <x-layout titre="Modification de l'actualité">
     <div class="conteneur-enregistrement">
-        <h1 class="font-lovelo font-bold neon-mauve">ADMINISTRATION</h1>
-
         <div class="formulaire-enregistrement">
             <div>
 
@@ -10,8 +8,10 @@
                 </h2>
 
             </div>
+            <div class="flex min-h-full flex-col justify-center px-6 py-1 lg:px-8">
 
-                    <form action="{{ route('admin.reservations.update') }}" method="POST"
+                <div class="mt-10 mx-auto w-full max-w-4xl">
+                    <form class="space-y-6" action="{{ route('reservations.update') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
 
@@ -83,7 +83,7 @@
                     </form>
 
                     {{-- SUPPRESSION --}}
-                    <form class="space-y-6" action="{{ route('admin.reservations.destroy') }}" method="POST"
+                    <form class="space-y-6" action="{{ route('reservations.destroy') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
 
@@ -101,11 +101,9 @@
 
 
                     {{-- RETOUR AUX À L'ADMINISTRATION --}}
-                    <div class="retour">
-                        <p >
-                            <a href="{{ route('admin.index') }}">Retour à l'administration</a>
-                        </p>
-                    </div>
+                    <p class="mt-10 text-center text-sm text-gray-500">
+                        <a href="{{ route('moncompte.edit' , ['id' => Auth::user()->id]) }}" class="hover:text-indigo-600">Retour au compte</a>
+                    </p>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@
         <div class="haut-page">
             <h2 class="font-lovelo date">DU 19 au 21 Juillet 2024</h2>
             <div>
-                <h2 class="font-technorace">Achetez vos Billets</h2>
+                <h2 class="font-technorace"><a href="{{ route('reservations.index') }}">Achetez vos Billets</a></h2>
             </div>
         </div>
 

@@ -147,18 +147,16 @@ class ReservationController extends Controller
             "date_depart.after_or_equal" => "La date de départ doit être égale ou supérieur à la date d'arrivée",
             "client.required" => "Un client est obligatoire",
         ]);
-        $forfaits = Forfait::all();
-        foreach ($forfaits as $forfait) {
-            if ($forfait->id == $valides["forfait"]) {
-                $jours_forfait = $forfait->jour - 1;
-            }
-        }
+        $forfait = Forfait::find($valides["forfait"]);
+        $jours_forfait = $forfait->jour;
+
+
 
         $date_limite = Carbon::parse($valides["date_arrivee"])->addDays($jours_forfait);
         $date_depart = Carbon::parse($valides["date_depart"]);
-        dd($valides["forfait"]);
 
-        if ($date_limite->gte($date_depart)) {
+
+        if ($date_limite->gt($date_depart)) {
             // Ajouter à la BDD
             $reservation = Reservation::findOrFail($valides["id"]);
             $reservation->user_id = $valides["client"];
@@ -176,7 +174,7 @@ class ReservationController extends Controller
         } else {
             // Rediriger
             return redirect()
-                ->route('admin.reservations.create')
+                ->route('admin.reservations.edit,["id"]')
                 ->with('error', "Les dates doivent respecter votre forfait");
         }
     }
@@ -190,7 +188,7 @@ class ReservationController extends Controller
     {
         Reservation::destroy($request->id);
 
-        return redirect()->route('admin.index')
+        return back()->route('admin.index')
             ->with('succes', "La réservation a été supprimée!");
     }
 }

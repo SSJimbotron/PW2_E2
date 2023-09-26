@@ -61,7 +61,7 @@
 
                 <div class="submit">
 
-                    <button type="submit" class="font-quicksand hover:text-bleu">
+                    <button type="submit" class="font-quicksand hover:text-jaune">
                         Modifier
                     </button>
 
@@ -112,7 +112,7 @@
 
                 <div class="submit">
 
-                    <button type="submit" class="font-quicksand hover:text-bleu">
+                    <button type="submit" class="font-quicksand hover:text-jaune">
                         Modifier
                     </button>
 
@@ -123,39 +123,47 @@
             {{-- ========================================================================== --}}
 
             {{-- *** RESERVATIONS *** --}}
-
-            @foreach ($reservations as $reservation)
-                @if ($reservation->user_id == Auth::user()->id)
-                <tr>
-                    <p>
-                        <td><a href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">
-                                @foreach ($usagers as $usager)
-                                    @if ($reservation->user_id == $usager->id)
-                                        {{ $usager->nom }} {{ $usager->prenom }}
-                                    @endif
-                                @endforeach
-                            </a>
-                        </td>
-                        <td><a
-                                href="{{ route('admin.reservations.edit', ['id' => $reservation->id, 'usager_id' => $usager->id]) }}">{{ $reservation->forfait_id }}</a>
-                        </td>
-                        <td><a
-                                href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_arrivee }}</a>
-                        </td>
-                        <td><a
-                                href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_depart }}</a>
-                        </td>
-                    </p>
-                </tr>
-                @endif
-
-            @endforeach
+            <div class="reservation-section">
+                <div>
+                    <h2 class="font-lovelo neon-text">
+                        Réservations
+                    </h2>
+                </div>
+                <p class="font-technorace"><a class="call-to-action" href="{{ route('reservations.index') }}">Achetez
+                        vos Billets</a></p>
+                @foreach ($reservations as $reservation)
+                    @if ($reservation->user_id == Auth::user()->id)
+                        <tr>
+                            <p>
+                                <td><a href="{{ route('reservations.edit', ['id' => $reservation->id]) }}">
+                                        @foreach ($usagers as $usager)
+                                            @if ($reservation->user_id == $usager->id)
+                                                {{ $usager->nom }} {{ $usager->prenom }}
+                                            @endif
+                                        @endforeach
+                                    </a>
+                                </td>
+                                <td><a
+                                        href="{{ route('reservations.edit', ['id' => $reservation->id, 'usager_id' => $usager->id]) }}">{{ $reservation->forfait_id }}</a>
+                                </td>
+                                <td><a
+                                        href="{{ route('reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_arrivee }}</a>
+                                </td>
+                                <td><a
+                                        href="{{ route('reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_depart }}</a>
+                                </td>
+                            </p>
+                        </tr>
+                    @endif
+                @endforeach
+            </div>
 
             {{-- RETOUR À L'ACCUEIL --}}
             <p class="mt-10 text-center text-sm text-gray-500">
-                <a href="{{ route('accueil') }}" class="hover:text-bleu">Retour</a>
+                <a href="{{ route('accueil') }}" class="hover:text-jaune">Retour</a>
 
             </p>
+
         </div>
     </div>
 

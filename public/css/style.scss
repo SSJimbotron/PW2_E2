@@ -49,6 +49,31 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
     background-position: center center;
     background-repeat: no-repeat;
 
+    .forfait_details {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding: 1vw;
+        top: 37.5vw;
+        left: 62.5vw;
+        width: 30vw;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 50px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #aaaaaa;
+
+        h2 {
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+        }
+    }
+
     h1 {
 
         margin-top: 100px;
@@ -97,6 +122,48 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 0 0 150px #fff;
 
         }
+
+        .reservation-section {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                padding: 1vw 0vw;
+            }
+
+            a {
+                transition: .25s all ease;
+            }
+
+            p {
+                padding: .25vw;
+                transition: .25s all ease;
+            }
+
+            p:hover {
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+            }
+
+            .call-to-action:hover {
+                background-color: white;
+                color: black;
+            }
+
+            .call-to-action {
+                border: 1px solid white;
+                padding: 3px 5px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 5px #aaaaaa;
+            }
+
+        }
     }
 
     .section {
@@ -131,12 +198,10 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
 
         button {
-
             border: 1px solid white;
             padding: 3px 5px;
             border-radius: 5px;
             box-shadow: 1px 1px 5px #aaaaaa;
-
         }
 
         button:hover{
@@ -1021,29 +1086,29 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
     }
 
-    .haut-page{
+    .haut-page {
         width: 100%;
         margin: 50px 0px;
         display: flex;
         align-items: center;
         justify-content: space-around;
 
-        h2.date{
+        h2.date {
             color: #fff;
             font-size: 1.80rem;
             font-weight: bold;
             text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 40px #fff,
-            0 0 80px #fff,
-            0 0 90px #fff,
-            0 0 100px #fff,
-            0 0 150px #fff;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
         }
 
-        div{
+        div {
             border: 2px solid #fff;
             border-radius: 15px;
             padding: 10px 25px;
@@ -1052,91 +1117,92 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             cursor: pointer;
             transition: all 0.2s ease-in;
             text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 40px #fff,
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
 
         }
 
-        div:hover{
+        div:hover {
             text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 40px #fff,
-            0 0 80px #fff,
-            0 0 90px #fff,
-            0 0 100px #fff,
-            0 0 110px #fff,
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 110px #fff,
         }
     }
 
 
-    .contenu{
+    .contenu {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width:  95%;
+        width: 95%;
 
-        .journee{
+        .journee {
             font-size: 2.2rem;
             margin: 30px 0px;
         }
 
-        .vendredi{
+        .vendredi {
             color: $rose;
             text-shadow:
-            0 0 5px $rose,
-            0 0 10px $rose,
-            0 0 20px $rose,
-            0 0 40px $rose,
-            0 0 80px $rose,
-            0 0 90px $rose,
-            0 0 100px $rose,
-            0 0 150px $rose;
+                0 0 5px $rose,
+                0 0 10px $rose,
+                0 0 20px $rose,
+                0 0 40px $rose,
+                0 0 80px $rose,
+                0 0 90px $rose,
+                0 0 100px $rose,
+                0 0 150px $rose;
         }
 
-        .samedi{
+        .samedi {
             color: $bleu;
             text-shadow:
-            0 0 5px $bleu,
-            0 0 10px $bleu,
-            0 0 20px $bleu,
-            0 0 40px $bleu,
-            0 0 80px $bleu,
-            0 0 90px $bleu,
-            0 0 100px $bleu,
-            0 0 150px $bleu;
+                0 0 5px $bleu,
+                0 0 10px $bleu,
+                0 0 20px $bleu,
+                0 0 40px $bleu,
+                0 0 80px $bleu,
+                0 0 90px $bleu,
+                0 0 100px $bleu,
+                0 0 150px $bleu;
         }
 
-        .dimanche{
+        .dimanche {
             color: $jaune;
             text-shadow:
-            0 0 5px $jaune,
-            0 0 10px $jaune,
-            0 0 20px $jaune,
-            0 0 40px $jaune,
-            0 0 80px $jaune,
-            0 0 90px $jaune,
-            0 0 100px $jaune,
-            0 0 150px $jaune;
+                0 0 5px $jaune,
+                0 0 10px $jaune,
+                0 0 20px $jaune,
+                0 0 40px $jaune,
+                0 0 80px $jaune,
+                0 0 90px $jaune,
+                0 0 100px $jaune,
+                0 0 150px $jaune;
         }
 
-        .artiste{
+        .artiste {
             display: flex;
             width: 100%;
             justify-content: space-evenly;
             margin: 10px 0px;
 
-            .img{
+            .img {
                 width: 42%;
-                img{
+
+                img {
                     width: 100%;
                 }
             }
 
-            .infos{
+            .infos {
                 background-color: #7777773a;
                 width: 55%;
                 border-radius: 15px;
@@ -1145,43 +1211,45 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 align-items: center;
                 padding: 0px 20px;
 
-                .nom-artiste{
+                .nom-artiste {
                     font-size: 1.5rem;
                     transition: all 0.1s ease-in;
                 }
 
-                .nom-artiste:hover{
+                .nom-artiste:hover {
                     font-weight: 600;
                 }
 
-                .heure{
+                .heure {
                     width: 30%;
                     text-align: center;
 
-                    h3{
+                    h3 {
                         color: #fff;
                         font-size: 1.75rem;
                     }
                 }
 
-                .nom{
+                .nom {
                     width: 70%;
                     text-align: left;
                 }
             }
 
-            .infos-vendredi{
+            .infos-vendredi {
                 border: 2px solid $rose;
             }
-            .infos-samedi{
+
+            .infos-samedi {
                 border: 2px solid $bleu;
             }
-            .infos-dimanche{
+
+            .infos-dimanche {
                 border: 2px solid $jaune;
             }
         }
 
-        .artiste-principal{
+        .artiste-principal {
             width: 98%;
             height: 53vh;
             background-repeat: no-repeat;
@@ -1193,41 +1261,41 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             justify-content: flex-start;
             padding: 0px 85px;
 
-            .heure{
+            .heure {
                 color: #fff;
                 margin-right: 50px;
             }
 
-            .nom-artiste{
+            .nom-artiste {
                 color: #fff;
                 text-shadow:
-                0 0 5px #fff,
-                0 0 10px #fff,
-                0 0 20px #fff,
-                0 0 40px #fff,
-                0 0 80px #fff,
-                0 0 90px #fff,
-                0 0 100px #fff,
-                0 0 150px #fff;
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+                    0 0 80px #fff,
+                    0 0 90px #fff,
+                    0 0 100px #fff,
+                    0 0 150px #fff;
                 font-weight: bolder;
                 transition: all 0.2s ease-in-out;
             }
 
-            .nom-artiste:hover{
+            .nom-artiste:hover {
                 color: #fff;
                 text-shadow:
-                0 0 5px #fff,
-                0 0 10px #fff,
-                0 0 20px #fff,
-                0 0 40px #fff,
-                0 0 80px #fff,
-                0 0 90px #fff,
-                0 0 100px #fff,
-                0 0 110px #fff,
-                0 0 120px #fff,
-                0 0 130px #fff,
-                0 0 140px #fff,
-                0 0 150px #fff;
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+                    0 0 80px #fff,
+                    0 0 90px #fff,
+                    0 0 100px #fff,
+                    0 0 110px #fff,
+                    0 0 120px #fff,
+                    0 0 130px #fff,
+                    0 0 140px #fff,
+                    0 0 150px #fff;
                 font-weight: bolder;
             }
 
@@ -1239,7 +1307,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 * Artistes Index
 ******************/
 
-.artistes{
+.artistes {
 
     background-image: $arrierePlan;
     color: $gris;
@@ -1276,7 +1344,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         }
     }
 
-    .contenu{
+    .contenu {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -1305,22 +1373,22 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             text-transform: uppercase;
             font-size: 1.5rem;
             text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff;
             background-color: #9c9c9c3d;
             border-radius: 15px;
             transition: all 0.2s ease-in-out;
         }
 
-        .carte-nom-artiste:hover{
+        .carte-nom-artiste:hover {
             text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 25px #fff,
-            0 0 30px #fff,
-            0 0 35px #fff;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 25px #fff,
+                0 0 30px #fff,
+                0 0 35px #fff;
         }
 
         .artiste-image {
