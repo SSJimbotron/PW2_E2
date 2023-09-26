@@ -897,7 +897,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
     justify-content: center;
     align-items: center;
     background-image: $arrierePlan;
-    color: $gris;
 
     .banniere {
         display: flex;
@@ -961,6 +960,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 margin-left: 20px;
 
 
+
                 h1 {
 
                     font-size: 1.8rem;
@@ -971,8 +971,13 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
                 }
 
-                p {
+                p.date{
+                    color: $gris;
+                }
+
+                p.intro {
                     margin-bottom: 10px;
+                    color: $gris;
                 }
 
                 .contenu {
@@ -981,6 +986,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                     max-height: 500px;
                     /* Hauteur maximale pour la partie "contenu" */
                     overflow: hidden;
+                    color: $gris;
                 }
 
                 .charger {
@@ -998,12 +1004,12 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                         transition: all 0.3s ease;
                         position: relative;
                         display: inline-block;
-                        color: $jaune;
                         border: 1px solid $jaune;
                         box-shadow: 0 0 5px $jaune, 0 0 5px $jaune inset;
                         z-index: 2;
                         transition: all 0.3s ease;
                         overflow: hidden;
+                        color: $jaune;
 
                         &:after {
                             position: absolute;
@@ -1014,18 +1020,17 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                             width: 100%;
                             height: 100%;
                             transition: all 0.5s ease;
-
+                            color: #000;
                         }
 
-                        .btn-9:hover {
+                        &:hover {
 
                             color: #000;
                         }
 
                         &:hover:after {
-
+                            color: #000;
                             background: $jaune;
-                            color: black;
                             -webkit-transform: scale(2) rotate(180deg);
                             transform: scale(2) rotate(180deg);
                             box-shadow:
@@ -1034,6 +1039,10 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                                 inset -4px -4px 6px 0 rgba(255, 255, 255, 1),
                                 inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
 
+                        }
+
+                        .voir-plus:hover{
+                            color: #000;
                         }
                     }
                 }
@@ -1143,6 +1152,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         flex-direction: column;
         align-items: center;
         width: 95%;
+        margin-bottom: 150px;
 
         .journee {
             font-size: 2.2rem;
@@ -1213,7 +1223,8 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
                 .nom-artiste {
                     font-size: 1.5rem;
-                    transition: all 0.1s ease-in;
+                    // transition: all 0.3s ease-out;
+                    cursor: pointer;
                 }
 
                 .nom-artiste:hover {
@@ -1277,8 +1288,8 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                     0 0 90px #fff,
                     0 0 100px #fff,
                     0 0 150px #fff;
-                font-weight: bolder;
-                transition: all 0.2s ease-in-out;
+
+                transition: all 0.1s ease-in-out;
             }
 
             .nom-artiste:hover {

@@ -7,7 +7,7 @@
         </div>
         <div class="actualites-index">
             @foreach ($actualites as $actualite)
-            <div id="{{ $actualite->id }}"></div>
+                <div id="{{ $actualite->id }}"></div>
                 <div class="plan-carte">
 
                     <div class="carte-actualites">
@@ -19,7 +19,7 @@
                         <a href="{{ route('activites.show', ['id' => $actualite->id]) }}" class="font-quicksand">
                             <h1 class="font-lovelo">{{ $actualite->titre }}</h1>
                         </a>
-                        <p>Publié le : {{ $actualite->created_at->format('d/m/Y H:i') }}</p>
+                        <p class="date">Publié le : {{ $actualite->created_at->format('d/m/Y H:i') }}</p>
                         <!-- Partie initialement visible -->
                         <p class="intro">
                             {{ substr($actualite->contenu, 0, 400) }}{{ strlen($actualite->contenu) > 200 ? '...' : '' }}
@@ -27,7 +27,9 @@
                         <!-- Le reste du contenu (initiallement caché) -->
                         <p class="contenu">{{ substr($actualite->contenu, 400) }}</p>
                         <div class="charger">
-                            <button class="voir-plus btn-9 ">Voir plus</button>
+                            <button class="voir-plus btn-9 ">
+                                <p>Voir plus</p>
+                            </button>
                         </div>
                     </div>
                 </div>
