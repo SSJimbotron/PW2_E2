@@ -142,13 +142,27 @@
 
             <h2 class="font-technorace text-4xl">INSCRIVEZ-VOUS À L'INFOLETTRE !</h2>
 
-            <p class="font-quicksand">Restez à jour et soyez au courant des événements à venir</p>
+            <p class="font-quicksand mb-4">Restez à jour et soyez au courant des événements à venir</p>
 
 
-            {{-- INPUT INFOLETTRE --}}
-            <div class=" border-white border-2 rounded drop-shadow-blanc flex items-center justify-end">
-                <img src="{{ url('image/enter.png') }}" alt="">
-            </div>
+            {{-- FORMULAIRE D'ENREGISTREMENT --}}
+            <form action="{{ route('infolettre.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+
+                {{-- EMAIL --}}
+                <div>
+                    <div class="flex items-center justify-center">
+                        <input class="border-white border-2 rounded drop-shadow-blanc w-3/4 h-12 bg-transparent text-center text-xl" id="email" name="email" type="email" value="{{ old('email') }}"
+                            placeholder="Courriel" >
+                        <button type="submit">
+                            <img class="hover:drop-shadow-blanc" src="{{ url('image/enter.png') }}" alt="">
+                        </button>
+                    </div>
+                    <x-forms.erreur champ="email" />
+
+                </div>
+            </form>
 
         </div>
 
