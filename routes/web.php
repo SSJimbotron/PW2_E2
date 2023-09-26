@@ -122,18 +122,38 @@ Route::post("/moncompte/mdp/update", [ClientController::class, 'updatemdp'])
 // ======================= RÉSERVATIONS ===========================
 
 //Index
-Route::get("/reservations", [ReservationController::class, 'index'])
+Route::get("/reservations", [ClientController::class, 'index'])
     ->name('reservations.index')
     ->middleware('auth');
-Route::post("/clients/store", [ReservationController::class, 'store'])
+//Edit Réservation
+Route::get("/reservations/edit/{id}", [ClientController::class, 'editreservation'])
+    ->name('reservations.edit')
+    ->middleware('auth');
+//Update Réservation
+Route::post("/reservations/update", [ClientController::class, 'updatereservation'])
+    ->name('reservations.update')
+    ->middleware('auth');
+//destroy
+Route::post("/reservations/destroy", [ClientController::class, 'destroy'])
+    ->name('reservations.destroy')
+    ->middleware('auth');
+
+//Store
+Route::post("/clients/store", [ClientController::class, 'store'])
     ->name('clients.store')
+    ->middleware('auth');
+//Destroy
+Route::post("/clients/destroy", [ClientController::class, 'destroy'])
+    ->name('clients.destroy')
     ->middleware('auth');
 
 //edit
 Route::get("/admin/reservations/edit/{id}", [ReservationController::class, 'edit'])
     ->name('admin.reservations.edit')
     ->middleware('auth', 'checkrole:3');
-Route::post("reservations/update", [ReservationController::class, 'update'])
+
+
+Route::post("/admin/reservations/update", [ReservationController::class, 'update'])
     ->name('admin.reservations.update')
     ->middleware('auth', 'checkrole:3');
 

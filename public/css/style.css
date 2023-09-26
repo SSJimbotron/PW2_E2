@@ -32,6 +32,25 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+.conteneur-enregistrement .forfait_details {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  padding: 1vw;
+  top: 37.5vw;
+  left: 62.5vw;
+  width: 30vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+}
+.conteneur-enregistrement .forfait_details h2 {
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
 .conteneur-enregistrement h1 {
   margin-top: 100px;
   font-size: 2rem;
@@ -57,6 +76,39 @@
   letter-spacing: 3px;
   font-size: 1.2rem;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+}
+.conteneur-enregistrement .formulaire-enregistrement .select-client {
+  background-color: none;
+}
+.conteneur-enregistrement .formulaire-enregistrement .reservation-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.conteneur-enregistrement .formulaire-enregistrement .reservation-section h2 {
+  padding: 1vw 0vw;
+}
+.conteneur-enregistrement .formulaire-enregistrement .reservation-section a {
+  transition: 0.25s all ease;
+}
+.conteneur-enregistrement .formulaire-enregistrement .reservation-section p {
+  padding: 0.25vw;
+  transition: 0.25s all ease;
+}
+.conteneur-enregistrement .formulaire-enregistrement .reservation-section p:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+.conteneur-enregistrement .formulaire-enregistrement .reservation-section .call-to-action:hover {
+  background-color: white;
+  color: black;
+}
+.conteneur-enregistrement .formulaire-enregistrement .reservation-section .call-to-action {
+  border: 1px solid white;
+  padding: 3px 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #aaaaaa;
 }
 .conteneur-enregistrement .section {
   margin-top: 15px;
@@ -651,8 +703,6 @@
   letter-spacing: 3px;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
-
-
 .programmation .haut-page {
   width: 100%;
   margin: 50px 0px;
@@ -841,7 +891,6 @@
   width: 500px;
   height: 200px;
 }
-
 
 /******************
 * Forfaits Index

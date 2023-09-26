@@ -1,5 +1,4 @@
 <x-layout titre="Nouvelle réservation">
-    @dump($errors)
     <div class="conteneur-enregistrement">
         <div class="formulaire-enregistrement">
             <div>

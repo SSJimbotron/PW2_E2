@@ -1,6 +1,54 @@
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get references to the select element and the target div
+        const forfaitSelect = document.getElementById("forfait");
+        const descriptionDiv = document.getElementById("forfait_description");
+        const jourDiv = document.getElementById("forfait_jour");
+        const nomDiv = document.getElementById("forfait_titre");
+
+        const selectedOption = forfaitSelect.options[forfaitSelect.selectedIndex];
+
+        // Get the description from the data attribute of the selected option
+        const description = selectedOption.getAttribute("description");
+        const jour = selectedOption.getAttribute("forfaitjour");
+        const nom = selectedOption.getAttribute("forfait-nom");
+
+        // Update the content of the description div
+        descriptionDiv.innerHTML = description;
+        jourDiv.innerHTML = jour;
+        nomDiv.innerHTML = nom;
+        // Add an event listener to the select element
+        forfaitSelect.addEventListener("change", function() {
+            // Get the selected option
+            const selectedOption = forfaitSelect.options[forfaitSelect.selectedIndex];
+
+            // Get the description from the data attribute of the selected option
+            const description = selectedOption.getAttribute("description");
+            const jour = selectedOption.getAttribute("forfaitjour");
+            const nom = selectedOption.getAttribute("forfait-nom");
+
+            // Update the content of the description div
+            descriptionDiv.innerHTML = description;
+            jourDiv.innerHTML = jour;
+            nomDiv.innerHTML = nom;
+
+
+        });
+    });
+</script>
 <x-layout titre="Nouvelle réservation">
 
+
     <div class="conteneur-enregistrement">
+        <div class="forfait_details">
+            <h2 id="forfait_titre" class="font-lovelo neon-text"></h2>
+            <h3 class="font-lovelo neon-text">Jours:</h3>
+            <div id="forfait_jour" class="font-quicksand"></div>
+            <h3 class="font-lovelo neon-text">Description:</h3>
+            <div id="forfait_description" class="font-quicksand"></div>
+        </div>
+
         <div class="formulaire-enregistrement">
             <div>
 
@@ -19,9 +67,9 @@
                     {{-- CLIENT --}}
                     <div>
                         <label for="client" class="block text-sm font-medium leading-6 text-gray-900">Client</label>
-                        <div class="mt-2">
+                        <div class="mt-2 ">
                             <select
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset select-client"
                                 name="client" id="client">
                                 @foreach ($usagers as $usager)
                                     @if ($usager->id == Auth::user()->id)
@@ -43,8 +91,9 @@
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
                                 name="forfait" id="forfait">
                                 @foreach ($forfaits as $forfait)
-                                    <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}">
-                                        {{ $forfait->id }} {{ $forfait->nom }}
+                                    <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
+                                        forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
+                                        {{ $forfait->nom }}
                                     </option>
                                 @endforeach
                             </select>
@@ -86,9 +135,11 @@
 
                 {{-- LIEN RETOUR --}}
                 <p class="mt-10 text-center text-sm text-gray-500">
-                    <a href="{{ route('admin.index') }}" class="hover:text-indigo-600">Retour à l'administration</a>
+                    <a href="{{ route('moncompte.edit', ['id' => Auth::user()->id]) }}"
+                        class="hover:text-indigo-600">Retour</a>
                 </p>
             </div>
         </div>
+
     </div>
 </x-layout>

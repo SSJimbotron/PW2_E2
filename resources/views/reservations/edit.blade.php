@@ -11,7 +11,7 @@
             <div class="flex min-h-full flex-col justify-center px-6 py-1 lg:px-8">
 
                 <div class="mt-10 mx-auto w-full max-w-4xl">
-                    <form class="space-y-6" action="{{ route('admin.reservations.update') }}" method="POST"
+                    <form class="space-y-6" action="{{ route('reservations.update') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
 
@@ -83,7 +83,7 @@
                     </form>
 
                     {{-- SUPPRESSION --}}
-                    <form class="space-y-6" action="{{ route('admin.reservations.destroy') }}" method="POST"
+                    <form class="space-y-6" action="{{ route('reservations.destroy') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
 
@@ -102,8 +102,7 @@
 
                     {{-- RETOUR AUX À L'ADMINISTRATION --}}
                     <p class="mt-10 text-center text-sm text-gray-500">
-                        <a href="{{ route('admin.index') }}" class="hover:text-indigo-600">Retour à
-                            l'administration</a>
+                        <a href="{{ route('moncompte.edit' , ['id' => Auth::user()->id]) }}" class="hover:text-indigo-600">Retour au compte</a>
                     </p>
                 </div>
             </div>

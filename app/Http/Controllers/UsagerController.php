@@ -80,6 +80,8 @@ class UsagerController extends Controller
     {
         return view('admin.usagers.edit', [
             "usager" => User::findOrFail($id),
+            "reservations" => Reservation::all(),
+            "usagers" =>   $usagers = User::all(),
         ]);
     }
 
