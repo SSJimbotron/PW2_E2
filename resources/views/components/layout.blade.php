@@ -60,24 +60,20 @@
 
             {{-- LOGO --}}
             <div class="w-1/3">
-
                 <a href="{{ route('accueil') }}">
-                    <img src="{{ url('/image/logo.png') }}" alt="Logo TechnoWave" class="w-auto h-64 m-auto">
+                    <img src="{{ url('/image/logo.png') }}" alt="Logo TechnoWave" class="w-auto h-64 m-auto logo">
                 </a>
-
             </div>
 
             {{-- BOUTON MON COMPTE/DECONNEXION --}}
-            <div class="flex flex-col justify-start items-end w-1/3">
+            <div class="flex flex-col justify-start items-end w-1/3 connexion-deconnexion">
 
                 {{-- Bouton mon compte/déconnexion si utilisateur connecté --}}
                 @if (Auth::check())
                     <button class="mr-8 p-2 border-mauve border-2 rounded drop-shadow-3xl lien-header">
-
                         <a href="{{ route('moncompte.edit', ['id' => Auth::user()->id]) }}">
                             <p class="text-gray-400 font-quicksand text-2xl lien-header">Mon compte</p>
                         </a>
-
                     </button>
 
                     <form action="{{ route('deconnexion') }}" method="POST">
@@ -107,7 +103,7 @@
         </div>
 
         {{-- LIENS --}}
-        <div id="app" class="w-full flex justify-evenly mt-24 pb-10 bg-noir text-white font-technorace text-4xl">
+        <div id="app" class="w-full flex justify-evenly mt-24 pb-10 bg-noir text-white font-technorace text-3xl">
             <h2 class="lien-header"><a href="{{ route('programmation.index') }}">PROGRAMMATION</a></h2>
 
             <h2 class="lien-header"><a href="{{ route('artistes.index') }}">ARTISTES</a></h2>

@@ -257,7 +257,8 @@
 }
 
 /************
-* À propos ***********/
+* À propos
+***********/
 .apropos {
   display: flex;
   flex-direction: column;
@@ -404,9 +405,30 @@
   padding: 20px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 955px) {
+  header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0px;
+  }
+  header .lien-header {
+    font-size: 2.25vw;
+  }
+  header .pb-60 .logo {
+    margin: 0px;
+    height: 25vw;
+    width: 30vw;
+  }
+  header .border-mauve {
+    border: 0.05vw solid;
+    --tw-border-opacity: .5;
+    border-color: rgb(234 51 247/var(--tw-border-opacity));
+  }
   /************
-  * À propos ***********/
+  * À propos
+  ***********/
   .apropos {
     display: flex;
     flex-direction: column;
@@ -417,26 +439,6 @@
     background-position: center center;
     background-repeat: repeat;
     min-height: 100vh;
-  }
-  .apropos .banniere {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url("/image/Apropos/banniereApropos.png");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 25vh;
-  }
-  .apropos .banniere h1 {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 20px;
-    border-radius: 5px;
-    letter-spacing: 3px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
   }
   .apropos .origine {
     max-width: 650px;
@@ -530,7 +532,9 @@
     padding: 30px;
   }
   .apropos .adresse .coordonnes {
-    width: 400px;
+    padding-top: 2vw;
+    width: 650px;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -539,13 +543,19 @@
     color: white;
   }
   .apropos .adresse .coordonnes .coordonnes.a {
+    width: 33%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: 40px;
   }
   .apropos .adresse .coordonnes .coordonnes.a img {
     display: inline-block;
     vertical-align: middle;
+    align-items: center;
+    text-align: center;
   }
   .apropos .adresse .coordonnes .coordonnes.a .image {
     margin-right: 20px;
@@ -553,7 +563,7 @@
   .apropos .adresse .coordonnes .coordonnes.a h2 {
     display: inline-block;
     vertical-align: middle;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 10px;
   }
   .apropos .adresse .coordonnes .coordonnes.a .coordonnes.a {
@@ -563,7 +573,8 @@
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
   /************
-  * À propos ***********/
+  * À propos
+  ***********/
   .apropos {
     display: flex;
     flex-direction: column;
@@ -596,6 +607,7 @@
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
   }
   .apropos .origine {
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -619,6 +631,7 @@
     color: #fff;
   }
   .apropos .valeur {
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -635,7 +648,7 @@
     text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
   }
   .apropos .valeur .separation {
-    width: 500px;
+    width: 350px;
     height: 4px;
     background-color: #EA33F7;
     margin-top: 80px;
@@ -650,6 +663,7 @@
     color: white;
   }
   .apropos .adresse {
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -667,7 +681,7 @@
     text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
   }
   .apropos .adresse .separation {
-    width: 500px;
+    width: 350px;
     height: 4px;
     background-color: #EA33F7;
     border-radius: 5px;
@@ -675,7 +689,7 @@
   }
   .apropos .adresse .joindre {
     display: flex;
-    flex-direction: row;
+    flex-direction: c;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
@@ -697,13 +711,15 @@
     vertical-align: middle;
   }
   .apropos .adresse .coordonnes .coordonnes.a .image {
-    margin-right: 20px;
+    margin-right: 0px;
   }
   .apropos .adresse .coordonnes .coordonnes.a h2 {
-    display: inline-block;
+    display: flex;
     vertical-align: middle;
     font-size: 1.5rem;
     margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
   }
   .apropos .adresse .coordonnes .coordonnes.a .coordonnes.a {
     padding: 20px;

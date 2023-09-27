@@ -1,5 +1,53 @@
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get references to the select element and the target div
+        const forfaitSelect = document.getElementById("forfait");
+        const descriptionDiv = document.getElementById("forfait_description");
+        const jourDiv = document.getElementById("forfait_jour");
+        const nomDiv = document.getElementById("forfait_titre");
+
+        const selectedOption = forfaitSelect.options[forfaitSelect.selectedIndex];
+
+        // Get the description from the data attribute of the selected option
+        const description = selectedOption.getAttribute("description");
+        const jour = selectedOption.getAttribute("forfaitjour");
+        const nom = selectedOption.getAttribute("forfait-nom");
+
+        // Update the content of the description div
+        descriptionDiv.innerHTML = description;
+        jourDiv.innerHTML = jour;
+        nomDiv.innerHTML = nom;
+        // Add an event listener to the select element
+        forfaitSelect.addEventListener("change", function() {
+            // Get the selected option
+            const selectedOption = forfaitSelect.options[forfaitSelect.selectedIndex];
+
+            // Get the description from the data attribute of the selected option
+            const description = selectedOption.getAttribute("description");
+            const jour = selectedOption.getAttribute("forfaitjour");
+            const nom = selectedOption.getAttribute("forfait-nom");
+
+            // Update the content of the description div
+            descriptionDiv.innerHTML = description;
+            jourDiv.innerHTML = jour;
+            nomDiv.innerHTML = nom;
+        });
+    });
+</script>
+
 <x-layout titre="Modification de l'actualité">
+
     <div class="conteneur-enregistrement">
+
+        <div class="forfait_details">
+            <h2 id="forfait_titre" class="font-lovelo neon-text"></h2>
+            <h3 class="font-lovelo neon-text">Jours:</h3>
+            <div id="forfait_jour" class="font-quicksand"></div>
+            <h3 class="font-lovelo neon-text">Description:</h3>
+            <div id="forfait_description" class="font-quicksand"></div>
+        </div>
+
         <div class="formulaire-enregistrement">
             <div>
 
@@ -35,11 +83,13 @@
                                     name="forfait" id="forfait">
                                     @foreach ($forfaits as $forfait)
                                         @if ($forfait->id == $reservation->forfait_id)
-                                            <option selected value="{{ old('forfait') ?? $forfait->id }}">
-                                                {{ $forfait->id }} {{ $forfait->nom }}
+                                            <option selected value="{{ old('forfait') ?? $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
+                                                forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
+                                                {{ $forfait->id }} {{ $forfait->    nom }}
                                             </option>
                                         @else
-                                            <option value="{{ old('forfait') ?? $forfait->id }}">
+                                            <option value="{{ old('forfait') ?? $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
+                                                forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
                                                 {{ $forfait->id }} {{ $forfait->nom }}
                                             </option>
                                         @endif
@@ -100,11 +150,11 @@
 
                 </div>
 
-                    {{-- RETOUR AUX À L'ADMINISTRATION --}}
-                    <p class="mt-10 text-center text-sm text-gray-500">
-                        <a href="{{ route('moncompte.edit', ['id' => Auth::user()->id]) }}"
-                            class="font-quicksand">Retour au compte</a>
-                    </p>
+                {{-- RETOUR AUX À L'ADMINISTRATION --}}
+                <p class="mt-10 text-center text-sm text-gray-500">
+                    <a href="{{ route('moncompte.edit', ['id' => Auth::user()->id]) }}" class="font-quicksand">Retour
+                        au compte</a>
+                </p>
             </div>
         </div>
     </div>
