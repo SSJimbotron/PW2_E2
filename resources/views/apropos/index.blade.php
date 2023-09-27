@@ -1,7 +1,7 @@
 <x-layout titre="À propos">
 
     <div class="apropos">
-        <div class="banniere">
+        <div class="banniere z-10">
 
             <h1 class="font-lovelo">
                 À propos

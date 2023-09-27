@@ -15,17 +15,19 @@ class EnregistrementController extends Controller
      *
      * @return View
      */
-    public function create() {
+    public function create()
+    {
         return view('auth.enregistrement.create');
     }
 
-     /**
+    /**
      * Traite l'enregistrement
      *
      * @param Request $request
      * @return RedirectResponse
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "prenom" => "required",
@@ -33,7 +35,7 @@ class EnregistrementController extends Controller
             "email" => "required|email|unique:users,email",
             "password" => "required|min:8",
             "confirmation_password" => "required|same:password"
-        ],[
+        ], [
             "prenom.required" => "Le prénom est requis",
             "nom.required" => "Le nom est requis",
             "email.required" => "Le courriel est requis",
@@ -59,9 +61,7 @@ class EnregistrementController extends Controller
 
         // Rediriger
         return redirect()
-                ->route('accueil')
-                ->with('succes', 'Votre compte a été créé');
-
+            ->route('accueil')
+            ->with('succes', 'Votre compte a été créé');
     }
-
 }

@@ -107,10 +107,10 @@
         </div>
 
         {{-- LIENS --}}
-        <div class="w-full flex justify-evenly mt-24 pb-10 bg-noir text-white font-technorace text-4xl">
-
+        <div id="app" class="w-full flex justify-evenly mt-24 pb-10 bg-noir text-white font-technorace text-4xl">
             <h2 class="lien-header"><a href="{{ route('programmation.index') }}">PROGRAMMATION</a></h2>
 
+            <h2 class="lien-header"><a href="{{ route('artistes.index') }}">ARTISTES</a></h2>
             <h2 class="lien-header"><a href="{{ route('forfaits.index') }}">FORFAITS</a></h2>
 
             <h2 class="lien-header"><a href="{{ route('activites.index') }}">ACTIVITÉS</a></h2>
@@ -153,8 +153,10 @@
                 {{-- EMAIL --}}
                 <div>
                     <div class="flex items-center justify-center">
-                        <input class="border-white border-2 rounded drop-shadow-blanc w-3/4 h-12 bg-transparent text-center text-xl" id="email" name="email" type="email" value="{{ old('email') }}"
-                            placeholder="Courriel" >
+                        <input
+                            class="border-white border-2 rounded drop-shadow-blanc w-3/4 h-12 bg-transparent text-center text-xl"
+                            id="email" name="email" type="email" value="{{ old('email') }}"
+                            placeholder="Courriel">
                         <button type="submit">
                             <img class="hover:drop-shadow-blanc" src="{{ url('image/enter.png') }}" alt="">
                         </button>
@@ -231,7 +233,8 @@
 
 
                 @foreach ($actualites->take(4) as $actualite)
-                    <a class="lien-header" href="{{ route('actualite.index') }}#{{$actualite->id}}">{{ $actualite->titre }}</a>
+                    <a class="lien-header"
+                        href="{{ route('actualite.index') }}#{{ $actualite->id }}">{{ $actualite->titre }}</a>
                 @endforeach
 
             </div>
@@ -255,7 +258,20 @@
         @endif
 
     </footer>
-    <script src="js/main.js"></script>
+
+    <script src="js/main.js" type="module"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EEQ1PZ0ZJW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EEQ1PZ0ZJW');
+    </script>
 </body>
 
 </html>

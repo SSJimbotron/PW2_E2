@@ -11,23 +11,14 @@ use Illuminate\Support\Facades\Storage;
 
 class ReservationController extends Controller
 {
-    /**
-     * Affiche la liste des actualités
-     *
-     * @return View
-     */
-    public function index()
-    {
-        // Récupérer toutes les actualites de la base de données
-        $forfaits = Forfait::all();
-        $usagers = User::all();
-        $reservations = Reservation::all();
-
-        // Passer les actualites à la vue
-        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits, "reservations" => $reservations,]);
-    }
 
     // ======================= AJOUT =======================
+
+    /**
+     * Affiche le formulaire d'ajout d'une réservation pour l'admin
+     *
+     * @return void
+     */
     public function create()
     {
         $usagers = User::all();
@@ -39,7 +30,7 @@ class ReservationController extends Controller
 
 
     /**
-     * Traite l'ajout
+     * Traite l'ajout d'une réservation pour l'admin
      *
      * @param Request $request
      * @return RedirectResponse
@@ -98,22 +89,17 @@ class ReservationController extends Controller
         }
     }
 
-    /**
-     * Affiche la liste des réservations
-     *
-     * @return View
-     */
     // ======================= MODIFICATION =======================
 
     /**
-     * Affiche le formulaire de modification
+     * Affiche le formulaire de modification d'une réservation coté admin
      *
      * @param int $id Id de la reservation à modifier
      * @return View
      */
     public function edit($id)
     {
-        // Récupération de tous les usagers
+        // Récupération de tous les usagers et forfaits
         $usagers = User::all();
         $forfaits = Forfait::all();
 
@@ -121,8 +107,10 @@ class ReservationController extends Controller
             "usagers" => $usagers, "forfaits" => $forfaits,  "reservation" => Reservation::findOrFail($id),
         ]);
     }
+
+
     /**
-     * Traite la modification
+     * Traite la modification d'une réservation coté admin
      *
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
@@ -178,8 +166,11 @@ class ReservationController extends Controller
                 ->with('error', "Les dates doivent respecter votre forfait");
         }
     }
+
+    // **** SUPRESSION ****
+
     /**
-     * Traite la suppression
+     * Traite la suppression d'une réservation coté admin
      *
      * @param Request $request
      * @return RedirectResponse

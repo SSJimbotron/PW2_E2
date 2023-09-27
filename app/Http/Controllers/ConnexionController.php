@@ -13,7 +13,8 @@ class ConnexionController extends Controller
      *
      * @return View
      */
-    public function create() {
+    public function create()
+    {
         return view('auth.connexion.create');
     }
 
@@ -24,7 +25,8 @@ class ConnexionController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function authentifier(Request $request) {
+    public function authentifier(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "email" => "required|email",
@@ -35,20 +37,19 @@ class ConnexionController extends Controller
             "password.required" => "Le mot de passe est requis"
         ]);
 
-        if(Auth::attempt($valides)){
+        if (Auth::attempt($valides)) {
             $request->session()->regenerate();
 
             return redirect()
-                    ->intended(route('accueil'))
-                    ->with('succes', 'Vous êtes connectés!');
+                ->intended(route('accueil'))
+                ->with('succes', 'Vous êtes connectés!');
         }
 
         return back()
-                ->withErrors([
-                    "email" => "Les informations fournies ne sont pas valides"
-                ])
-                ->onlyInput('email');
-
+            ->withErrors([
+                "email" => "Les informations fournies ne sont pas valides"
+            ])
+            ->onlyInput('email');
     }
 
     /**
@@ -57,16 +58,15 @@ class ConnexionController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function deconnecter(Request $request) {
+    public function deconnecter(Request $request)
+    {
         Auth::logout();
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
         return redirect()
-                ->route('accueil')
-                ->with('succes', "Vous êtes déconnectés!");
-
+            ->route('accueil')
+            ->with('succes', "Vous êtes déconnectés!");
     }
-
 }

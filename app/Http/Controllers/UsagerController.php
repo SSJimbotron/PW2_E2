@@ -12,7 +12,7 @@ class UsagerController extends Controller
 {
     // ======================= AJOUT =======================
     /**
-     * Affiche le formulaire d'enregistrement
+     * Affiche le formulaire d'enregistrement d'un nouvel utilisateur pour l'admin
      *
      * @return View
      */
@@ -23,7 +23,7 @@ class UsagerController extends Controller
         ]);
     }
     /**
-     * Traite l'enregistrement
+     * Traite l'enregistrement d'un nouvel utilisateur pour l'admin
      *
      * @param Request $request
      * @return RedirectResponse
@@ -71,7 +71,7 @@ class UsagerController extends Controller
 
     // ======================= MODIFICATION =======================
     /**
-     * Affiche le formulaire de modification
+     * Affiche le formulaire de modification d'un utilisateur coté admin
      *
      * @param int $id Id de l'actualité à modifier
      * @return View
@@ -87,7 +87,7 @@ class UsagerController extends Controller
 
 
     /**
-     * Traite l'enregistrement
+     * Traite l'enregistrement d'un utilisateur coté admin
      *
      * @param Request $request
      * @return RedirectResponse
@@ -126,8 +126,11 @@ class UsagerController extends Controller
             ->route('admin.index')
             ->with('succes', "La modification de l'usager à été effectuer");
     }
+
+    // **** SUPRESSION
+
     /**
-     * Traite la suppression
+     * Traite la suppression d'un utilisateur coté admin
      *
      * @param Request $request
      * @return RedirectResponse

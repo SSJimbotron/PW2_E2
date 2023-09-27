@@ -26,6 +26,11 @@ class ActualiteController extends Controller
 
     // ======================= AJOUT =======================
 
+    /**
+     * Affiche le formulaire d'ajout
+     *
+     * @return View
+     */
     public function create()
     {
         return view('admin.actualites.create');
@@ -162,6 +167,9 @@ class ActualiteController extends Controller
             ->route('admin.index')
             ->with('succes', "L'image de l'actualité a été modifiée avec succès!");
     }
+
+    // ======================= SUPRESSION =======================
+
     /**
      * Traite la suppression
      *
