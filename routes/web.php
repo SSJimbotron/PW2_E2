@@ -110,7 +110,7 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->middleware('guest');
 
 // ***MON COMPTE***
-//  edit
+//  editer les informations du compte pour l'utilisateur connecter
 Route::get('/moncompte/{id}', [ClientController::class, 'edit'])
     ->name('moncompte.edit')
     ->middleware('auth');

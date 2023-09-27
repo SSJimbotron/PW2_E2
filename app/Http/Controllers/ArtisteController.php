@@ -25,6 +25,7 @@ class ArtisteController extends Controller
     /**
      * Affiche un artiste
      *
+     * @param int $id Id de l'actualité à modifier
      * @return View
      */
 

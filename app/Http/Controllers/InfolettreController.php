@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class InfolettreController extends Controller
 {
     /**
-     * Traite l'enregistrement
+     * Traite l'enregistrement d'un client pour l'infolettre
      *
      * @param Request $request
      * @return RedirectResponse

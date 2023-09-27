@@ -19,12 +19,13 @@ class AdministrationController extends Controller
     public function index()
     {
 
-        // Récupération de tous les usagers
+        // Récupération de tous les usagers,activités,actualités et réservations
         $usagers = User::all();
         $activites = Activite::all();
         $actualites = Actualite::all();
         $reservations = Reservation::all();
 
+        // Passe les variables dans la vue
         return view('admin.index', [
             "usagers" => $usagers,
             "activites" => $activites,

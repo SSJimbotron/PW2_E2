@@ -10,53 +10,39 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
 class ClientController extends Controller
 {
 
-    /**
-     * Affiche la liste des actualités
-     *
-     * @return View
-     */
-    public function index()
-    {
-        // Récupérer toutes les actualites de la base de données
-        $forfaits = Forfait::all();
-        $usagers = User::all();
-        $reservations = Reservation::all();
-
-        // Passer les actualites à la vue
-        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits, "reservations" => $reservations,]);
-    }
+    // ======================= COMPTE CLIENT =======================
 
     /**
-     * Affiche le formulaire de modification
+     * Affiche le formulaire de modification pour le compte de l'utilisateur connecter
      *
      * @param int $id Id de l'actualité à modifier
      * @return View
      */
     public function edit($id)
     {
-        // Récupération de tous les usagers
-        $usagers = User::all();
-        $activites = Activite::all();
-        $actualites = Actualite::all();
-        $reservations = Reservation::all();
+        // Récupération de tous les usagers et ses réservations, ainsi que tous les forfaits
+        $usagers = User::Find($id);
+        $reservations = DB::table('reservations')->where('user_id','=', $id)->get();
+        $forfaits = Forfait::all();
 
+        // Passer les données à la vue
         return view('clients.edit', [
             "usager" => User::findOrFail($id), "usagers" => $usagers,
-            "activites" => $activites,
-            "actualites" => $actualites,
             "reservations" => $reservations,
+            "forfaits" => $forfaits,
         ]);
     }
 
 
     /**
-     * Traite l'enregistrement
+     * Traite la modification du compte client
      *
      * @param Request $request
      * @return RedirectResponse
@@ -90,8 +76,64 @@ class ClientController extends Controller
             ->route('accueil')
             ->with('succes', "La modification de l'usager à été effectuée");
     }
+
     /**
-     * Traite l'ajout de la part du client
+     * Traite la modification du mot de passe d'un client
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function updatemdp(Request $request)
+    {
+        // Valider
+        $valides = $request->validate([
+            "id" => "required",
+            "password" => "required|min:8",
+            "confirmation_password" => "required|same:password",
+        ], [
+            "id.required" => "L'id de l'usager est obligatoire",
+            "password.required" => "Le mot de passe est requis",
+            "password.min" => "Le mot de passe doit avoir une longueur de :min caractères",
+            "confirmation_password.required" => "La confirmation du mot de passe est requise",
+            "confirmation_password.same" => "Le mot de passe n'a pu être confirmé",
+
+        ]);
+
+        // Sauvegarder
+        $user = User::findOrFail($valides["id"]);
+        $user->password = Hash::make($valides["password"]);
+
+        $user->save();
+
+        // Rediriger
+        return redirect()
+            ->route('accueil')
+            ->with('succes', "La modification du mot de passe à été effectuer");
+    }
+
+
+    // ======================= RÉSERVATION =======================
+
+    // **** AJOUT ****
+
+    /**
+     * Affiche la page pour effectuer une nouvelle réservation
+     *
+     * @return View
+     */
+    public function index()
+    {
+        // Récupérer tous les forfaits et utilisateurs
+        $forfaits = Forfait::all();
+        $usagers = User::all();
+        $reservations = Reservation::all();
+
+        // Passer les données à la vue
+        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits]);
+    }
+
+    /**
+     * Traite l'ajout d'une nouvelle réservation de la part du client
      *
      * @param Request $request
      * @return RedirectResponse
@@ -149,17 +191,17 @@ class ClientController extends Controller
         }
     }
 
-    // ======================= MODIFICATION =======================
+    // **** MODIFICATION ****
 
     /**
-     * Affiche le formulaire de modification
+     * Affiche le formulaire de modification pour une réservation
      *
      * @param int $id Id de la reservation à modifier
      * @return View
      */
     public function editreservation($id)
     {
-        // Récupération de tous les usagers
+        // Récupération de tous les usagers et les forfaits
         $usagers = User::all();
         $forfaits = Forfait::all();
 
@@ -167,8 +209,9 @@ class ClientController extends Controller
             "usagers" => $usagers, "forfaits" => $forfaits,  "reservation" => Reservation::findOrFail($id),
         ]);
     }
+
     /**
-     * Traite la modification
+     * Traite la modification d'une réservation
      *
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
@@ -224,35 +267,11 @@ class ClientController extends Controller
                 ->with('error', "Les dates doivent respecter votre forfait");
         }
     }
-    public function updatemdp(Request $request)
-    {
-        // Valider
-        $valides = $request->validate([
-            "id" => "required",
-            "password" => "required|min:8",
-            "confirmation_password" => "required|same:password",
-        ], [
-            "id.required" => "L'id de l'usager est obligatoire",
-            "password.required" => "Le mot de passe est requis",
-            "password.min" => "Le mot de passe doit avoir une longueur de :min caractères",
-            "confirmation_password.required" => "La confirmation du mot de passe est requise",
-            "confirmation_password.same" => "Le mot de passe n'a pu être confirmé",
 
-        ]);
+    // **** SUPRESSION ****
 
-        // Sauvegarder
-        $user = User::findOrFail($valides["id"]);
-        $user->password = Hash::make($valides["password"]);
-
-        $user->save();
-
-        // Rediriger
-        return redirect()
-            ->route('accueil')
-            ->with('succes', "La modification du mot de passe à été effectuer");
-    }
     /**
-     * Traite la suppression
+     * Traite la suppression d'une réservation
      *
      * @param Request $request
      * @return RedirectResponse
