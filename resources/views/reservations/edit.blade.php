@@ -56,7 +56,8 @@
                                 d'arrivée</label>
                             <div class="mt-2">
                                 <input type="date" id="date_arrivee" name="date_arrivee"
-                                    value="{{ old('date_arrivee') ?? $reservation->date_arrivee }}" min="2024-08-19" max="2024-08-21" />
+                                    value="{{ old('date_arrivee') ?? $reservation->date_arrivee }}" min="2024-08-19"
+                                    max="2024-08-21" />
                             </div>
                             <x-forms.erreur champ="date_arrivee" />
                         </div>
@@ -68,7 +69,8 @@
                             </label>
                             <div class="mt-2">
                                 <input type="date" id="date_depart" name="date_depart"
-                                    value="{{ old('date_depart') ?? $reservation->date_depart }}" min="2024-08-19" max="2024-08-21" />
+                                    value="{{ old('date_depart') ?? $reservation->date_depart }}" min="2024-08-19"
+                                    max="2024-08-21" />
                             </div>
                             <x-forms.erreur champ="date_depart" />
                         </div>
@@ -102,7 +104,8 @@
 
                     {{-- RETOUR AUX À L'ADMINISTRATION --}}
                     <p class="mt-10 text-center text-sm text-gray-500">
-                        <a href="{{ route('moncompte.edit' , ['id' => Auth::user()->id]) }}" class="hover:text-indigo-600">Retour au compte</a>
+                        <a href="{{ route('moncompte.edit', ['id' => Auth::user()->id]) }}"
+                            class="hover:text-indigo-600">Retour au compte</a>
                     </p>
                 </div>
             </div>

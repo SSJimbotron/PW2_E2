@@ -188,7 +188,7 @@ class ReservationController extends Controller
     {
         Reservation::destroy($request->id);
 
-        return back()->route('admin.index')
+        return redirect()->route('admin.index')
             ->with('succes', "La réservation a été supprimée!");
     }
 }

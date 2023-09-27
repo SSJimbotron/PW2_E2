@@ -215,8 +215,8 @@ class ClientController extends Controller
 
             // Rediriger
             return redirect()
-            ->route('moncompte.edit', ['id' => Auth::user()->id])
-            ->with('succes', "La réservation a été ajoutée avec succès!");
+                ->route('moncompte.edit', ['id' => Auth::user()->id])
+                ->with('succes', "La réservation a été ajoutée avec succès!");
         } else {
             // Rediriger
             return redirect()
@@ -259,9 +259,22 @@ class ClientController extends Controller
      */
     public function destroy(Request $request)
     {
+
+        $date_festival = Carbon::createFromFormat('Y-m-d',  '2024-08-19');
+        $date_test = Carbon::createFromFormat('Y-m-d',  '2024-08-21');
+
+
+        $maintenant = Carbon::now()->format('Y-m-d');
+
+
+        if($date_test->gte($date_festival)){
+            return redirect()->route('reservations.edit', ['id' => $request->id])
+            ->with('erreur', "La réservation ne peux être annulée après le début du festival");
+        }else{
+
         Reservation::destroy($request->id);
 
         return redirect()->route('moncompte.edit', ['id' => Auth::user()->id])
-            ->with('succes', "La réservation a été supprimée!");
+            ->with('succes', "La réservation a été supprimée!");}
     }
 }

@@ -204,20 +204,20 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             box-shadow: 1px 1px 5px #aaaaaa;
         }
 
-        button:hover{
+        button:hover {
             border: 1px solid rgb(0, 255, 0);
             color: rgb(0, 255, 0);
             box-shadow: 1px 1px 5px rgb(0, 255, 0);
         }
 
-        .supprime{
+        .supprime {
             margin: auto;
             background-color: #fff;
             color: rgb(197, 0, 0);
             transition: all 0.2s ease-in-out;
         }
 
-        .supprime:hover{
+        .supprime:hover {
             margin: auto;
             background-color: red;
             color: #fff;
@@ -226,13 +226,13 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         }
     }
 
-    .retour{
+    .retour {
         text-align: center;
         margin-top: 20px;
         transition: all 0.2s ease-in-out;
     }
 
-    .retour:hover{
+    .retour:hover {
         color: $rose;
     }
 }
@@ -449,8 +449,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         align-items: center;
 
         h1 {
-
-
             padding: 60px;
             color: $rose;
             font-size: 2.5rem;
@@ -622,7 +620,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-image: url('/image/ActiviteIndex/banniere.png');
+        background-image: url('/image/ActiviteShow/banniere.png');
         background-size: cover;
         background-position: center center;
         background-repeat: repeat;
@@ -631,7 +629,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
         h1 {
 
-            color: $bleu;
+            color: #fff;
             font-size: 2.5rem;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.7);
@@ -639,14 +637,14 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             border-radius: 5px;
             letter-spacing: 3px;
             text-shadow:
-                0 0 5px $bleu,
-                0 0 10px $bleu,
-                0 0 20px $bleu,
-                0 0 40px $bleu,
-                0 0 80px $bleu,
-                0 0 90px $bleu,
-                0 0 100px $bleu,
-                0 0 150px $bleu;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
         }
 
     }
@@ -864,7 +862,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 }
             }
 
-            .bas{
+            .bas {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -911,14 +909,22 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         height: 25vh;
 
         h1 {
-            color: $jaune;
+            color: #fff;
             font-size: 2.5rem;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 5px 20px;
             border-radius: 5px;
             letter-spacing: 3px;
-            text-shadow: 0 0 5px $jaune, 0 0 10px $jaune, 0 0 20px $jaune, 0 0 40px $jaune, 0 0 80px $jaune, 0 0 90px $jaune, 0 0 100px $jaune, 0 0 150px $jaune;
+            text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #fff,
+            0 0 80px #fff,
+            0 0 90px #fff,
+            0 0 100px #fff,
+            0 0 150px #fff;
         }
     }
 
@@ -967,11 +973,11 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                     font-weight: 700;
                     text-align: center;
                     margin-bottom: 30px;
-                    color: $jaune;
+                    color: #fff;
 
                 }
 
-                p.date{
+                p.date {
                     color: $gris;
                 }
 
@@ -1041,7 +1047,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
                         }
 
-                        .voir-plus:hover{
+                        .voir-plus:hover {
                             color: #000;
                         }
                     }
@@ -1438,7 +1444,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
         h1 {
 
-            color: $jaune;
+            color: #fff;
             font-size: 2.5rem;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.7);
@@ -1446,14 +1452,14 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             border-radius: 5px;
             letter-spacing: 3px;
             text-shadow:
-                0 0 5px $jaune,
-                0 0 10px $jaune,
-                0 0 20px $jaune,
-                0 0 40px $jaune,
-                0 0 80px $jaune,
-                0 0 90px $jaune,
-                0 0 100px $jaune,
-                0 0 150px $jaune;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
         }
 
     }
