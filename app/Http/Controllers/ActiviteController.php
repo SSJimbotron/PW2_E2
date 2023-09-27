@@ -30,6 +30,7 @@ class ActiviteController extends Controller
     /**
      * Affiche une activité
      *
+     * @param int $id Id de l'actualité à modifier
      * @return View
      */
 
@@ -54,6 +55,11 @@ class ActiviteController extends Controller
 
     // ======================= AJOUT =======================
 
+    /**
+     * Affiche le formulaire d'ajout
+     *
+     * @return View
+     */
     public function create()
     {
         return view('admin.activites.create');
@@ -98,7 +104,7 @@ class ActiviteController extends Controller
         $activite->save();
 
 
-        // Rediriger
+        // Rediriger avec message de succès
         return redirect()
             ->route('admin.index')
             ->with('succes', "L'activité a été ajoutée avec succès!");
@@ -149,11 +155,13 @@ class ActiviteController extends Controller
 
         $activite->save();
 
-        // Rediriger
+        // Rediriger avec message de succès
         return redirect()
             ->route('admin.index')
             ->with('succes', "L'activité a été modifiée avec succès!");
     }
+
+
     /**
      * Traite la modification de l'image
      *
@@ -190,6 +198,8 @@ class ActiviteController extends Controller
             ->route('admin.index')
             ->with('succes', "L'activité a été modifiée avec succès!");
     }
+
+    // ======================= SUPPRESSION =======================
 
     /**
      * Traite la suppression

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
     /**
-     * Affiche la page d'accueil
+     * Affiche la page d'accueil du site
      *
      * @return View
      */
@@ -16,7 +16,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Affiche la page à propos
+     * Affiche la page à propos du site
      *
      * @return View
      */

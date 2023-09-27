@@ -129,22 +129,21 @@
                         Réservations
                     </h2>
                 </div>
+
                 <p class="font-technorace"><a class="call-to-action" href="{{ route('reservations.index') }}">Achetez
                         vos Billets</a></p>
                 @foreach ($reservations as $reservation)
                     @if ($reservation->user_id == Auth::user()->id)
                         <tr>
                             <p>
-                                <td><a href="{{ route('reservations.edit', ['id' => $reservation->id]) }}">
-                                        @foreach ($usagers as $usager)
-                                            @if ($reservation->user_id == $usager->id)
-                                                {{ $usager->nom }} {{ $usager->prenom }}
-                                            @endif
-                                        @endforeach
-                                    </a>
-                                </td>
-                                <td><a
-                                        href="{{ route('reservations.edit', ['id' => $reservation->id, 'usager_id' => $usager->id]) }}">{{ $reservation->forfait_id }}</a>
+                                <td>
+                                    {{-- Récupère le nom du forfait associé à la réservation --}}
+                                    @foreach ($forfaits as $forfait)
+                                        @if ($forfait->id == $reservation->forfait_id)
+                                            <a
+                                                href="{{ route('reservations.edit', ['id' => $reservation->id, 'usager_id' => $usager->id]) }}">{{ $forfait->nom }}</a>
+                                        @endif
+                                    @endforeach
                                 </td>
                                 <td><a
                                         href="{{ route('reservations.edit', ['id' => $reservation->id]) }}">{{ $reservation->date_arrivee }}</a>
