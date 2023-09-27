@@ -38,7 +38,7 @@
                     <label for="description" class="font-technorace">Description de l'activité</label>
 
                     <div>
-                        <textarea name="description" id="description" cols="30" rows="10"
+                        <textarea name="description" id="description" cols="38" rows="10"
                             placeholder="{{ old('description') ?? $activite->description }}"></textarea>
                         <x-forms.erreur champ="description" />
                     </div>

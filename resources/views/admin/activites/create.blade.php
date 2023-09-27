@@ -32,10 +32,11 @@
                 <div class="section">
                     <label for="description" class="font-technorace">Description
                         de l'activité</label>
-                    <div>
-                        <input type="textarea" name="description" id="description">
-                        <x-forms.erreur champ="description" />
-                    </div>
+                        <div>
+                            <textarea name="description" id="description" cols="38" rows="10"
+                                placeholder="Entrez une description"></textarea>
+                            <x-forms.erreur champ="description" />
+                        </div>
                 </div>
 
 
