@@ -97,6 +97,18 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
     }
 
+    textarea {
+        width: 300px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        opacity: 0.1s;
+        background-color: #323232;
+        box-shadow: 0 0 5px #fff;
+        padding-left: 5px;
+        color: white;
+
+    }
+
     .formulaire-enregistrement {
 
         padding: 50px 100px;
@@ -188,6 +200,19 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
     }
 
+    select {
+
+        width: 300px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        opacity: 0.1s;
+        background-color: #323232;
+        box-shadow: 0 0 5px #fff;
+        padding-left: 5px;
+        color: white;
+
+    }
+
     .submit {
 
         display: flex;
@@ -204,20 +229,20 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             box-shadow: 1px 1px 5px #aaaaaa;
         }
 
-        button:hover{
+        button:hover {
             border: 1px solid rgb(0, 255, 0);
             color: rgb(0, 255, 0);
             box-shadow: 1px 1px 5px rgb(0, 255, 0);
         }
 
-        .supprime{
+        .supprime {
             margin: auto;
             background-color: #fff;
             color: rgb(197, 0, 0);
             transition: all 0.2s ease-in-out;
         }
 
-        .supprime:hover{
+        .supprime:hover {
             margin: auto;
             background-color: red;
             color: #fff;
@@ -226,13 +251,13 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         }
     }
 
-    .retour{
+    .retour {
         text-align: center;
         margin-top: 20px;
         transition: all 0.2s ease-in-out;
     }
 
-    .retour:hover{
+    .retour:hover {
         color: $rose;
     }
 }
@@ -450,8 +475,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         align-items: center;
 
         h1 {
-
-
             padding: 60px;
             color: $rose;
             font-size: 2.5rem;
@@ -606,6 +629,518 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
     }
 }
 
+@media screen and (max-width: 992px) {
+
+    /************
+* À propos ***********/
+    .apropos {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: $arrierePlan;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        min-height: 100vh;
+
+        .banniere {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('/image/Apropos/banniereApropos.png');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 25vh;
+
+            h1 {
+
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 700;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 5px 20px;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+                    0 0 80px #fff,
+                    0 0 90px #fff,
+                    0 0 100px #fff,
+                    0 0 150px #fff;
+            }
+
+        }
+
+        .origine {
+            max-width: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            h1 {
+                max-width: 650px;
+                padding: 60px;
+                color: $rose;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px $rose,
+                    0 0 10px $rose,
+                    0 0 20px $rose,
+                    0 0 40px $rose,
+                    0 0 80px $rose,
+                    0 0 90px $rose,
+                    0 0 100px $rose,
+                    0 0 150px $rose;
+            }
+
+            p {
+
+                width: 100%;
+                max-width: 650px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: #fff;
+
+
+            }
+
+            ;
+
+        }
+
+        .valeur {
+            max-width: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                max-width: 650px;
+                padding: 60px;
+                color: $rose;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px $rose,
+                    0 0 10px $rose,
+                    0 0 20px $rose,
+                    0 0 40px $rose,
+                    0 0 80px $rose,
+                    0 0 90px $rose,
+                    0 0 100px $rose,
+                    0 0 150px $rose;
+
+            }
+
+            .separation {
+
+                width: 500px;
+                height: 4px;
+                background-color: $rose;
+                margin-top: 80px;
+                border-radius: 5px;
+                box-shadow:
+                    0 0 5px $rose,
+                    0 0 10px white,
+                    0 0 20px $rose,
+                    0 0 40px white,
+                    0 0 80px $rose,
+                    0 0 90px white,
+                    0 0 100px $rose,
+                    0 0 150px white;
+
+            }
+
+
+            p {
+                max-width: 650px;
+                width: 100%;
+                max-width: 950px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: white;
+
+            }
+        }
+
+        .adresse {
+            max-width: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+
+
+            h1 {
+
+                padding: 60px;
+                color: $rose;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px $rose,
+                    0 0 10px $rose,
+                    0 0 20px $rose,
+                    0 0 40px $rose,
+                    0 0 80px $rose,
+                    0 0 90px $rose,
+                    0 0 100px $rose,
+                    0 0 150px $rose;
+
+            }
+
+            .separation {
+
+                width: 500px;
+                height: 4px;
+                background-color: $rose;
+                border-radius: 5px;
+                box-shadow:
+                    0 0 5px $rose,
+                    0 0 10px white,
+                    0 0 20px $rose,
+                    0 0 40px white,
+                    0 0 80px $rose,
+                    0 0 90px white,
+                    0 0 100px $rose,
+                    0 0 150px white;
+
+            }
+
+            .joindre {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px;
+
+            }
+
+            .coordonnes {
+                width: 400px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                color: white;
+
+                .coordonnes.a {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 40px;
+
+                    img {
+                        display: inline-block; // Display the image inline
+                        vertical-align: middle; // Align vertically to middle
+
+
+                    }
+
+                    .image {
+                        margin-right: 20px;
+
+                    }
+
+
+
+
+                    h2 {
+                        display: inline-block; // Display the image inline
+                        vertical-align: middle; // Align vertically to middle
+                        font-size: 1.5rem;
+                        margin-bottom: 10px;
+
+                    }
+
+                    .coordonnes.a {
+                        padding: 20px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+
+    /************
+* À propos ***********/
+    .apropos {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: $arrierePlan;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        min-height: 100vh;
+
+        .banniere {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('/image/Apropos/banniereApropos.png');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 25vh;
+
+            h1 {
+
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 700;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 5px 20px;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #fff,
+                    0 0 80px #fff,
+                    0 0 90px #fff,
+                    0 0 100px #fff,
+                    0 0 150px #fff;
+            }
+
+        }
+
+        .origine {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            h1 {
+
+                padding: 60px;
+                color: $rose;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px $rose,
+                    0 0 10px $rose,
+                    0 0 20px $rose,
+                    0 0 40px $rose,
+                    0 0 80px $rose,
+                    0 0 90px $rose,
+                    0 0 100px $rose,
+                    0 0 150px $rose;
+            }
+
+            p {
+
+                width: 100%;
+                max-width: 850px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: #fff;
+
+
+            }
+
+            ;
+
+        }
+
+        .valeur {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                padding: 60px;
+                color: $rose;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px $rose,
+                    0 0 10px $rose,
+                    0 0 20px $rose,
+                    0 0 40px $rose,
+                    0 0 80px $rose,
+                    0 0 90px $rose,
+                    0 0 100px $rose,
+                    0 0 150px $rose;
+
+            }
+
+            .separation {
+
+                width: 500px;
+                height: 4px;
+                background-color: $rose;
+                margin-top: 80px;
+                border-radius: 5px;
+                box-shadow:
+                    0 0 5px $rose,
+                    0 0 10px white,
+                    0 0 20px $rose,
+                    0 0 40px white,
+                    0 0 80px $rose,
+                    0 0 90px white,
+                    0 0 100px $rose,
+                    0 0 150px white;
+
+            }
+
+
+            p {
+
+                width: 100%;
+                max-width: 950px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: white;
+
+            }
+        }
+
+        .adresse {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+
+
+            h1 {
+
+                padding: 60px;
+                color: $rose;
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                border-radius: 5px;
+                letter-spacing: 3px;
+                text-shadow:
+                    0 0 5px $rose,
+                    0 0 10px $rose,
+                    0 0 20px $rose,
+                    0 0 40px $rose,
+                    0 0 80px $rose,
+                    0 0 90px $rose,
+                    0 0 100px $rose,
+                    0 0 150px $rose;
+
+            }
+
+            .separation {
+
+                width: 500px;
+                height: 4px;
+                background-color: $rose;
+                border-radius: 5px;
+                box-shadow:
+                    0 0 5px $rose,
+                    0 0 10px white,
+                    0 0 20px $rose,
+                    0 0 40px white,
+                    0 0 80px $rose,
+                    0 0 90px white,
+                    0 0 100px $rose,
+                    0 0 150px white;
+
+            }
+
+            .joindre {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px;
+
+            }
+
+            .coordonnes {
+
+                width: 400px;
+                // height: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                color: white;
+
+                .coordonnes.a {
+                    margin-bottom: 40px;
+
+                    img {
+                        display: inline-block; // Display the image inline
+                        vertical-align: middle; // Align vertically to middle
+
+
+                    }
+
+                    .image {
+                        margin-right: 20px;
+
+                    }
+
+
+
+
+                    h2 {
+                        display: inline-block; // Display the image inline
+                        vertical-align: middle; // Align vertically to middle
+                        font-size: 1.5rem;
+                        margin-bottom: 10px;
+
+                    }
+
+                    .coordonnes.a {
+                        padding: 20px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*****************
 * Activités index
 ****************/
@@ -623,7 +1158,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-image: url('/image/ActiviteIndex/banniere.png');
+        background-image: url('/image/ActiviteShow/banniere.png');
         background-size: cover;
         background-position: center center;
         background-repeat: repeat;
@@ -632,7 +1167,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
         h1 {
 
-            color: $bleu;
+            color: #fff;
             font-size: 2.5rem;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.7);
@@ -640,14 +1175,14 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             border-radius: 5px;
             letter-spacing: 3px;
             text-shadow:
-                0 0 5px $bleu,
-                0 0 10px $bleu,
-                0 0 20px $bleu,
-                0 0 40px $bleu,
-                0 0 80px $bleu,
-                0 0 90px $bleu,
-                0 0 100px $bleu,
-                0 0 150px $bleu;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
         }
 
     }
@@ -865,7 +1400,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 }
             }
 
-            .bas{
+            .bas {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -912,14 +1447,22 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
         height: 25vh;
 
         h1 {
-            color: $jaune;
+            color: #fff;
             font-size: 2.5rem;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 5px 20px;
             border-radius: 5px;
             letter-spacing: 3px;
-            text-shadow: 0 0 5px $jaune, 0 0 10px $jaune, 0 0 20px $jaune, 0 0 40px $jaune, 0 0 80px $jaune, 0 0 90px $jaune, 0 0 100px $jaune, 0 0 150px $jaune;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
         }
     }
 
@@ -968,11 +1511,11 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                     font-weight: 700;
                     text-align: center;
                     margin-bottom: 30px;
-                    color: $jaune;
+                    color: #fff;
 
                 }
 
-                p.date{
+                p.date {
                     color: $gris;
                 }
 
@@ -1042,7 +1585,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
                         }
 
-                        .voir-plus:hover{
+                        .voir-plus:hover {
                             color: #000;
                         }
                     }
@@ -1439,7 +1982,7 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
         h1 {
 
-            color: $jaune;
+            color: #fff;
             font-size: 2.5rem;
             font-weight: 700;
             background-color: rgba(0, 0, 0, 0.7);
@@ -1447,14 +1990,14 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             border-radius: 5px;
             letter-spacing: 3px;
             text-shadow:
-                0 0 5px $jaune,
-                0 0 10px $jaune,
-                0 0 20px $jaune,
-                0 0 40px $jaune,
-                0 0 80px $jaune,
-                0 0 90px $jaune,
-                0 0 100px $jaune,
-                0 0 150px $jaune;
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 90px #fff,
+                0 0 100px #fff,
+                0 0 150px #fff;
         }
 
     }

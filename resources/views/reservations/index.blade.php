@@ -136,7 +136,7 @@
                 {{-- LIEN RETOUR --}}
                 <p class="mt-10 text-center text-sm text-gray-500">
                     <a href="{{ route('moncompte.edit', ['id' => Auth::user()->id]) }}"
-                        class="hover:text-indigo-600">Retour</a>
+                        class="hover:text-jaune font-quicksand">Retour</a>
                 </p>
             </div>
         </div>

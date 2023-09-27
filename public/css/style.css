@@ -63,6 +63,16 @@
   border-radius: 5px;
   box-shadow: 1px 1px 5px #aaaaaa;
 }
+.conteneur-enregistrement textarea {
+  width: 300px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  opacity: 0.1s;
+  background-color: #323232;
+  box-shadow: 0 0 5px #fff;
+  padding-left: 5px;
+  color: white;
+}
 .conteneur-enregistrement .formulaire-enregistrement {
   padding: 50px 100px;
   background: rgba(0, 0, 0, 0.7);
@@ -121,6 +131,16 @@
   background-color: #323232;
   box-shadow: 0 0 5px #fff;
   padding-left: 5px;
+}
+.conteneur-enregistrement select {
+  width: 300px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  opacity: 0.1s;
+  background-color: #323232;
+  box-shadow: 0 0 5px #fff;
+  padding-left: 5px;
+  color: white;
 }
 .conteneur-enregistrement .submit {
   display: flex;
@@ -384,6 +404,311 @@
   padding: 20px;
 }
 
+@media screen and (max-width: 992px) {
+  /************
+  * À propos ***********/
+  .apropos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/image/Plan/planTitre.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    min-height: 100vh;
+  }
+  .apropos .banniere {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("/image/Apropos/banniereApropos.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25vh;
+  }
+  .apropos .banniere h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 20px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  }
+  .apropos .origine {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .apropos .origine h1 {
+    max-width: 650px;
+    padding: 60px;
+    color: #EA33F7;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+  }
+  .apropos .origine p {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .apropos .valeur {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .apropos .valeur h1 {
+    max-width: 650px;
+    padding: 60px;
+    color: #EA33F7;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+  }
+  .apropos .valeur .separation {
+    width: 500px;
+    height: 4px;
+    background-color: #EA33F7;
+    margin-top: 80px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #EA33F7, 0 0 10px white, 0 0 20px #EA33F7, 0 0 40px white, 0 0 80px #EA33F7, 0 0 90px white, 0 0 100px #EA33F7, 0 0 150px white;
+  }
+  .apropos .valeur p {
+    max-width: 650px;
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .apropos .adresse {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .apropos .adresse h1 {
+    padding: 60px;
+    color: #EA33F7;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+  }
+  .apropos .adresse .separation {
+    width: 500px;
+    height: 4px;
+    background-color: #EA33F7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #EA33F7, 0 0 10px white, 0 0 20px #EA33F7, 0 0 40px white, 0 0 80px #EA33F7, 0 0 90px white, 0 0 100px #EA33F7, 0 0 150px white;
+  }
+  .apropos .adresse .joindre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+  .apropos .adresse .coordonnes {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a .image {
+    margin-right: 20px;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a h2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a .coordonnes.a {
+    padding: 20px;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  /************
+  * À propos ***********/
+  .apropos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/image/Plan/planTitre.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    min-height: 100vh;
+  }
+  .apropos .banniere {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("/image/Apropos/banniereApropos.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25vh;
+  }
+  .apropos .banniere h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 20px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  }
+  .apropos .origine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .apropos .origine h1 {
+    padding: 60px;
+    color: #EA33F7;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+  }
+  .apropos .origine p {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .apropos .valeur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .apropos .valeur h1 {
+    padding: 60px;
+    color: #EA33F7;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+  }
+  .apropos .valeur .separation {
+    width: 500px;
+    height: 4px;
+    background-color: #EA33F7;
+    margin-top: 80px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #EA33F7, 0 0 10px white, 0 0 20px #EA33F7, 0 0 40px white, 0 0 80px #EA33F7, 0 0 90px white, 0 0 100px #EA33F7, 0 0 150px white;
+  }
+  .apropos .valeur p {
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .apropos .adresse {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .apropos .adresse h1 {
+    padding: 60px;
+    color: #EA33F7;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7, 0 0 40px #EA33F7, 0 0 80px #EA33F7, 0 0 90px #EA33F7, 0 0 100px #EA33F7, 0 0 150px #EA33F7;
+  }
+  .apropos .adresse .separation {
+    width: 500px;
+    height: 4px;
+    background-color: #EA33F7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #EA33F7, 0 0 10px white, 0 0 20px #EA33F7, 0 0 40px white, 0 0 80px #EA33F7, 0 0 90px white, 0 0 100px #EA33F7, 0 0 150px white;
+  }
+  .apropos .adresse .joindre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+  .apropos .adresse .coordonnes {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a {
+    margin-bottom: 40px;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a .image {
+    margin-right: 20px;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a h2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .apropos .adresse .coordonnes .coordonnes.a .coordonnes.a {
+    padding: 20px;
+  }
+}
 /*****************
 * Activités index
 ****************/
@@ -398,7 +723,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("/image/ActiviteIndex/banniere.png");
+  background-image: url("/image/ActiviteShow/banniere.png");
   background-size: cover;
   background-position: center center;
   background-repeat: repeat;
@@ -406,14 +731,14 @@
   height: 25vh;
 }
 .activites .banniere h1 {
-  color: #78FBFD;
+  color: #fff;
   font-size: 2.5rem;
   font-weight: 700;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 5px 20px;
   border-radius: 5px;
   letter-spacing: 3px;
-  text-shadow: 0 0 5px #78FBFD, 0 0 10px #78FBFD, 0 0 20px #78FBFD, 0 0 40px #78FBFD, 0 0 80px #78FBFD, 0 0 90px #78FBFD, 0 0 100px #78FBFD, 0 0 150px #78FBFD;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
 .activites .activites-index {
   display: flex;
@@ -606,14 +931,14 @@
   height: 25vh;
 }
 .actualites .banniere h1 {
-  color: #F7CD45;
+  color: #fff;
   font-size: 2.5rem;
   font-weight: 700;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 5px 20px;
   border-radius: 5px;
   letter-spacing: 3px;
-  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
 .actualites .actualites-index {
   display: flex;
@@ -649,7 +974,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
-  color: #F7CD45;
+  color: #fff;
 }
 .actualites .actualites-index .plan-carte .carte-information p.date {
   color: #ADADAD;
@@ -954,14 +1279,14 @@
   height: 25vh;
 }
 .forfaits .banniere h1 {
-  color: #F7CD45;
+  color: #fff;
   font-size: 2.5rem;
   font-weight: 700;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 5px 20px;
   border-radius: 5px;
   letter-spacing: 3px;
-  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 80px #F7CD45, 0 0 90px #F7CD45, 0 0 100px #F7CD45, 0 0 150px #F7CD45;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
 }
 .forfaits .forfait_carte {
   display: flex;
