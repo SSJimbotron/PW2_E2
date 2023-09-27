@@ -12,7 +12,7 @@
             <div class="information">
                 <h1 class="font-lovelo">{{ $artiste->nom }}</h1>
                 <h2 class="capitalize"><i class="fas fa-calendar"></i> {{ $artiste->journee }}</h2>
-                <h2><i class="fa fa-clock-o"></i> {{ $artiste->heure }}</h2>
+                <h2><i class="fas fa-clock"></i> {{ $artiste->heure }}</h2>
                 <div class="description">
                     <p>{{ $artiste->description }}</p>
 
