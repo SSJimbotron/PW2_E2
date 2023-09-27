@@ -59,7 +59,7 @@
             </div>
             <div class="mt-10 mx-auto w-full max-w-sm">
                 {{-- FORMULAIRE --}}
-                <form class="space-y-6" action="{{ route('clients.store') }}" method="POST"
+                <form class="space-y-6" action="{{ route('reservations.store') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
 
