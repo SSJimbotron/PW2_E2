@@ -11,7 +11,7 @@
         <div class="haut-page">
             <h2 class="font-lovelo date">DU 19 au 21 Juillet 2024</h2>
             <div>
-                <h2 class="font-technorace"><a href="{{ route('reservations.index') }}">Achetez vos Billets</a></h2>
+                <h2 class="font-technorace"><a href="{{ route('forfaits.index') }}">Achetez vos Billets</a></h2>
             </div>
         </div>
 
@@ -22,7 +22,7 @@
                 @if ($artiste->journee == 'vendredi')
                     <div class="artiste">
 
-                        <div class="img">
+                        <div class="img img-vendredi">
                             <img src="{{ $artiste->image }}" alt="">
                         </div>
                         <div class="infos infos-vendredi">
@@ -46,7 +46,7 @@
 
             @foreach ($artistes as $artiste)
                 @if ($artiste->journee == 'samedi')
-                    @if ($artiste->nom == 'DEE JAY' || $artiste->nom == 'Mister technofantome')
+                    @if ($artiste->nom == 'DEE JAY' || $artiste->nom == 'Mister TechnoFantome')
                         <div class="artiste-principal" style="background-image: url('{{ $artiste->image }}')">
                             <div class="heure">
                                 <h3 class="font-technorace">{{ $artiste->heure }}</h3>
@@ -67,7 +67,7 @@
                                     <h3 class="samedi font-lovelo nom-artiste">{{ $artiste->nom }}</h3>
                                 </div>
                             </div>
-                            <div class="img">
+                            <div class="img img-samedi">
                                 <img src="{{ $artiste->image }}" alt="">
                             </div>
                         </div>
@@ -82,7 +82,7 @@
             @foreach ($artistes as $artiste)
                 @if ($artiste->journee == 'dimanche')
                     <div class="artiste">
-                        <div class="img">
+                        <div class="img img-dimanche">
                             <img src="{{ $artiste->image }}" alt="">
                         </div>
                         <div class="infos infos-dimanche">
