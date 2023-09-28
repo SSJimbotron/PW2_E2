@@ -130,7 +130,7 @@
                     </h2>
                 </div>
 
-                <p class="font-technorace"><a class="call-to-action" href="{{ route('reservations.index') }}">Achetez
+                <p class="font-technorace"><a class="call-to-action" href="{{ route('forfaits.index') }}">Achetez
                         vos Billets</a></p>
                 @foreach ($reservations as $reservation)
                     @if ($reservation->user_id == Auth::user()->id)

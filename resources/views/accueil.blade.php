@@ -1,6 +1,17 @@
 <x-layout>
 
     <div class="acceuil">
+        <div class="video">
+            <video src="storage/uploads/video.mp4" autoplay muted></video>
+            <div class="calltoaction">
+                <h2 class="font-lovelo">DU 19 AU 21 JUILLET 2024</h2>
+                <a href="{{ route('forfaits.index') }}">
+                    <div>
+                        <h3 class="font-technorace">Achetez vos billets</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
 
         {{-- Forfaits --}}
         <div class="section-forfaits section">

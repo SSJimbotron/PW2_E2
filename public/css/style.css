@@ -17,6 +17,44 @@ body {
 .acceuil {
   width: 100%;
 }
+.acceuil .video {
+  width: 100%;
+  position: relative;
+}
+.acceuil .video video {
+  width: 100%;
+  z-index: 2;
+}
+.acceuil .video .calltoaction {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  z-index: 99;
+  color: #fff;
+}
+.acceuil .video .calltoaction h2 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  margin-bottom: 15px;
+}
+.acceuil .video .calltoaction div {
+  width: 20%;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+}
+.acceuil .video .calltoaction div h3 {
+  font-size: 2rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  transition: all 0.1s ease-in-out;
+}
+.acceuil .video .calltoaction div h3:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+}
 .acceuil .section {
   margin: 10rem 0px;
   color: white;
@@ -1073,7 +1111,8 @@ body {
   overflow: hidden;
 }
 .actualites .actualites-index .plan-carte .actualite-image img {
-  width: 300px;
+  width: 500px;
+  border-radius: 15px;
 }
 .actualites .actualites-index .plan-carte .carte-information {
   max-width: 900px;
@@ -1233,9 +1272,23 @@ body {
 }
 .programmation .contenu .artiste .img {
   width: 42%;
+  border-radius: 15px;
 }
 .programmation .contenu .artiste .img img {
   width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.programmation .contenu .artiste .img-vendredi {
+  border: 2px solid #EA33F7;
+}
+.programmation .contenu .artiste .img-samedi {
+  border: 2px solid #78FBFD;
+}
+.programmation .contenu .artiste .img-dimanche {
+  border: 2px solid #F7CD45;
 }
 .programmation .contenu .artiste .infos {
   background-color: rgba(119, 119, 119, 0.2274509804);
@@ -1278,13 +1331,16 @@ body {
   width: 98%;
   height: 53vh;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position-y: center;
   margin: 10px 0px;
   font-size: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0px 85px;
+  border: 2px solid #78FBFD;
+  border-radius: 15px;
 }
 .programmation .contenu .artiste-principal .heure {
   color: #fff;
@@ -1353,7 +1409,8 @@ body {
   font-size: 1.5rem;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
   background-color: rgba(156, 156, 156, 0.2392156863);
-  border-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   transition: all 0.2s ease-in-out;
 }
 .artistes .contenu .carte-nom-artiste:hover {
@@ -1362,6 +1419,10 @@ body {
 .artistes .contenu .artiste-image {
   width: 500px;
   height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /******************

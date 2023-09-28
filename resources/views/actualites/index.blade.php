@@ -10,7 +10,7 @@
                 <div id="{{ $actualite->id }}"></div>
                 <div class="plan-carte">
 
-                    <div class="carte-actualites">
+                    <div class="actualite-image">
 
                         <img src="{{ asset($actualite->image) }}" alt="{{ $actualite->titre }}">
 
