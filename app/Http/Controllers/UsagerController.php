@@ -143,14 +143,14 @@ class UsagerController extends Controller
         // Vérifier si l'utilisateur a des réservations
         $reservations = Reservation::where('user_id', $usager->id)->get();
 
-        if ($reservations->count() > 0) {
-            return redirect()->route('admin.index')
-                ->with('erreur', "L'usager a des réservations associés, veuillez les supprimer en premier lieu");
-        } else {
+        if ($reservations->count() < 1) {
             User::destroy($request->id);
 
             return redirect()->route('admin.index')
                 ->with('succes', "L'usager a été supprimée!");
+        } else {
+            return redirect()->route('admin.index')
+                ->with('erreur', "L'usager a des réservations associés, veuillez les supprimer en premier lieu");
         }
     }
 }

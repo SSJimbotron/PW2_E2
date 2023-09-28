@@ -51,7 +51,7 @@
     <x-alertes.succes cle="erreur" />
 
     {{-- HEADER --}}
-    <header class="bg-noir h-96 w-full pt-14 pb-96 mb-10">
+    <header class="bg-noir w-full  ">
 
         <div class="flex justify-center">
             <div class="w-1/3">
@@ -59,9 +59,9 @@
             </div>
 
             {{-- LOGO --}}
-            <div class="w-1/3">
+            <div class="">
                 <a href="{{ route('accueil') }}">
-                    <img src="{{ url('/image/logo.png') }}" alt="Logo TechnoWave" class="w-auto h-64 m-auto logo">
+                    <img src="{{ url('/image/logo.png') }}" alt="Logo TechnoWave" class="logo">
                 </a>
             </div>
 
@@ -70,7 +70,7 @@
 
                 {{-- Bouton mon compte/déconnexion si utilisateur connecté --}}
                 @if (Auth::check())
-                    <button class="mr-8 p-2 border-mauve border-2 rounded drop-shadow-3xl lien-header">
+                    <button class="mr-8 p-2 border-mauve border-2 rounded drop-shadow-3xl ">
                         <a href="{{ route('moncompte.edit', ['id' => Auth::user()->id]) }}">
                             <p class="text-gray-400 font-quicksand text-2xl lien-header">Mon compte</p>
                         </a>
@@ -103,7 +103,7 @@
         </div>
 
         {{-- LIENS --}}
-        <div id="app" class="w-full flex justify-evenly mt-24 pb-10 bg-noir text-white font-technorace text-3xl">
+        <div id="app" class="w-full flex justify-evenly  bg-noir text-white font-technorace text-3xl">
             <h2 class="lien-header"><a href="{{ route('programmation.index') }}">PROGRAMMATION</a></h2>
 
             <h2 class="lien-header"><a href="{{ route('artistes.index') }}">ARTISTES</a></h2>
@@ -125,10 +125,10 @@
     <footer class="flex flex-col items-center w-full pt-16 pb-16 bg-noir font-quicksand">
 
         {{-- LOGO --}}
-        <div class="mb-12">
+        <div class="mb-12 logo">
 
             <a href="{{ route('accueil') }}">
-                <img src="{{ url('image/logo.png') }}" alt="Logo TechnoWave" class="w-auto h-64 m-auto">
+                <img src="{{ url('image/logo.png') }}" alt="Logo TechnoWave" class="m-auto">
             </a>
 
         </div>
@@ -165,7 +165,7 @@
         </div>
 
         {{-- RÉSEAUX --}}
-        <div class="w-1/3 flex justify-around mt-10 mb-10">
+        <div class="w-1/3 flex justify-center reseau">
 
             {{-- Instagram --}}
             <a href="https://www.instagram.com/">
@@ -185,7 +185,7 @@
         </div>
 
         {{-- LIENS --}}
-        <div class="flex justify-around w-full mt-10 mb-10 text-white font-quicksand text-xl">
+        <div class="flex justify-around w-full mt-10 mb-10 text-white font-quicksand text-xl lien-footer">
 
             {{-- Programmation --}}
             <div class="flex flex-col">

@@ -2,25 +2,68 @@
 /***************
     HEADER
 *************/
-.lien-header {
+header {
+  padding: 2.5vw;
+}
+header .lien-header {
   transition: 0.1s ease-in-out;
 }
-
-.lien-header:hover {
+header .lien-header:hover {
   text-shadow: 0 0 5px #c2c2c2, 0 0 10px #c2c2c2, 0 0 15px #c2c2c2;
 }
-
-.lien-h3-footer {
-  transition: 0.1s ease-in-out;
+header .logo {
+  display: flex;
+  position: relative;
+  margin: 0px;
+  height: 21vw;
+  width: 27.5vw;
+  max-width: 100%;
+  height: auto;
+  padding-top: 1.5vw;
 }
-
-.lien-h3-footer:hover {
-  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 15px #EA33F7;
+header h2 {
+  margin-top: 3.5vw;
 }
 
 /***************
-*Enregistrement
+    FOOTER
 *************/
+footer {
+  display: flex;
+  position: relative;
+}
+footer .logo {
+  width: 37.5vw;
+}
+footer .lien-footer {
+  flex-direction: row;
+}
+footer .lien-header {
+  transition: 0.1s ease-in-out;
+}
+footer .lien-header:hover {
+  text-shadow: 0 0 5px #c2c2c2, 0 0 10px #c2c2c2, 0 0 15px #c2c2c2;
+}
+footer .lien-h3-footer {
+  transition: 0.1s ease-in-out;
+}
+footer .lien-h3-footer:hover {
+  text-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 15px #EA33F7;
+}
+footer .reseau {
+  margin: 4vw;
+}
+footer .reseau a {
+  margin: 1vw;
+  transition: 0.25s all ease;
+}
+footer .reseau a:hover {
+  margin-top: 0.75vw;
+}
+
+/***************
+Enregistrement
+**************/
 .conteneur-enregistrement {
   display: flex;
   justify-content: center;
@@ -406,20 +449,28 @@
 }
 
 @media screen and (max-width: 955px) {
+  /***************
+      HEADER
+  *************/
   header {
     display: flex;
     position: relative;
     flex-direction: column;
     width: 100vw;
     margin: 0px;
+    justify-content: center;
   }
   header .lien-header {
     font-size: 2.25vw;
   }
-  header .pb-60 .logo {
+  header .logo {
+    display: flex;
+    position: relative;
     margin: 0px;
     height: 25vw;
-    width: 30vw;
+    width: 40vw;
+    max-width: 100%;
+    height: auto;
   }
   header .border-mauve {
     border: 0.05vw solid;
@@ -549,7 +600,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 40px;
   }
   .apropos .adresse .coordonnes .coordonnes.a img {
     display: inline-block;
@@ -569,9 +619,35 @@
   .apropos .adresse .coordonnes .coordonnes.a .coordonnes.a {
     padding: 20px;
   }
+  /***************
+      FOOTER
+  *************/
+  footer {
+    display: flex;
+    position: relative;
+  }
+  footer .lien-footer {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  footer .lien-footer div {
+    padding: 2.5vw 0vw 0vw 0vw;
+    margin: 2vw;
+  }
+  footer .lien-footer .reseau {
+    margin: 4vw;
+  }
+  footer .lien-footer .reseau a {
+    margin: 1vw;
+    transition: 0.25s all ease;
+  }
+  footer .lien-footer .reseau a:hover {
+    margin-top: -0.05vw;
+  }
 }
 /* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   /************
   * À propos
   ***********/
@@ -704,14 +780,16 @@
     color: white;
   }
   .apropos .adresse .coordonnes .coordonnes.a {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
   .apropos .adresse .coordonnes .coordonnes.a img {
+    margin-top: 1vwfo;
     display: inline-block;
     vertical-align: middle;
   }
   .apropos .adresse .coordonnes .coordonnes.a .image {
     margin-right: 0px;
+    width: 10vw;
   }
   .apropos .adresse .coordonnes .coordonnes.a h2 {
     display: flex;
@@ -723,6 +801,25 @@
   }
   .apropos .adresse .coordonnes .coordonnes.a .coordonnes.a {
     padding: 20px;
+  }
+  /***************
+      FOOTER
+  *************/
+  footer {
+    display: flex;
+    position: relative;
+  }
+  footer .logo {
+    width: 50vw;
+  }
+  footer .lien-footer {
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding-left: 15vw;
+  }
+  footer .lien-footer div {
+    padding: 1.5vw 4vw 0vw 0vw;
   }
 }
 /*****************
