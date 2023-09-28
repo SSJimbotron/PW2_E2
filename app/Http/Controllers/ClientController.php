@@ -119,9 +119,11 @@ class ClientController extends Controller
     /**
      * Affiche la page pour effectuer une nouvelle réservation
      *
+     * @param int $id Id de la reservation à modifier
      * @return View
+     *
      */
-    public function index()
+    public function index($id)
     {
         // Récupérer tous les forfaits et utilisateurs
         $forfaits = Forfait::all();
@@ -129,7 +131,7 @@ class ClientController extends Controller
         $reservations = Reservation::all();
 
         // Passer les données à la vue
-        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits]);
+        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits, "id" => $id]);
     }
 
     /**

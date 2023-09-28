@@ -130,7 +130,7 @@ Route::post("/moncompte/mdp/update", [ClientController::class, 'updatemdp'])
 // ================= *RÉSERVATIONS* =================
 
 //Affiche le formulaire pour effectuer une réservation
-Route::get("/reservations", [ClientController::class, 'index'])
+Route::get("/reservations/{id}", [ClientController::class, 'index'])
     ->name('reservations.index')
     ->middleware('auth');
 //Traite l'ajout d'une réservation

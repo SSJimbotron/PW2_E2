@@ -1,12 +1,13 @@
+
 <script>
     // Wait for the DOM to be fully loaded
+
     document.addEventListener("DOMContentLoaded", function() {
         // Get references to the select element and the target div
         const forfaitSelect = document.getElementById("forfait");
         const descriptionDiv = document.getElementById("forfait_description");
         const jourDiv = document.getElementById("forfait_jour");
         const nomDiv = document.getElementById("forfait_titre");
-
         const selectedOption = forfaitSelect.options[forfaitSelect.selectedIndex];
 
         // Get the description from the data attribute of the selected option
@@ -33,9 +34,9 @@
             jourDiv.innerHTML = jour;
             nomDiv.innerHTML = nom;
         });
+
     });
 </script>
-
 <x-layout titre="Modification de l'actualité">
 
     <div class="conteneur-enregistrement">
@@ -85,12 +86,12 @@
                                         @if ($forfait->id == $reservation->forfait_id)
                                             <option selected value="{{ old('forfait') ?? $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
                                                 forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
-                                                {{ $forfait->id }} {{ $forfait->    nom }}
+                                                {{ $forfait->nom }}
                                             </option>
                                         @else
                                             <option value="{{ old('forfait') ?? $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
                                                 forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
-                                                {{ $forfait->id }} {{ $forfait->nom }}
+                                                {{ $forfait->nom }}
                                             </option>
                                         @endif
                                     @endforeach

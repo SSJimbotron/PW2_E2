@@ -39,7 +39,7 @@
 
                     <div>
                         <textarea name="description" id="description" cols="38" rows="10"
-                            placeholder="{{ old('description') ?? $activite->description }}"></textarea>
+                            >{{ old('description') ?? $activite->description }}</textarea>
                         <x-forms.erreur champ="description" />
                     </div>
 

@@ -71,7 +71,7 @@
                     </div>
                     <div>
                         <select id="role" name="role" class="text-noir">
-                            @if ($usager->role = 1)
+                            @if ($usager->role == 1)
                                 <option selected value="1">Clients</option>
                             @else
                                 <option value="1">Clients</option>

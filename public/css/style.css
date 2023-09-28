@@ -1095,6 +1095,7 @@ Enregistrement
 .actualites .actualites-index .plan-carte .carte-information p.intro {
   margin-bottom: 10px;
   color: #ADADAD;
+  overflow-wrap: break-word;
 }
 .actualites .actualites-index .plan-carte .carte-information .contenu {
   display: none;
@@ -1102,6 +1103,7 @@ Enregistrement
   /* Hauteur maximale pour la partie "contenu" */
   overflow: hidden;
   color: #ADADAD;
+  overflow-wrap: break-word;
 }
 .actualites .actualites-index .plan-carte .carte-information .charger {
   text-align: center;

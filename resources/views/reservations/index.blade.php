@@ -1,12 +1,12 @@
 <script>
     // Wait for the DOM to be fully loaded
+
     document.addEventListener("DOMContentLoaded", function() {
         // Get references to the select element and the target div
         const forfaitSelect = document.getElementById("forfait");
         const descriptionDiv = document.getElementById("forfait_description");
         const jourDiv = document.getElementById("forfait_jour");
         const nomDiv = document.getElementById("forfait_titre");
-
         const selectedOption = forfaitSelect.options[forfaitSelect.selectedIndex];
 
         // Get the description from the data attribute of the selected option
@@ -32,14 +32,14 @@
             descriptionDiv.innerHTML = description;
             jourDiv.innerHTML = jour;
             nomDiv.innerHTML = nom;
-
-
         });
+
     });
 </script>
 
 <x-layout titre="Nouvelle réservation">
     <div class="conteneur-enregistrement">
+
         <div class="forfait_details">
             <h2 id="forfait_titre" class="font-lovelo neon-text"></h2>
             <h3 class="font-lovelo neon-text">Jours:</h3>
@@ -81,10 +81,18 @@
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
                                 name="forfait" id="forfait">
                                 @foreach ($forfaits as $forfait)
-                                    <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
-                                        forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
-                                        {{ $forfait->nom }}
-                                    </option>
+                                    @if ($forfait->id == $id)
+                                        <option selected value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
+                                            forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
+                                            {{ $forfait->nom }}
+                                        </option>
+                                    @else
+                                        <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
+                                            forfait-nom="{{ $forfait->nom }}"
+                                            description="{{ $forfait->description }}">
+                                            {{ $forfait->nom }}
+                                        </option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>

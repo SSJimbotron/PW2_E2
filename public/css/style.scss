@@ -1651,6 +1651,7 @@ Enregistrement
                 p.intro {
                     margin-bottom: 10px;
                     color: $gris;
+                    overflow-wrap: break-word;
                 }
 
                 .contenu {
@@ -1660,6 +1661,7 @@ Enregistrement
                     /* Hauteur maximale pour la partie "contenu" */
                     overflow: hidden;
                     color: $gris;
+                    overflow-wrap: break-word;
                 }
 
                 .charger {
