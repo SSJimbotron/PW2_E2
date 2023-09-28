@@ -1,5 +1,161 @@
 @charset "UTF-8";
 /***************
+    STYLE GÉNÉRAL
+*************/
+body {
+  background-image: url("/image/Plan/planTitre.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+/***************
+    ACCUEIL
+*************/
+.acceuil {
+  width: 100%;
+}
+.acceuil .video {
+  width: 100%;
+  position: relative;
+}
+.acceuil .video video {
+  width: 100%;
+  z-index: 2;
+}
+.acceuil .video .calltoaction {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  z-index: 99;
+  color: #fff;
+}
+.acceuil .video .calltoaction h2 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  margin-bottom: 15px;
+}
+.acceuil .video .calltoaction div {
+  width: 20%;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+}
+.acceuil .video .calltoaction div h3 {
+  font-size: 2rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  transition: all 0.1s ease-in-out;
+}
+.acceuil .video .calltoaction div h3:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+}
+.acceuil .section {
+  margin: 10rem 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.acceuil .section div {
+  width: 100%;
+  text-align: center;
+}
+.acceuil .section div h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+  margin-bottom: 30px;
+}
+.acceuil .section div .cartes {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.acceuil .section div .cartes div {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.acceuil .section div .cartes div img {
+  position: relative;
+  height: 625px;
+  width: 560px;
+  border-radius: 15px;
+  border: 2px solid #EA33F7;
+  box-shadow: 0 0 5px #EA33F7, 0 0 10px #EA33F7, 0 0 20px #EA33F7;
+}
+.acceuil .section div .cartes div div {
+  width: 100%;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.acceuil .section div .cartes div div h3 {
+  width: 70%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.137254902);
+  padding: 10px;
+  color: #F7CD45;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45;
+}
+.acceuil .section div .cartes-activites div img {
+  border: 2px solid #78FBFD;
+  box-shadow: 0 0 5px #78FBFD, 0 0 10px #78FBFD, 0 0 20px #78FBFD;
+}
+.acceuil .section div .cartes-actualites div img {
+  border: 2px solid #F7CD45;
+  box-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45;
+}
+.acceuil .section .lien {
+  margin: 40px 0px;
+  width: 100%;
+  text-align: center;
+}
+.acceuil .section .lien a {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 5px 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+.acceuil .section .lien a:hover {
+  font-weight: bolder;
+}
+.acceuil .section-accessibilites h2 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+  margin-bottom: 10px;
+}
+.acceuil .section-accessibilites .separation {
+  width: 20vw;
+  margin: auto;
+  height: 4px;
+  background-color: #F7CD45;
+  box-shadow: 0 0 5px #F7CD45, 0 0 10px #F7CD45, 0 0 20px #F7CD45, 0 0 40px #F7CD45, 0 0 50px #F7CD45;
+  margin-bottom: 50px;
+}
+.acceuil .section-accessibilites .tags {
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/***************
     HEADER
 *************/
 header {
@@ -307,11 +463,6 @@ Enregistrement
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/image/Plan/planTitre.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: repeat;
-  min-height: 100vh;
 }
 .apropos .banniere {
   display: flex;
@@ -485,11 +636,6 @@ Enregistrement
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/image/Plan/planTitre.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: repeat;
-    min-height: 100vh;
   }
   .apropos .origine {
     max-width: 650px;
@@ -656,11 +802,6 @@ Enregistrement
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/image/Plan/planTitre.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: repeat;
-    min-height: 100vh;
   }
   .apropos .banniere {
     display: flex;
@@ -825,12 +966,6 @@ Enregistrement
 /*****************
 * Activités index
 ****************/
-.activites {
-  background-image: url("/image/Plan/planTitre.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: repeat;
-}
 .activites .banniere {
   display: flex;
   justify-content: center;
@@ -924,7 +1059,6 @@ Enregistrement
 * ActiviteShow
 ***********/
 .activite-show {
-  background-image: url("/image/Plan/planTitre.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1029,7 +1163,6 @@ Enregistrement
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/image/Plan/planTitre.jpg");
 }
 .actualites .banniere {
   display: flex;
@@ -1075,7 +1208,8 @@ Enregistrement
   overflow: hidden;
 }
 .actualites .actualites-index .plan-carte .actualite-image img {
-  width: 300px;
+  width: 500px;
+  border-radius: 15px;
 }
 .actualites .actualites-index .plan-carte .carte-information {
   max-width: 900px;
@@ -1095,6 +1229,7 @@ Enregistrement
 .actualites .actualites-index .plan-carte .carte-information p.intro {
   margin-bottom: 10px;
   color: #ADADAD;
+  overflow-wrap: break-word;
 }
 .actualites .actualites-index .plan-carte .carte-information .contenu {
   display: none;
@@ -1102,6 +1237,7 @@ Enregistrement
   /* Hauteur maximale pour la partie "contenu" */
   overflow: hidden;
   color: #ADADAD;
+  overflow-wrap: break-word;
 }
 .actualites .actualites-index .plan-carte .carte-information .charger {
   text-align: center;
@@ -1156,7 +1292,6 @@ Enregistrement
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/image/Plan/planTitre.jpg");
   color: #ADADAD;
 }
 .programmation .banniere {
@@ -1236,9 +1371,23 @@ Enregistrement
 }
 .programmation .contenu .artiste .img {
   width: 42%;
+  border-radius: 15px;
 }
 .programmation .contenu .artiste .img img {
   width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.programmation .contenu .artiste .img-vendredi {
+  border: 2px solid #EA33F7;
+}
+.programmation .contenu .artiste .img-samedi {
+  border: 2px solid #78FBFD;
+}
+.programmation .contenu .artiste .img-dimanche {
+  border: 2px solid #F7CD45;
 }
 .programmation .contenu .artiste .infos {
   background-color: rgba(119, 119, 119, 0.2274509804);
@@ -1281,13 +1430,16 @@ Enregistrement
   width: 98%;
   height: 53vh;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position-y: center;
   margin: 10px 0px;
   font-size: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0px 85px;
+  border: 2px solid #78FBFD;
+  border-radius: 15px;
 }
 .programmation .contenu .artiste-principal .heure {
   color: #fff;
@@ -1308,7 +1460,6 @@ Enregistrement
 * Artistes Index
 ******************/
 .artistes {
-  background-image: url("/image/Plan/planTitre.jpg");
   color: #ADADAD;
 }
 .artistes .banniere {
@@ -1357,7 +1508,8 @@ Enregistrement
   font-size: 1.5rem;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
   background-color: rgba(156, 156, 156, 0.2392156863);
-  border-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   transition: all 0.2s ease-in-out;
 }
 .artistes .contenu .carte-nom-artiste:hover {
@@ -1366,6 +1518,10 @@ Enregistrement
 .artistes .contenu .artiste-image {
   width: 500px;
   height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 /******************
@@ -1376,7 +1532,6 @@ Enregistrement
   flex-direction: column;
   align-items: center;
   height: 65vw;
-  background-image: url("/image/Plan/planTitre.jpg");
   color: #ADADAD;
 }
 .forfaits .banniere {
