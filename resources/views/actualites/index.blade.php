@@ -16,21 +16,26 @@
 
                     </div>
                     <div class="carte-information carte-info-{{ $actualite->id }}" data-state="hidden">
-                        <a href="{{ route('activites.show', ['id' => $actualite->id]) }}" class="font-quicksand">
-                            <h1 class="font-lovelo">{{ $actualite->titre }}</h1>
-                        </a>
+
+                        <h1 class="font-lovelo">{{ $actualite->titre }}</h1>
+
                         <p class="date">Publié le : {{ $actualite->created_at->format('d/m/Y H:i') }}</p>
+
+
                         <!-- Partie initialement visible -->
                         <p class="intro">
                             {{ substr($actualite->contenu, 0, 400) }}{{ strlen($actualite->contenu) > 200 ? '...' : '' }}
                         </p>
+
+
                         <!-- Le reste du contenu (initiallement caché) -->
-                        <p class="contenu">{{ substr($actualite->contenu, 400) }}</p>
+                        <p class="contenu">{{ ($actualite->contenu) }}</p>
                         <div class="charger">
                             <button class="voir-plus btn-9 ">
                                 <p>Voir plus</p>
                             </button>
                         </div>
+
                     </div>
                 </div>
             @endforeach
