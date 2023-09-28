@@ -8,34 +8,98 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 /***************
     HEADER
 *************/
-.lien-header {
-    transition: 0.1s ease-in-out;
+header {
+
+    padding: 2.5vw;
+
+    .lien-header {
+        transition: 0.1s ease-in-out;
+    }
+
+    .lien-header:hover {
+        text-shadow:
+            0 0 5px #c2c2c2,
+            0 0 10px #c2c2c2,
+            0 0 15px #c2c2c2,
+
+    }
+
+
+
+    .logo {
+        display: flex;
+        position: relative;
+        margin: 0px;
+        height: 21vw;
+        width: 27.5vw;
+        max-width: 100%;
+        height: auto;
+        padding-top: 1.5vw;
+    }
+
+    h2 {
+        margin-top: 3.5vw;
+    }
 }
 
-.lien-header:hover {
-    text-shadow:
-        0 0 5px #c2c2c2,
-        0 0 10px #c2c2c2,
-        0 0 15px #c2c2c2,
+/***************
+    FOOTER
+*************/
+footer {
+    display: flex;
+    position: relative;
+
+    .logo {
+        width: 37.5vw;
+    }
+
+    .lien-footer {
+        flex-direction: row;
+    }
+
+    .lien-header {
+        transition: 0.1s ease-in-out;
+    }
+
+    .lien-header:hover {
+        text-shadow:
+            0 0 5px #c2c2c2,
+            0 0 10px #c2c2c2,
+            0 0 15px #c2c2c2,
+
+    }
+
+    .lien-h3-footer {
+        transition: 0.1s ease-in-out;
+    }
+
+    .lien-h3-footer:hover {
+        text-shadow:
+            0 0 5px $rose,
+            0 0 10px $rose,
+            0 0 15px $rose,
+    }
+
+    .reseau {
+        margin: 4vw;
+
+        a {
+            margin: 1vw;
+            transition: .25s all ease;
+        }
+
+        a:hover {
+            margin-top: .75vw;
+        }
+    }
+
 
 }
-
-.lien-h3-footer {
-    transition: 0.1s ease-in-out;
-}
-
-.lien-h3-footer:hover {
-    text-shadow:
-        0 0 5px $rose,
-        0 0 10px $rose,
-        0 0 15px $rose,
-}
-
 
 
 /***************
-*Enregistrement
-*************/
+Enregistrement
+**************/
 
 .conteneur-enregistrement {
 
@@ -632,21 +696,32 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
 @media screen and (max-width: 955px) {
 
+    /***************
+    HEADER
+*************/
     header {
         display: flex;
         position: relative;
         flex-direction: column;
         width: 100vw;
         margin: 0px;
+        justify-content: center;
 
         .lien-header {
             font-size: 2.25vw;
+
+
         }
 
-        .pb-60 .logo {
+
+        .logo {
+            display: flex;
+            position: relative;
             margin: 0px;
             height: 25vw;
-            width: 30vw;
+            width: 40vw;
+            max-width: 100%;
+            height: auto;
         }
 
         .border-mauve {
@@ -654,7 +729,11 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             --tw-border-opacity: .5;
             border-color: rgb(234 51 247 / var(--tw-border-opacity));
         }
+
+
     }
+
+
 
     /************
 * À propos
@@ -712,7 +791,6 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
 
             }
 
-            ;
 
         }
 
@@ -852,15 +930,13 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                     flex-direction: column;
                     align-items: center;
                     text-align: center;
-                    margin-bottom: 40px;
+
 
                     img {
                         display: inline-block; // Display the image inline
                         vertical-align: middle; // Align vertically to middle
                         align-items: center;
                         text-align: center;
-
-
                     }
 
                     .image {
@@ -887,10 +963,42 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             }
         }
     }
+
+    /***************
+    FOOTER
+*************/
+    footer {
+        display: flex;
+        position: relative;
+
+        .lien-footer {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            div {
+                padding: 2.5vw 0vw 0vw 0vw;
+                margin: 2vw;
+            }
+
+            .reseau {
+                margin: 4vw;
+
+                a {
+                    margin: 1vw;
+                    transition: .25s all ease;
+                }
+
+                a:hover {
+                    margin-top: -.05vw;
+                }
+            }
+        }
+    }
 }
 
 /* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     /************
 * À propos
@@ -1106,15 +1214,17 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
                 color: white;
 
                 .coordonnes.a {
-                    margin-bottom: 40px;
+                    margin-bottom: 0px;
 
                     img {
+                        margin-top: 1vwfo;
                         display: inline-block; // Display the image inline
                         vertical-align: middle; // Align vertically to middle
                     }
 
                     .image {
                         margin-right: 0px;
+                        width: 10vw;
                     }
 
                     h2 {
@@ -1133,6 +1243,31 @@ $arrierePlan: url('/image/Plan/planTitre.jpg');
             }
         }
     }
+
+    /***************
+    FOOTER
+*************/
+    footer {
+        display: flex;
+        position: relative;
+
+        .logo {
+            width: 50vw;
+        }
+
+        .lien-footer {
+            flex-direction: row;
+            justify-content: left;
+            flex-wrap: wrap;
+            padding-left: 15vw;
+
+            div {
+                padding: 1.5vw 4vw 0vw 0vw;
+            }
+
+        }
+    }
+
 }
 
 /*****************
