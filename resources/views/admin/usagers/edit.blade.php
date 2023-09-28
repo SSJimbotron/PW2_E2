@@ -125,7 +125,7 @@
                 {{-- *** RESERVATIONS *** --}}
 
                 @foreach ($reservations as $reservation)
-                    @if ($reservation->user_id == Auth::user()->id)
+                    @if ($reservation->user_id == $usager->id)
                         <tr>
                             <p>
                                 <td><a href="{{ route('admin.reservations.edit', ['id' => $reservation->id]) }}">
