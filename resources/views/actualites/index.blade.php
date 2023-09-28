@@ -29,7 +29,9 @@
 
 
                         <!-- Le reste du contenu (initiallement caché) -->
+
                         <p class="contenu">{{ ($actualite->contenu) }}</p>
+
                         <div class="charger">
                             <button class="voir-plus btn-9 ">
                                 <p>Voir plus</p>
