@@ -22,7 +22,7 @@
 
                 <div class="cartes cartes-forfaits">
 
-                    <a href="{{ route('reservations.index') }}">
+                    <a href="{{ route('reservations.index', ['id_forfait' => 3]) }}">
                         <div>
                             <img src="storage/uploads/MisterTechnofantome.jpg" alt="">
                             <div>
@@ -31,7 +31,7 @@
                         </div>
                     </a>
 
-                    <a href="{{ route('reservations.index') }}">
+                    <a href="{{ route('reservations.index', ['id_forfait' => 2]) ) }}">
                         <div>
                             <img src="storage/uploads/DEEJAY.jpg" alt="">
                             <div>
@@ -40,7 +40,7 @@
                         </div>
                     </a>
 
-                    <a href="{{ route('reservations.index') }}">
+                    <a href="{{ route('reservations.index', ['id_forfait' => 1]) ) }}">
                         <div>
                             <img src="storage/uploads/TechnoKnightRebooted.jpg" alt="">
                             <div>
