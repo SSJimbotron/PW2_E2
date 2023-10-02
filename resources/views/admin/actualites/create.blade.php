@@ -35,7 +35,7 @@
                         <label for="contenu" class="font-technorace">Contenu de
                             l'actualité</label>
                         <div>
-                            <input type="textarea" name="contenu" id="contenu">
+                            <textarea name="contenu" id="contenu"></textarea>
 
                             <x-forms.erreur champ="contenu" />
                         </div>

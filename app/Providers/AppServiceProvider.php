@@ -2,8 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\Activite;
-use App\Models\Actualite;
+
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 

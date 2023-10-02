@@ -22,7 +22,7 @@
                         <button class="mr-32 p-2 border-bleu border-2 rounded drop-shadow-3xl lien-header">
 
                             <a href="{{ route('artistes.index') }}">
-                                <p class="text-gray-400 font-quicksand text-2xl lien-header">RETOUR</p>
+                                <p class="text-gray-400 font-quicksand text-2xl lien-header hover:text-gray-200 hover:font-bold">RETOUR</p>
                             </a>
 
                         </button>
