@@ -28,7 +28,5 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         View::share(["activites" => Activite::get(),"actualites" => Actualite::get()]);
-
-
     }
 }

@@ -80,12 +80,23 @@
                             <select
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
                                 name="forfait" id="forfait">
+
                                 @foreach ($forfaits as $forfait)
-                                    <option value="{{ $forfait->id }}" forfaitjour="{{ $forfait->jour }}"
-                                        forfait-nom="{{ $forfait->nom }}" description="{{ $forfait->description }}">
-                                        {{ $forfait->nom }}
-                                    </option>
+                                    @if ($forfait->id == $id_forfait)
+                                        <option selected value="{{ old('forfait') ?? $forfait->id }}"
+                                            forfaitjour="{{ $forfait->jour }}" forfait-nom="{{ $forfait->nom }}"
+                                            description="{{ $forfait->description }}">
+                                             {{ $forfait->nom }}
+                                        </option>
+                                    @else
+                                        <option value="{{ old('forfait') ?? $forfait->id }}"
+                                            forfaitjour="{{ $forfait->jour }}" forfait-nom="{{ $forfait->nom }}"
+                                            description="{{ $forfait->description }}">
+                                           {{ $forfait->nom }}
+                                        </option>
+                                    @endif
                                 @endforeach
+
                             </select>
                         </div>
                         <x-forms.erreur champ="forfait" />

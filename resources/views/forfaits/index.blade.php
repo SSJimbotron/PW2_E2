@@ -18,7 +18,7 @@
                         <h2 class="font-lovelo platine">Platine</h2>
                     </div>
                     <button class="font-quicksand platine"><a
-                        href="{{ route('reservations.index') }}">Réserver</a></button>
+                            href="{{ route('reservations.index', ['id_forfait' => 3]) }}">Réserver</a></button>
                 </div>
                 <div>
                     <p class="font-quicksand platine">Accès exclusif aux zones VIP du festival.
@@ -40,8 +40,7 @@
                         <img src="image/Forfaits/or.png" alt="">
                         <h2 class="font-lovelo or">Or</h2>
                     </div>
-                    <button class="font-quicksand or"><a
-                        href="{{ route('reservations.index') }}">Réserver</a></button>
+                    <button class="font-quicksand or"><a href="{{ route('reservations.index', ['id_forfait' => 2]) }}">Réserver</a></button>
                 </div>
                 <div>
                     <p class="font-quicksand or">Billets pour le festival et emplacement de camping inclus.
@@ -64,7 +63,7 @@
                         <h2 class="font-lovelo argent">Argent</h2>
                     </div>
                     <button class="font-quicksand argent"><a
-                            href="{{ route('reservations.index') }}">Réserver</a></button>
+                            href="{{ route('reservations.index', ['id_forfait' => 1]) }}">Réserver</a></button>
                 </div>
                 <div>
                     <p class="font-quicksand argent">Billets pour le festival à un prix abordable.

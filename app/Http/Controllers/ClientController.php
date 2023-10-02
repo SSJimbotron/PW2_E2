@@ -121,7 +121,7 @@ class ClientController extends Controller
      *
      * @return View
      */
-    public function index()
+    public function index($id_forfait)
     {
         // Récupérer tous les forfaits et utilisateurs
         $forfaits = Forfait::all();
@@ -129,7 +129,7 @@ class ClientController extends Controller
         $reservations = Reservation::all();
 
         // Passer les données à la vue
-        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits]);
+        return view('reservations.index', ["usagers" => $usagers, "forfaits" => $forfaits, "id_forfait" => $id_forfait]);
     }
 
     /**
