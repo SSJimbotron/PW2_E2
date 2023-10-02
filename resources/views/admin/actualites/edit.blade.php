@@ -34,8 +34,8 @@
                 <div class="section">
                     <label for="contenu" class="font-technorace">Contenu de l'actualité</label>
                     <div>
-                        <input type="textarea" id="contenu" name="contenu" col="15" row="30"
-                            value="{{ old('contenu') ?? $actualite->contenu }}">
+                        <textarea id="contenu" name="contenu" col="15" row="30"
+                            value="{{ old('contenu') ?? $actualite->contenu }}">{{ old('contenu') ?? $actualite->contenu }}</textarea>
 
                         <x-forms.erreur champ="contenu" />
                     </div>
@@ -51,8 +51,7 @@
                 </div>
             </form>
 
-            <form action="{{ route('admin.actualites.updateimg') }}" method="POST"
-                enctype="multipart/form-data">
+            <form action="{{ route('admin.actualites.updateimg') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 {{-- ID --}}
@@ -82,14 +81,13 @@
 
             </form>
 
-            <form action="{{ route('admin.actualites.destroy') }}" method="POST"
-                enctype="multipart/form-data">
+            <form action="{{ route('admin.actualites.destroy') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
 
 
-                    {{-- ID --}}
-                    <input type="hidden" name="id" value="{{ $actualite->id }}">
+                {{-- ID --}}
+                <input type="hidden" name="id" value="{{ $actualite->id }}">
 
 
                 {{-- SUBMIT --}}

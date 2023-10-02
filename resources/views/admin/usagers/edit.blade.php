@@ -79,12 +79,12 @@
                             @if ($usager->role == 2)
                                 <option selected value="2">Employé</option>
                             @else
-                                <option value="1">Employé</option>
+                                <option value="2">Employé</option>
                             @endif
                             @if ($usager->role == 3)
                                 <option selected value="3">Administrateur</option>
                             @else
-                                <option value="1">Administrateur</option>
+                                <option value="3">Administrateur</option>
                             @endif
                         </select>
                     </div>
